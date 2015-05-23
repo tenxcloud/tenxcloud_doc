@@ -11,9 +11,7 @@ $ npm install gitbook-cli -g
 ```
 Create the directories and files for a book from SUMMARY.md file using
 ```
-$ npm install gitbook-cli -g
 $ gitbook init
-$ gitbook build
 ```
 You can serve a repository as a book using:
 ```
