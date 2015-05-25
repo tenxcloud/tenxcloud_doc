@@ -14,10 +14,13 @@
 | 代码分支       | 默认均为master | 不可编辑 |
 | 程序类型       | 编写项目的语言 | 可选 |
 | Docker的版本   | 目前默认均为v1.6 | 不可编辑 |
-| 容器端口       | 要与Dockerfile中的端口一致| 必填 |
 | 环境变量       | 配置项目相关环境变量，可添加多个 | 可选 |
 
-注：源代码中一定要有Dockerfile，否则构建会失败，可以点击GitHub地址查看自己的项目。下面是**docker-tomcat**项目**/8.0/**下的Dockerfile：
+* 注：
+ * 源代码中一定要有Dockerfile，否则构建会失败，可以点击GitHub地址查看自己的项目。
+ * 系统会自动获取**Dokerfile**中EXPOSE的**容器端口**，如需重新设定，在项目构建完成后，在**项目详情页->操作->修改镜像**中
+
+下面是**docker-tomcat**项目**/8.0/**下的Dockerfile：
 
 ```
 FROM tifayuki/java:7
@@ -50,7 +53,7 @@ CMD ["/run.sh"]
 ```
 关于如何编写Dokerfile，可以参考英文官方文档 -> [编写Dockerfile](http://docs.docker.com/reference/builder/)，我们后续会提供中文版，并随时提供技术支持。
 
-我们在**Dockerfile位置**中填写**/8.0/**，**容器端口**中填写**Dokerfile**中EXPOSE的端口8080，并填写环境变量，如下图：
+我们在**Dockerfile位置**中填写**/8.0/**，并填写环境变量，如下图：
 
 ![addproject2](../images/ci/ci-addproject2.jpg)
 
