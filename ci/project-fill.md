@@ -1,4 +1,4 @@
-# 填写项目信息
+### 填写项目信息
 在上一节我们点击**Carrotzpc/docker-tomcat**，进入了添加项目页面，我们来看下都需要填写什么：
 
 ![addproject](../images/ci/ci-addproject.jpg)
@@ -18,7 +18,7 @@
 
 * 注：
  * 源代码中一定要有Dockerfile，否则构建会失败，可以点击GitHub地址查看自己的项目。
- * 系统会自动获取**Dokerfile**中EXPOSE的**容器端口**，如需重新设定，在项目构建完成后，在**项目详情页->操作->修改镜像**中
+ * 系统会自动获取**Dokerfile**中EXPOSE的**容器端口**，如需重新设定，在项目构建完成后，在**项目详情页->操作->修改镜像**中重新设定。
 
 下面是**docker-tomcat**项目**/8.0/**下的Dockerfile：
 
@@ -53,14 +53,14 @@ CMD ["/run.sh"]
 ```
 关于如何编写Dokerfile，可以参考英文官方文档 -> [编写Dockerfile](http://docs.docker.com/reference/builder/)，我们后续会提供中文版，并随时提供技术支持。
 
-我们在**Dockerfile位置**中填写**/8.0/**，并填写环境变量，如下图：
+我们在**Dockerfile位置**中填写**/8.0/**，并填写环境变量（默认值可为空），如下图：
 
 ![addproject2](../images/ci/ci-addproject2.jpg)
 
 点击**创建**，页面跳转到项目详情页，开始构建项目，静待片刻后项目构建完成。
 ![addproject3](../images/ci/ci-addproject3.jpg)
 
-注：有些项目需要用时会比较长，我们正在优化构建环境，后续在速度上会有较大提升。
+注：有些项目构建用时会比较长，我们正在优化构建环境，后续在速度上会有较大提升。
 
 
 _ The End _

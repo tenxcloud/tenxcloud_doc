@@ -9,7 +9,7 @@
        * [添加源代码](ci/project-listcoderepo.md)
        * [填写项目信息](ci/project-fill.md)
    * [管理我的项目](ci/project-manage.md)
-       * [快速构建](ci/project-fast-build.md)
+       * [构建项目](ci/project-fast-build.md)
        * [部署项目](ci/project-deploy.md)
        * [管理镜像](ci/project-image.md)
        * [其他操作](ci/project-other.md)
