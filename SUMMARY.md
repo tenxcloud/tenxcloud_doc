@@ -1,25 +1,4 @@
 # Summary
-
-<<<<<<< Updated upstream
-* [简介](README.md)
-* [容器服务](container/README.md)
-   * [新建一个容器](container/example1.md)
-   * [绑定域名](container/example2.md)
-* [持续集成](ci/README.md)
-   * [新建一个项目](ci/project-add.md)
-       * [添加源代码](ci/project-listcoderepo.md)
-       * [填写项目信息](ci/project-fill.md)
-   * [管理我的项目](ci/project-manage.md)
-       * [构建项目](ci/project-fast-build.md)
-       * [部署项目](ci/project-deploy.md)
-       * [管理镜像](ci/project-image.md)
-       * [其他操作](ci/project-other.md)
-   * [使用 tce 客户端](ci/client-download.md)
-* [镜像服务](registry/README.md)
-   * [部署一个镜像](registry/example1.md)
-* [主机管理](host/README.md)
-   * [添加一个主机](ci/example1.md)
-=======
 * [简介](doc/v1/README.md)
 * [容器服务](doc/v1/container/README.md)
    * [新建一个容器](doc/v1/container/example1.md)
@@ -39,5 +18,3 @@
 * [主机管理](doc/v1/host/README.md)
    * [添加一个主机](doc/v1/ci/example1.md)
 * [TenxCloud tce 客户端](doc/v1/client/README.md)
->>>>>>> Stashed changes
-
