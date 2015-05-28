@@ -14,6 +14,8 @@
        * [管理镜像](ci/project-image.md)
        * [其他操作](ci/project-other.md)
    * [使用 tce 客户端](ci/client-download.md)
+       * [快速部署Node.js应用](ci/samples-nodejs.md)
+       * [快速部署Java 应用](ci/samples-java.md)
 * [镜像服务](registry/README.md)
    * [部署一个镜像](registry/example1.md)
 * [主机管理](host/README.md)

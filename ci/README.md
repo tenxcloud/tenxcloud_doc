@@ -13,4 +13,6 @@
        * [管理镜像](project-image.md)
        * [其他操作](project-other.md)
    * [使用 tce 客户端](client-download.md)
+       * [快速部署Node.js应用](samples-nodejs.md)
+       * [快速部署Java 应用](samples-java.md)
 
