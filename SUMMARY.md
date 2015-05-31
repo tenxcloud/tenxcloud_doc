@@ -1,9 +1,11 @@
 # Summary
-* [Introduction](README.md)
-* [v1简介](doc/v1/README.md)
+
+* [介绍](README.md)
 * [容器服务](doc/v1/container/README.md)
-   * [新建一个容器](doc/v1/container/example1.md)
-   * [绑定域名](doc/v1/container/example2.md)
+   * [新建一个容器](doc/v1/container/create.md)
+   * [绑定域名](doc/v1/container/bind_domain.md)
+   * [停止/启动/重启容器](doc/v1/container/start_stop.md)
+   * [修改容器配置](doc/v1/container/update.md)
 * [持续集成](doc/v1/ci/README.md)
    * [新建一个项目](doc/v1/ci/project-add.md)
        * [添加源代码](doc/v1/ci/project-listcoderepo.md)
@@ -17,8 +19,9 @@
        * [快速部署Node.js应用](doc/v1/ci/samples-nodejs.md)
        * [快速部署Java 应用](doc/v1/ci/samples-java.md)
 * [镜像服务](doc/v1/registry/README.md)
-   * [部署一个镜像](doc/v1/registry/example1.md)
+   * [浏览镜像](doc/v1/registry/browse-images.md)
+   * [修改镜像配置](doc/v1/registry/config-image.md)
 * [主机管理](doc/v1/host/README.md)
-   * [添加一个主机](doc/v1/ci/example1.md)
-
+   * [添加一个主机](doc/v1/host/add-host.md)
+   * [部署应用到私有集群](doc/v1/host/deploy-app.md)
 

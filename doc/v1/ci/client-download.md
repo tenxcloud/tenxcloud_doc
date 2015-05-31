@@ -8,6 +8,8 @@
 #### **如何使用 tce 客户端**
 1.   在 [www.tenxcloud.com](https://www.tenxcloud.com "时速云") 上注册用户
 2.   登录并进入第二个功能块“集成”，点击绿色按钮“下载客户端”，在后面的页面中选择客户端的运行平台下载即可
+![tce1](../images/ci/tce-1.png)
+
 3.   为了使用方便，下载后将tce的路径加入到系统的PATH下，以便在任意目录均可运行。可以参考以下步骤：</br>
  **Windows**: [添加到系统Path](http://jingyan.baidu.com/article/db55b6099d1e0d4ba30a2fc0.html)</br>
  **Linux**:  [添加到系统Path](http://zhidao.baidu.com/link?url=psqItfkdfNFruHE9WS-phqcjqyYyyzOPHbvIquTCib_EdSTRz1Xpp4BYs0zsBxYh8yZvE-w33BdKxLKEV9nyqK)</br>

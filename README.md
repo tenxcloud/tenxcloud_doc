@@ -1,24 +1,6 @@
-TenxCloud 官方文档
+# 时速云(TenxCloud) 产品信息中心
 =======
-### How to use it:
-At first you should do this
-```
-$ git clone https://github.com/Carrotzpc/TenxCloud-DOC.git
-```
-Then install GitBook,GitBook can be installed from NPM using
-```
-$ npm install gitbook-cli -g
-```
-Create the directories and files for a book from SUMMARY.md file using
-```
-$ gitbook init
-```
-You can serve a repository as a book using:
-```
-$ gitbook serve
-```
-Or simply build the static website using:
 
-```
-$ gitbook build
-```
+TenxCloud 时速云作为国内最早进入容器即服务（Container as a Service）领域的创业公司之一，正在不断的在研究和打磨自己的 Docker 容器服务平台。
+
+时速云目前的功能主要包括“容器服务”、“持续集成”、“镜像服务”和“主机管理”，涵盖了实现容器服务的整个体系架构，权衡了平台未来对公有云、私有云以及混合云不同场景的扩展支持。这里是时速云产品的文档信息中心，涵盖产品的使用说明，案例分析，常见问题，问题定位等帮助信息，力争汇总各种有价值的信息，使用户更加容易方便的找到所需要的详细文档。
