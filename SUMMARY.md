@@ -1,6 +1,6 @@
 # Summary
-
-* [介绍](README.md)
+* [时速云官方文档](README.md)
+* [平台介绍](doc/README.md)
 * [容器服务](doc/v1/container/README.md)
    * [新建一个容器](doc/v1/container/create.md)
    * [绑定域名](doc/v1/container/bind_domain.md)
