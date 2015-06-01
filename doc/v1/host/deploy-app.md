@@ -1,6 +1,6 @@
 # 部署应用到私有集群
 节点添加成功后，便可以在集群的列表中显示出来。切换到容器服务板块，就可以更改容器部署的集群环境。
 
-![host1](../images/host/deploy-app-1.png)
+![host1](/images/host/deploy-app-1.png)
 
 

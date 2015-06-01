@@ -1,7 +1,7 @@
 ### 填写项目信息
 上一节我们选择**Carrotzpc/docker-tomcat**，进入了添加项目页面：
 
-![addproject](../images/ci/ci-addproject.jpg)
+![addproject](/images/ci/ci-addproject.jpg)
 
 下面列出了项目信息的相关表单，可以参考以下表格进行填写：
 
@@ -55,10 +55,10 @@ CMD ["/run.sh"]
 
 我们在**Dockerfile位置**中填写**/8.0/**，并填写环境变量（默认值可为空），如下图：
 
-![addproject2](../images/ci/ci-addproject2.jpg)
+![addproject2](/images/ci/ci-addproject2.jpg)
 
 点击 **“创建”**，页面跳转到项目详情页，开始构建该项目的第一个镜像。
-![addproject3](../images/ci/ci-addproject3.jpg)
+![addproject3](/images/ci/ci-addproject3.jpg)
 
 注：有些项目构建用时会比较长，我们正在优化构建环境，后续在速度上会有较大提升。
 
