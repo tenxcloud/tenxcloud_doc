@@ -1,13 +1,13 @@
 ### 部署项目
- ![manage4](/images/ci/ci-manage4.jpg)
+ ![manage4](/doc/v1/images/ci/ci-manage4.jpg)
 
 在项目详情页，点击**部署**，再点击 **“确认”**：
 
- ![manage5](/images/ci/ci-manage5.jpg)
+ ![manage5](/doc/v1/images/ci/ci-manage5.jpg)
 
 填写**容器名称**、**实例数量**，以及在添加项目时我们配置的环境变量**用户名**和**密码**，点击确认提交，页面会跳转到容器服务页面：
 
- ![manage6](/images/ci/ci-manage6.jpg)
+ ![manage6](/doc/v1/images/ci/ci-manage6.jpg)
 
 这样项目的最新镜像就部署成功了。
 

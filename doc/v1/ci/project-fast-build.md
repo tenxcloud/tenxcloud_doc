@@ -1,11 +1,11 @@
 ### 构建项目
 1. 快速构建
- ![manage2](/images/ci/ci-manage2.jpg)
+ ![manage2](/doc/v1/images/ci/ci-manage2.jpg)
 点击功能下**docker-tomcat**对应的绿色图标，再选择**确定**，即可进行快速构建。<br/>
 注：点击代码源列可以快速查看对应项目的源代码。
 
 2. 项目详情页构建项目
- ![manage3](/images/ci/ci-manage3.jpg)
+ ![manage3](/doc/v1/images/ci/ci-manage3.jpg)
 点击 **构建**，再点击 **确定** 即可重新构建项目。
 
 注：构建项目时会检查该项目有无“构建中”或“等待中”的项目，若有，后续的构建请求会进入等待队列，等待正在构建的镜像完成后再开始下一次构建。
