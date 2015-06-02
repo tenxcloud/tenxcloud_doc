@@ -4,7 +4,7 @@
 * [容器服务](doc/v1/container/README.md)
    * [新建一个容器](doc/v1/container/create.md)
    * [绑定域名](doc/v1/container/bind_domain.md)
-   * [停止/启动/重启容器](doc/v1/container/start_stop.md)
+   * [停止/启动/重启/删除容器](doc/v1/container/start_stop.md)
    * [修改容器配置](doc/v1/container/update.md)
 * [持续集成](doc/v1/ci/README.md)
    * [新建一个项目](doc/v1/ci/project-add.md)
