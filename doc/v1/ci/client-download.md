@@ -22,7 +22,7 @@
 *   `images`  查看所有tce构建的镜像，参数-a查看构建的所有镜像<br>
 *   `login`   登录 TenxCloud 容器引擎<br/>
 *   `logout`  退出 TenxCloud 容器引擎<br/>
-*   `logs <imageName>`    查看构建镜像的构建日志<br/>
+*   `logs <imageName>`    查看构建镜像的最近构建日志<br/>
 *   `push <imageName>`    构建镜像，将本地的文件push到TenxCloud
  容器引擎并构建镜像<br/>
 
