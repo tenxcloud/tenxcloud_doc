@@ -22,6 +22,7 @@
    * [浏览镜像](doc/v1/registry/browse-images.md)
    * [修改镜像配置](doc/v1/registry/config-image.md)
 * [主机管理](doc/v1/host/README.md)
+   * [添加一个集群](doc/v1/host/add-cluster.md)
    * [添加一个主机](doc/v1/host/add-host.md)
    * [部署应用到私有集群](doc/v1/host/deploy-app.md)
 
