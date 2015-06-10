@@ -20,11 +20,11 @@
        * [快速部署Node.js应用](doc/v1/ci/samples-nodejs.md)
        * [快速部署Java 应用](doc/v1/ci/samples-java.md)
        * [快速部署golang应用](doc/v1/ci/golang.md)
+       * [Q&A](doc/v1/ci/q&a.md)
 * [镜像服务](doc/v1/registry/README.md)
    * [浏览镜像](doc/v1/registry/browse-images.md)
    * [修改镜像配置](doc/v1/registry/config-image.md)
 * [主机管理](doc/v1/host/README.md)
-   * [添加一个集群](doc/v1/host/add-cluster.md)
    * [添加一个主机](doc/v1/host/add-host.md)
    * [部署应用到私有集群](doc/v1/host/deploy-app.md)
 
