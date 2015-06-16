@@ -43,7 +43,8 @@ tce 使用详解：
  5. 如果构建镜像过程中连接出了问题，中断了日志输出，或者想查看某一镜像的构建过程，输入<span style="color: #0000ff;">`tce logs <image name>`</span>，继续查看构建日志。
  6. 镜像创建成功后，你可以通过
  [镜像控制台](https://www.tenxcloud.com/console/docker-registry) -> “我的镜像” 查看；还可以定义该镜像的服务接口，比如容器端口、环境变量等。
-[![tce1](http://wordpress-zpvaz.tenxcloud.net:48126/wp-content/uploads/2015/05/tce11.png)](http://wordpress-zpvaz.tenxcloud.net:48126/wp-content/uploads/2015/05/tce31.png)[![tce3](http://wordpress-zpvaz.tenxcloud.net:48126/wp-content/uploads/2015/05/tce32.png)](http://wordpress-zpvaz.tenxcloud.net:48126/wp-content/uploads/2015/05/tce32.png)
+![tce1](/doc/v1/images/samples/port_path.png)
  5. 最后，进入到 “容器”
  控制台，就可以通过刚刚创建的镜像启动容器服务啦！
-[![tce2](http://wordpress-zpvaz.tenxcloud.net:48126/wp-content/uploads/2015/05/tce21.png)](http://wordpress-zpvaz.tenxcloud.net:48126/wp-content/uploads/2015/05/tce21.png)
+![tce1](/doc/v1/images/samples/tce_start.png)
+
