@@ -4,6 +4,8 @@
 
 1.首先在你的Java项目目录中创建一个Dockerfile文件，如果您已经添加了此文件，可以忽略此步。
 
+参考tomcatsample项目地址：https://github.com/tenxcloud/java-sample
+
 ```
 # Dockerfile to create a docker image
 # Base image
@@ -46,7 +48,5 @@ CMD ["/run.sh"]
 
 8.接下来就可以看到我们的tomcat项目了。
 ![tce1](/doc/v1/images/samples/tce_running_tomcat.png)
-
-附：tomcatsample项目地址：https://github.com/tenxcloud/java-sample
 
 

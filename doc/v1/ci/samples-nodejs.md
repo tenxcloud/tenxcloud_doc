@@ -4,6 +4,8 @@
 
 1.首先在你的node.js项目目录中创建一个Dockerfile文件，如果您已经添加了此文件，可以忽略此步。
 
+参考node.js项目地址：https://github.com/tenxcloud/docker-node-hello
+
 ```
 # Dockerfile to create a docker image
 # Base image

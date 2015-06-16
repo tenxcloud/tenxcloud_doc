@@ -4,6 +4,8 @@
 
 1.首先在你的Java项目目录中创建一个Dockerfile文件，如果您已经添加了此文件，可以忽略此步。
 
+参考gosample项目：https://github.com/tenxcloud/golang-sample.git
+
 ```
 # Dockerfile to create a docker image
 # Base image
@@ -45,7 +47,5 @@ CMD ["/run.sh"]
 
 8.接下来就可以看到我们的gosample项目了。
 ![tce1](/doc/v1/images/samples/gosample/tce_go_success.png)
-
-附：gosample项目地址：https://github.com/tenxcloud/golang-sample.git
 
 
