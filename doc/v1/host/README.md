@@ -3,6 +3,7 @@
 ![host1](/doc/v1/images/host/main.png)
 
 本章主要通过以下几个方面来介绍镜像服务的主要功能：
+   * [为什么使用"主机管理"](preface.md)  
    * [添加一个集群](add-cluster.md)  
    * [添加一个主机](add-host.md)
    * [部署应用到私有集群](deploy-app.md)

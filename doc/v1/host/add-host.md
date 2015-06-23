@@ -11,8 +11,15 @@
 ![host1](/doc/v1/images/host/add-host-4.png)
 
 注意：
-1、目前暂不支持添加基于SDN网络的主机和内网主机。
-2、如果您在机器上已经安装docker 1.5+, 脚本会跳过安装
-3、添加不同的主机需要使用不同的 命令，否则会添加失败
-4、允许把一台主机添加到多个集群中，以最后添加的集群为准，其他集群中该主机的状态均为"不可用"
-5、tenx-agent是一个守护进程，可以通过执行"service tenx-agent stop"来断开与集群的连接。tenx-agent终止后，docker进程也会终止，可以通过"service docker start"重新运行docker
+1、目前暂不支持添加内网主机，比如笔记本上安装的虚拟机。<br />
+2、aws和青云主机默认开启防火墙，添加以后，需要开启inbound udp 8285端口。创建容器后，需要开放 inbound tcp 容器端口。<br />
+在本例中，ubuntu container在主机52.10.36.208上的对外端口是49436，ssh对应的传输层协议是tcp<br />
+![host1](/doc/v1/images/host/add-host-5.png)
+![host1](/doc/v1/images/host/add-host-6.png)
+如果想偷懒的话，可以开放一个网段, 比如 40000-49999<br />
+![host1](/doc/v1/images/host/add-host-7.png)
+3、如果您在机器上已经安装docker 1.5+, 脚本会跳过安装<br />
+4、添加不同的主机需要使用不同的 命令，否则会添加失败<br />
+5、允许把一台主机添加到多个集群中，以最后添加的集群为准，其他集群中该主机的状态均为"不可用"<br />
+6、tenx-agent是一个守护进程，可以通过执行"service tenx-agent stop"来断开与集群的连接。tenx-agent终止后，docker进程也会终止，可以通过"service docker start"重新运行docker <br />
+7、目前支持的添加阿里云、青云、美团云、AWS上的主机，
