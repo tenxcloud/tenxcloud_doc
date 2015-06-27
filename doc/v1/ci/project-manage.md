@@ -3,7 +3,7 @@
 
 ![manage](/doc/v1/images/ci/ci-manage.jpg)
 
-* [构建项目](ci/project-fast-build.md)
-* [管理镜像](ci/project-image.md)
-* [部署项目](ci/project-deploy.md)
-* [其他操作](ci/project-other.md)
+* [构建项目](project-fast-build.md)
+* [管理镜像](project-image.md)
+* [部署项目](project-deploy.md)
+* [其他操作](project-other.md)
