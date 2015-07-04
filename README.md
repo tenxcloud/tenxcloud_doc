@@ -1,5 +1,4 @@
-# 时速云(TenxCloud) 产品信息中心
-=======
+# 时速云(TenxCloud) 产品帮助文档
 
 TenxCloud 时速云作为国内最早进入容器即服务（Container as a Service）领域的创业公司之一，正在不断的在研究和打磨自己的 Docker 容器服务平台。
 

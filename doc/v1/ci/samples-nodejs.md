@@ -4,6 +4,8 @@
 
 1.首先在你的node.js项目目录中创建一个Dockerfile文件，如果您已经添加了此文件，可以忽略此步。
 
+参考node.js项目地址：https://github.com/tenxcloud/docker-node-hello
+
 ```
 # Dockerfile to create a docker image
 # Base image
@@ -48,10 +50,10 @@ Unzip successfully...
 ```
 4.登录 www.tenxcloud.com，在“镜像板块”的“我的镜像”中，可以看到刚刚构建的“nodejssample”镜像。
 
-![tce1](/images/samples/tce_1.png)
+![tce1](/doc/v1/images/samples/tce_1.png)
 
 5.切换到“容器服务”，在私有镜像中就能看到自己的镜像，并创建相应的容器服务了：
-![tce1](/images/samples/tce_2.png)
+![tce1](/doc/v1/images/samples/tce_2.png)
 
 注意：如果镜像没有 expose 任何端口，将不能创建容器服务，我们也可以在“我的镜像”中选择镜像，并在“服务接口”中配置镜像的端口和环境变量等信息。
 

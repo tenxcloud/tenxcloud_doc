@@ -18,11 +18,14 @@
 #### **tce 用法说明书**
 
  **tce [选项]**<br/>
-*   help    查看帮助，列出所有tce命令<br/>
-*   login   登录 TenxCloud 容器引擎<br/>
-*   logout  退出 TenxCloud 容器引擎<br/>
-*   push    构建镜像，将本地的文件push到TenxCloud
- 容器引擎并构建镜像
+*   `help`    查看帮助，列出所有tce命令<br/>
+*   `images`  查看使用tce部署的镜像，使用参数 '-a'  查看TenxCloud上所有构建的镜像<br>
+*   `login`   登录 TenxCloud 容器引擎<br/>
+*   `logout`  退出 TenxCloud 容器引擎<br/>
+*   `logs <imageName>`    查看指定构建镜像的最近一次构建日志<br/>
+*   `push <imageName>`    构建镜像，将本地的文件push到TenxCloud
+ 容器引擎并构建镜像<br/>
+
 
 注：我们还在继续添加更多更酷的选项，让您更便捷的通过终端操作TenxCloud 容器引擎，尽请期待！
 
@@ -36,9 +39,12 @@ tce 使用详解：
  `ADD testDir/ /opt` 将项目testDir目录下所有文件打包<br/>
  `ADD testDir/file*.txt /opt` * 匹配<br/>
  `ADD testDir/file?.txt /opt` ? 匹配
- 4. 镜像创建成功后，你可以通过
+ 4. 输入<span style="color: #0000ff;">`tce images <image name>`</span>，查看通过tce构建的所有镜像。或者输入<span style="color: #0000ff;">`tce images <image name> -a`</span>，查看所有构建镜像（包括GitHub等）
+ 5. 如果构建镜像过程中连接出了问题，中断了日志输出，或者想查看某一镜像的构建过程，输入<span style="color: #0000ff;">`tce logs <image name>`</span>，继续查看构建日志。
+ 6. 镜像创建成功后，你可以通过
  [镜像控制台](https://www.tenxcloud.com/console/docker-registry) -> “我的镜像” 查看；还可以定义该镜像的服务接口，比如容器端口、环境变量等。
-[![tce1](http://wordpress-zpvaz.tenxcloud.net:48126/wp-content/uploads/2015/05/tce11.png)](http://wordpress-zpvaz.tenxcloud.net:48126/wp-content/uploads/2015/05/tce31.png)[![tce3](http://wordpress-zpvaz.tenxcloud.net:48126/wp-content/uploads/2015/05/tce32.png)](http://wordpress-zpvaz.tenxcloud.net:48126/wp-content/uploads/2015/05/tce32.png)
+![tce1](/doc/v1/images/samples/port_path.png)
  5. 最后，进入到 “容器”
  控制台，就可以通过刚刚创建的镜像启动容器服务啦！
-[![tce2](http://wordpress-zpvaz.tenxcloud.net:48126/wp-content/uploads/2015/05/tce21.png)](http://wordpress-zpvaz.tenxcloud.net:48126/wp-content/uploads/2015/05/tce21.png)
+![tce1](/doc/v1/images/samples/tce_start.png)
+
