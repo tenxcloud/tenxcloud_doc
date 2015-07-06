@@ -23,7 +23,7 @@
        * [其他操作](doc/v1/ci/project-other.md)
    * [使用 tce 客户端](doc/v1/ci/client-download.md)
        * [快速部署Node.js应用](doc/v1/ci/samples-nodejs.md)
-       * [快速部署Java 应用](doc/v1/ci/samples-java.md)
+       * [快速部署Java应用](doc/v1/ci/samples-java.md)
        * [快速部署golang应用](doc/v1/ci/golang.md)
        * [Q&A](doc/v1/ci/q&a.md)
 * [镜像服务](doc/v1/registry/README.md)
