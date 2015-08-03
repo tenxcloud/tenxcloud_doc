@@ -9,6 +9,7 @@
        * [填写项目信息](project-fill.md)
    * [管理我的项目](project-manage.md)
        * [快速构建](project-fast-build.md)
+       * [如何选择构建节点](select-build-agent.md)
        * [部署项目](project-deploy.md)
        * [管理镜像](project-image.md)
        * [其他操作](project-other.md)
