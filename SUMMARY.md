@@ -26,7 +26,7 @@
        * [快速部署Node.js应用](doc/v1/ci/samples-nodejs.md)
        * [快速部署Java应用](doc/v1/ci/samples-java.md)
        * [快速部署golang应用](doc/v1/ci/golang.md)
-       * [Q&A](doc/v1/ci/q&a.md)
+       * [FAQ](doc/v1/ci/FAQ.md)
 * [镜像服务](doc/v1/registry/README.md)
    * [浏览镜像](doc/v1/registry/browse-images.md)
    * [修改镜像配置](doc/v1/registry/config-image.md)
@@ -35,4 +35,5 @@
    * [添加一个集群](doc/v1/host/add-cluster.md)
    * [添加一个主机](doc/v1/host/add-host.md)
    * [部署应用到私有集群](doc/v1/host/deploy-app.md)
-
+   * [如何卸载Agent](doc/v1/host/remove-agent.md)
+   * [FAQ](doc/v1/host/FAQ.md)

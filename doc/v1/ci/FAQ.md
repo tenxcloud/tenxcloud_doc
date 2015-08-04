@@ -1,4 +1,4 @@
-# Q&A
+# FAQ
 
 1.如果在push的过程中，出现了如下的错误提示。
 ![tce1](/doc/v1/images/samples/tce_notice/transform_error.png)

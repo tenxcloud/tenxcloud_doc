@@ -10,16 +10,10 @@
 ![host1](/doc/v1/images/host/add-host-3.png)
 ![host1](/doc/v1/images/host/add-host-4.png)
 
-注意：
-1、目前暂不支持添加内网主机，比如笔记本上安装的虚拟机。<br />
-2、aws和青云主机默认开启防火墙，添加以后，需要开启inbound udp 8285端口。创建容器后，需要开放 inbound tcp 容器端口。<br />
-在本例中，ubuntu container在主机52.10.36.208上的对外端口是49436，ssh对应的传输层协议是tcp<br />
-![host1](/doc/v1/images/host/add-host-5.png)
-![host1](/doc/v1/images/host/add-host-6.png)
-如果想偷懒的话，可以开放一个网段, 比如 40000-49999<br />
-![host1](/doc/v1/images/host/add-host-7.png)
-3、如果您在机器上已经安装docker 1.5+, 脚本会跳过安装<br />
-4、添加不同的主机需要使用不同的 命令，否则会添加失败<br />
-5、允许把一台主机添加到多个集群中，以最后添加的集群为准，其他集群中该主机的状态均为"不可用"<br />
-6、tenx-agent是一个守护进程，可以通过执行"service tenx-agent stop"来断开与集群的连接。tenx-agent终止后，docker进程也会终止，可以通过"service docker start"重新运行docker <br />
-7、目前支持的添加阿里云、青云、美团云、AWS上的主机，
+<h3>注意：</h3>
+<strong>1、对于内网机器，需要能够访问外网才能添加。</strong>青云、ucloud、腾讯云等基于SDN网络的机器，如果有公网ip，则直接添加即可；如果没有分配公网ip，则必须自己搭建路由(如何搭建参考 IaaS厂商的文档）。<br />
+<strong>2、aws、青云、ucloud和腾讯云上的机器默认开启防火墙，需要手动设置防火墙规则。</strong>添加节点之前，需要开启inbound udp 8285和tcp 10250/16000端口（8285用于集群网络组建，10250用于与集群master通信, 16000用于探测网络状态）。创建容器以后，如果允许外网访问容器，则还需要开启容器应用的对外端口。<br />
+在本例中，ubuntu container在主机52.10.36.208上的对外端口是49436 (ssh对应的传输层协议是tcp)<br />
+<strong>3、添加不同的主机需要使用不同的 命令，否则会添加失败</strong><br />
+<strong>4、允许把一台主机添加到多个集群中，以最后添加的集群为准，其他集群中该主机的状态均为"不可用"</strong><br />
+<strong>5、tenx-agent是一个守护进程，可以通过执行"service tenx-agent stop"来断开与集群的连接。</strong>tenx-agent终止后，docker进程也会终止，可以通过"service docker start"重新运行docker <br />

@@ -7,3 +7,5 @@
    * [添加一个集群](add-cluster.md)  
    * [添加一个主机](add-host.md)
    * [部署应用到私有集群](deploy-app.md)
+   * [如何卸载Agent](remove-agent.md)
+   * [FAQ](FAQ.md)
