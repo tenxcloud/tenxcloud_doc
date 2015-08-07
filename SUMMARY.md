@@ -37,3 +37,7 @@
    * [部署应用到私有集群](doc/v1/host/deploy-app.md)
    * [如何卸载Agent](doc/v1/host/remove-agent.md)
    * [FAQ](doc/v1/host/FAQ.md)
+       * [如何搭建自己的路由和子网？](doc/v1/host/faq-question-1.md)
+       * [是否可以添加本地虚拟机？](doc/v1/host/faq-question-2.md)
+       * [私有集群容器一直处于"启动中"](doc/v1/host/faq-question-3.md)
+       * [如何设置防火墙](doc/v1/host/faq-question-4.md)
