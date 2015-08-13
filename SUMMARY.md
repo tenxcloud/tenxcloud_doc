@@ -28,7 +28,7 @@
        * [快速部署golang应用](doc/v1/ci/golang.md)
    * [FAQ](doc/v1/ci/FAQ.md)
        * [tce push镜像时出错怎么办？](doc/v1/ci/faq-tce-push-error.md)
-       * [如何添加私有代码仓库？](doc/v1/ci/faq-how-to-add-private-code-repositories.md)
+       * [时速云支持私有代码仓库构建吗？](doc/v1/ci/faq-how-to-build-private-code-repositories.md)
 * [镜像服务](doc/v1/registry/README.md)
    * [浏览镜像](doc/v1/registry/browse-images.md)
    * [修改镜像配置](doc/v1/registry/config-image.md)
