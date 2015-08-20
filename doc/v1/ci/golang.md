@@ -1,8 +1,8 @@
 # 快速部署golang应用
 
-如果您需要快速部署一个Java的应用到TenxCloud的容器平台，可以使用如下步骤:
+如果您需要快速部署一个golang的应用到TenxCloud的容器平台，可以使用如下步骤:
 
-1.首先在你的Java项目目录中创建一个Dockerfile文件，如果您已经添加了此文件，可以忽略此步。
+1.首先在你的golang项目目录中创建一个Dockerfile文件，如果您已经添加了此文件，可以忽略此步。
 
 参考gosample项目：https://github.com/tenxcloud/golang-sample.git
 

@@ -3,4 +3,4 @@
 常见问题
 
    * [tce push镜像时出错怎么办？](faq-tce-push-error.md)
-   * [如何添加私有代码仓库？](faq-how-to-add-private-code-repositories.md)
+   * [时速云支持私有代码仓库构建吗？](faq-how-to-build-private-code-repositories.md)
