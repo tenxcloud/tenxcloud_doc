@@ -43,3 +43,4 @@
        * [是否可以添加本地虚拟机？](doc/v1/host/faq-question-2.md)
        * [私有集群容器一直处于"启动中"](doc/v1/host/faq-question-3.md)
        * [如何设置防火墙](doc/v1/host/faq-question-4.md)
+       * [如何在IaaS平台上创建AccessKeyId和SecretAccessKey](doc/v1/host/faq-question-5.md)
