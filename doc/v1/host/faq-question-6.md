@@ -18,7 +18,7 @@
  * __编辑"入站(inbound)"规则。点击"编辑"->"添加规则"。__每条规则有四个字段。"类型"包括tcp、udp、icmp等几大类。ssh对应tcp 22，http对应tcp 80，dns对应udp 53。开通icmp才能对主机进行ping和traceroute操作。"来源"包括任意ip(0.0.0.0/0)、我的ip(检测当前您登陆aws主站的机器出口ip）和自定义ip(指定一个内网/外网网段)
  
 ![host1](/doc/v1/images/host/aws/aws-firewall-5.png)
- * __添加"主机管理"所需规则。__主机管理需要 udp 8285(任意ip), tcp 10250(任意ip)和容器端口（tcp 40000以上，任意ip）。为了便于ssh登陆，这里放开了 tcp 22。
+ * __添加"主机管理"所需规则。__主机管理需要 udp 8285(任意ip 网络通信), tcp 4194 (任意ip 主机和容器运行信息统计)，tcp 20248-10255(任意ip 日志采集)，tcp 16000(任意ip 网络类型探测) 和容器端口（tcp 20000-59999以上，任意ip，也可以在创建容器后按需开通）。为了便于ssh登陆，这里放开了 tcp 22。
  
 ![host1](/doc/v1/images/host/aws/aws-firewall-6.png)
  * __检查防火墙规则。__
