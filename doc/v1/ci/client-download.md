@@ -20,13 +20,14 @@
  **tce [选项]**<br/>
 *   `exec <app_name> <command>...` 在应用内部执行Linux命令
 *   `help`    查看帮助，列出所有tce命令<br/>
-*   `projects`  查看使用tce部署的项目，使用参数 '-a'  查看TenxCloud上所有构建的项目<br>
 *   `login`   登录 TenxCloud 容器引擎<br/>
 *   `logout`  退出 TenxCloud 容器引擎<br/>
 *   `logs <project Name>`    查看指定构建镜像的最近一次构建日志<br/>
+*   `projects`  查看使用tce部署的项目，使用参数 '-a'  查看TenxCloud上所有构建的项目<br>
 *   `ps`                  查看当前账户下的应用
 *   `push <project Name>:<tag>`    构建镜像，将本地的文件push到TenxCloud
  容器引擎并构建镜像<br/>
+*   `run` 根据本地的json文件，创建一个时速云应用
 *   `version`查看当前版本，如果有新版本，会提示更新
 
 
@@ -44,12 +45,12 @@ tce 使用详解：
  `ADD testDir/file*.txt /opt` * 匹配<br/>
  `ADD testDir/file?.txt /opt` ? 匹配
 
- 4. 输入<span style="color: #0000ff;">`tce projects`</span>，查看通过tce构建的所有项目。或者输入<span style="color: #0000ff;">`tce projects -a`</span>，查看所有构建项目（包括GitHub等）
  5. 如果构建项目过程中连接出了问题，中断了日志输出，或者想查看某一项目的构建过程，输入<span style="color: #0000ff;">`tce logs <project name>`</span>，继续查看构建日志。
  6. 镜像创建成功后，你可以通过
  [镜像控制台](https://www.tenxcloud.com/console/docker-registry) -> “我的镜像” 查看；还可以定义该镜像的服务接口，比如容器端口、环境变量等。
 ![tce1](/doc/v1/images/samples/port_path.png)
- 5. 最后，进入到 “容器”
- 控制台，就可以通过刚刚创建的镜像启动容器服务啦！
+ 5. 接下来我们就可以根据这个镜像创建容器了，一种方法是进入到 “容器”
+ 控制台，令一种方法是通过`tce run`创建容器。这样我们就成功启动了一个容器服务啦！
 ![tce1](/doc/v1/images/samples/tce_start.png)
-
+ 4. 最后输入<span style="color: #0000ff;">`tce projects`</span>，查看通过tce构建的所有项目。或者输入<span style="color: #0000ff;">`tce projects -a`</span>，查看所有构建项目（包括GitHub等）
+ 8. 如果想对应用内部进行操作，可以使用`tce exec`命令来查询日志，调试问题等等。

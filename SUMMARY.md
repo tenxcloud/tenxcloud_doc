@@ -23,6 +23,7 @@
        * [管理镜像](doc/v1/ci/project-image.md)
        * [其他操作](doc/v1/ci/project-other.md)
    * [使用 tce 客户端](doc/v1/ci/client-download.md)
+       * [命令详解](doc/v1/ci/fasdf.md)
        * [快速部署Node.js应用](doc/v1/ci/samples-nodejs.md)
        * [快速部署Java应用](doc/v1/ci/samples-java.md)
        * [快速部署golang应用](doc/v1/ci/golang.md)
@@ -41,3 +42,4 @@
        * [是否可以添加本地虚拟机？](doc/v1/host/faq-question-2.md)
        * [私有集群容器一直处于"启动中"](doc/v1/host/faq-question-3.md)
        * [如何设置防火墙](doc/v1/host/faq-question-4.md)
+
