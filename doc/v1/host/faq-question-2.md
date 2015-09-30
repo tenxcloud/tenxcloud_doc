@@ -11,11 +11,11 @@ b. 向集群中添加虚拟机成功 （时速云控制台"主机"->"新建集�
 ![host1](/doc/v1/images/host/faq-vm-net-4.png)
 
 c. 创建helloworld容器成功（时速云控制台）
-	
+
 ![host1](/doc/v1/images/host/faq-vm-net-2.png)
 
 d. 宿主机上浏览器中访问helloworld容器
-	
+
 ![host1](/doc/v1/images/host/faq-vm-net-3.png)
 
 ### 注意：如果虚拟机网络拓扑发生变化，需要重新添加虚拟机节点到集群中

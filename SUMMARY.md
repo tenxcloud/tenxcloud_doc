@@ -27,7 +27,9 @@
        * [快速部署Node.js应用](doc/v1/ci/samples-nodejs.md)
        * [快速部署Java应用](doc/v1/ci/samples-java.md)
        * [快速部署golang应用](doc/v1/ci/golang.md)
-       * [FAQ](doc/v1/ci/FAQ.md)
+   * [FAQ](doc/v1/ci/FAQ.md)
+       * [tce push镜像时出错怎么办？](doc/v1/ci/faq-tce-push-error.md)
+       * [时速云支持私有代码仓库构建吗？](doc/v1/ci/faq-how-to-build-private-code-repositories.md)
 * [镜像服务](doc/v1/registry/README.md)
    * [浏览镜像](doc/v1/registry/browse-images.md)
    * [修改镜像配置](doc/v1/registry/config-image.md)
@@ -42,4 +44,4 @@
        * [是否可以添加本地虚拟机？](doc/v1/host/faq-question-2.md)
        * [私有集群容器一直处于"启动中"](doc/v1/host/faq-question-3.md)
        * [如何设置防火墙](doc/v1/host/faq-question-4.md)
-
+       * [如何在IaaS平台上创建AccessKeyId和SecretAccessKey](doc/v1/host/faq-question-5.md)
