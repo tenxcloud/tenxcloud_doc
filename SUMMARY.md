@@ -12,7 +12,7 @@
    * [绑定域名](doc/v1/container/bind_domain.md)
    * [停止/启动/重启/删除容器](doc/v1/container/start_stop.md)
    * [修改容器配置](doc/v1/container/update.md)
-* [持续集成](doc/v1/ci/README.md)
+* [代码构建](doc/v1/ci/README.md)
    * [新建一个项目](doc/v1/ci/project-add.md)
        * [添加源代码](doc/v1/ci/project-listcoderepo.md)
        * [填写项目信息](doc/v1/ci/project-fill.md)
@@ -45,3 +45,4 @@
        * [私有集群容器一直处于"启动中"](doc/v1/host/faq-question-3.md)
        * [如何设置防火墙](doc/v1/host/faq-question-4.md)
        * [如何在IaaS平台上创建AccessKeyId和SecretAccessKey](doc/v1/host/faq-question-5.md)
+* [Stack](doc/v1/stack/README.md)

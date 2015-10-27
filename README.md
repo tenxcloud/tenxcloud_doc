@@ -6,6 +6,7 @@
 
 * [新手指引](doc/v1/getting_started/README.md)
 * [容器服务](doc/v1/container/README.md)
-* [持续集成](doc/v1/ci/README.md)
+* [代码构建](doc/v1/ci/README.md)
 * [镜像服务](doc/v1/registry/README.md)
 * [主机管理](doc/v1/host/README.md)
+* [Stack](doc/v1/stack/README.md)
