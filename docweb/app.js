@@ -102,7 +102,7 @@ app.use(morgan('dev'));
 app.use(require('method-override')());
 
 app.set('port', 3002);
-app.set('host', 'localhost');
+app.set('host', '0.0.0.0');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'html');
 app.engine('html', require('ejs-mate-var'));
