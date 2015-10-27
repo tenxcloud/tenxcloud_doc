@@ -1,6 +1,6 @@
 # Summary
 
-* [TenxCloud时速云文档](README.md)
+* [时速云帮助文档](README.md)
 * [平台介绍](doc/README.md)
 * [新手指引](doc/v1/getting_started/README.md)
    * [什么是容器服务](doc/v1/getting_started/what-is-container.md)

@@ -1,0 +1,29 @@
+{
+  "name": "tenxnginx",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "ejs-mate-var": "1.1.0",
+    "escape-html": "*",
+    "express": "4.12.2",
+    "express-partials": "*",
+    "compression": "1.2.0",
+    "express-session": "1.9.1",
+    "morgan": "*",
+    "log4js": "0.6.12",
+    "ejs": "*",
+    "method-override": "1.0.2",
+    "cookie-parser": "1.3.3",
+    "docker-registry-client": "*",
+    "superagent": "*",
+    "body-parser": "1.9.1"
+  },
+  "devDependencies": {
+    "mocha": "~1.12.0",
+    "should": "2.1.1",
+    "mockery": "~1.4.0"
+  }
+}

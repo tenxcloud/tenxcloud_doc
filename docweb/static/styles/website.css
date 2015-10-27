@@ -1,0 +1,30 @@
+body{
+  height: calc(100% - 65px);
+  font-family: "Microsoft YaHei",Arial,"Hiragino Sans GB",STHeiti,"WenQuanYi Micro Hei",SimSun,sans-serif;
+}
+.book .book-summary {background: #EBEFF1;}
+.book .book-summary ul.summary li.active>a, .book .book-summary ul.summary li a:hover{
+  background: #fff;
+}
+.fixed-row {
+  width: 98%;
+}
+#nav-top {
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.175);
+    background-clip: padding-box;
+    background: rgba(255, 255, 255, 0.9)
+}
+#nav-top li a {color: #333}
+#nav-top ul.c_navbar li a.font_size {border: 1px solid #666}
+.book .book-body .navigation.navigation-next{right: 10px;}
+.book-search>input{border:1px solid #eee;}
+header ul.c_navbar{margin-right: 20px;}
+.header-actions:hover b.caret{
+  transition:all 0.3s ease-in-out;
+  -webkit-transform:rotate(-180deg);
+  -moz-transform:rotate(-180deg);
+  -ms-transform:rotate(-180deg);
+  transform:rotate(-180deg);
+}
+img{box-shadow: 0 0px 15px rgba(0,0,0,0.35);}
+

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TenxCloud时速云 文档</title>
+  <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="/css/index-top.css">
+   <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+ <!--[if (gt IE 6)&(lt IE 9)]>
+    <h1 style='color:red;text-align:center;'>
+      '你好，你的浏览器版本过低，升级可正常访问'
+    </h1>
+    <style type="text/css">section{display:none}h1{height:200px;line-height: 200px;display:block;}</style>
+<![endif]-->
+  <!-- <script src="/lib/jquery/jquery-2.1.0.min.js"></script> -->
+<header id="nav-top">
+  <nav id="main-nav" class="navbar navbar-default" role="navigation">
+    <div class="container fixed-row">
+        <div class="row">
+            <div class="navbar-header">
+                <button type="button" class="toggle navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-top-collapse">
+                <span class="sr-only"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a href="https://www.tenxcloud.com"><span class="logo"></span></a>
+            </div>
+            <div class="navbar-collapse navbar-top-collapse collapse" style="height: 1px;">
+              <ul class="nav navbar-nav navbar-right z_navbar">
+                  <li class="header-products"><a href="/products">产品</a></li>
+                  <li><a href="/price">价格</a></li>
+                  <% if (typeof url != 'undefined' && url == 'appstore') { %>
+                  <li><a style="color: #4280cb" href="/marketplace">镜像</a></li>
+                  <% } else { %>
+                  <li><a href="/marketplace">镜像</a></li>
+                  <% } %>
+                  <li class="header-doc">
+                    <a href="/doc" target="_block">文档</a>
+                    <div class="nav-new" id="nav-doc">
+                      <div class="rows"></div>
+                      <a href="/doc" target="_blank" class="li-new">帮助文档</a>
+                      <a href="/tutorial" class="li-new">视频教程</a>
+                      <a href="http://study.tenxcloud.com/" class='li-new' target="_block">入门实践</a>
+                    </div>
+                  </li>
+                  <li><a href="/invite" class="global-notice">活动</a></li>
+                  <li><a href="http://blog.tenxcloud.com" target="_block">博客</a></li>
+                  <li><a href="/download">下载</a></li>
+              </ul>
+            </div>
+
+        </div>
+    </div>
+  </nav>
+</header>
+  <!-- <iframe id="iframeDoc" src="index.html" style='width:100%;min-height:100%;position:fixed;top:65px;border:0px;'> -->
+  <!-- </iframe> -->
+  <%- include(docPath) %>
+  <script>
+    if('ontouchend' in document.body){
+      $('body').append('<script src="/lib/bootstrap/js/index-bootstrap.min.js">');
+    }else{
+      $('.header-doc').hover(function() {
+          $('#nav-doc').stop().show();
+      }, function() {
+          $('#nav-doc').stop().hide();
+      });
+      $('.header-products').hover(function() {
+          $('#nav-products').stop().show();
+      }, function() {
+          $('#nav-products').stop().hide();
+      });
+      $('.header-actions').hover(function(){
+          $('.select_go').stop().show();
+      }, function(){
+          $('.select_go').stop().hide();
+      });
+    }
+
+    $(document).on('click','a[href="../../../index.html"]',function(event){
+      // alert('请求完成');
+      window.location = '/doc/index.html';
+    });
+    $(document).on('click','a[href="../index.html"]',function(event){
+      // alert('请求完成');
+      window.location = '/doc/index.html';
+    });
+
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?a266f3d40214e1e5de30ca3b8c77394a";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+</body>
+</html>

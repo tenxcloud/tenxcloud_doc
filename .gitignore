@@ -1,0 +1,7 @@
+#过滤文件夹
+_book/
+docweb/node_modules/
+docweb/logs/
+.DS_Store
+nohup.out
+
