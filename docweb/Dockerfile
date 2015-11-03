@@ -5,7 +5,7 @@
 FROM node
 MAINTAINER TenxCloud Team <service@tenxcloud.com>
 
-# Install nodebb
+# Add files
 RUN mkdir -p /opt/code
 ADD . /opt/code
 
