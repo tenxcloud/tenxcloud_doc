@@ -46,19 +46,3 @@
        * [如何设置防火墙](doc/v1/host/faq-question-4.md)
        * [如何在IaaS平台上创建AccessKeyId和SecretAccessKey](doc/v1/host/faq-question-5.md)
 * [Stack](doc/v1/stack/README.md)
-* [最佳实践](doc/v1/best_practice/README.md)
-   * [时速云使用技巧](doc/v1/best_practice/techniques.md)
-   * [如何部署我的代码](doc/v1/best_practice/deploy-code.md)
-       * [部署PHP代码](doc/v1/best_practice/deploy-php.md)
-       * [部署Java代码](doc/v1/best_practice/deploy-java.md)
-       * [部署Node.js代码](doc/v1/best_practice/deploy-node.md)
-       * [部署Python代码](doc/v1/best_practice/deploy-python.md)
-       * [部署Golang代码](doc/v1/best_practice/deploy-golang.md)
-   * [如何写Dockerfile](doc/v1/best_practice/how-to-write-dockerfile.md)
-   * [如何使用持续集成和持续部署](doc/v1/best_practice/how-to-use-ci-and-cd.md)
-   * [创建一个有状态和无状态的服务](doc/v1/best_practice/create-statefull-stateless-service.md)
-   * [创建一个完整的生产环境应用](doc/v1/best_practice/create-a-production-env.md)
-* [常见问题](doc/v1/faq/README.md)
-
-
-

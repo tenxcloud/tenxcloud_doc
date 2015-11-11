@@ -45,9 +45,12 @@ exports.index = function(req, res) {
 }
 
 exports.welcome = function(req, res){
-  res.render('doc/doc', {docPath: 'index.html'});
+  //res.render('doc/doc', {docPath: 'index.html'});
+  res.redirect('/doc');
 }
 
+/**
 exports.redirectDoc = function(req, res){
-  res.redirect('/doc/index.html');
+  res.redirect('http://doc.tenxcloud.com');
 }
+**/

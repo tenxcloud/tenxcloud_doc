@@ -109,7 +109,7 @@ app.engine('html', require('ejs-mate-var'));
 
 // routes
 app.get('/', routes.welcome);
-app.get('/index.html', routes.redirectDoc);
+app.get('/index.html', routes.index);
 app.get('/doc', routes.index);
 app.get('/doc/:version', routes.index);
 app.get('/doc/:version/:pathone', routes.index);
