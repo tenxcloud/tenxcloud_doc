@@ -46,3 +46,13 @@
        * [如何设置防火墙](doc/v1/host/faq-question-4.md)
        * [如何在IaaS平台上创建AccessKeyId和SecretAccessKey](doc/v1/host/faq-question-5.md)
 * [Stack](doc/v1/stack/README.md)
+* [使用开放 API](doc/v1/api/README.md)
+   * [获取 API token](doc/v1/api/intro.md)
+   * [使用详细说明](doc/v1/api/detail.md)
+       * [API 服务状态](doc/v1/api/status.md)
+       * [用户信息](doc/v1/api/auth.md)
+       * [服务区信息](doc/v1/api/regions.md)
+       * [服务](doc/v1/api/services.md)
+       * [服务实例](doc/v1/api/instances.md)
+   * [通过 swagger UI 查看](doc/v1/api/api_swagger.md)
+
