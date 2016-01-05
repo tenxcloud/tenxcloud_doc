@@ -63,7 +63,6 @@
               {
                 "name": "volumeName1",
                 "disk_name": "disk1",
-                "type": "rbd",
                 "fsType": "ext4",
                 "is_ready_only": false
               }
@@ -137,7 +136,6 @@
         {
           "name": "volumeName1",
           "disk_name": "disk1",
-          "type": "rbd",
           "fsType": "ext4",
           "is_ready_only": false
         }
@@ -201,13 +199,10 @@ request_body 示例：
         {
           "name": "volumeName1",
           "disk_name": "disk1",
-          "type": "rbd",
-          "fsType": "ext4",
           "is_ready_only": false
         }
       ],
       "sync_timezone", true,
-      “default_domain_name“: "myubuntu-demox.tenxapp.com",
       ”binding_domain_name”: [
         "www.xxxx.cn"
       ]
@@ -263,7 +258,6 @@ request_body 示例：
         {
           "name": "volumeName1",
           "disk_name": "disk1",
-          "type": "rbd",
           "fsType": "ext4",
           "is_ready_only": false
         }

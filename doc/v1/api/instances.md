@@ -57,7 +57,6 @@
           {
             "name", "volumeName1",
             "disk_name", "disk1",
-            "type": "rbd",
             "fsType": "ext4",
             "is_ready_only": false
           }
