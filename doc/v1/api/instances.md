@@ -70,11 +70,11 @@
 
 ### 获取服务实例日志
 
-    GET /v1/regions/{region}/services/{name}/instances/{name}/logs?start_time={start_time}&end_time={end_time}
+    GET /v1/regions/{region}/services/{name}/instances/{name}/logs?date={date}&from={from_number}&size={total_size}
 
 请求示例:
 
-    curl "https://api.tenxcloud.com/v1/regions/beijing1/services/service_name/instances/instance1/logs?start_time=2015.12.29-13:30:00&end_time=2015.12.29-13:32:00" -H "username:[user_name]" -H "Authorization: token [api_token]"
+    curl "https://api.tenxcloud.com/v1/regions/beijing1/services/service_name/instances/instance1/logs?date=2015.12.29&from=0&size=100" -H "username:[user_name]" -H "Authorization: token [api_token]"
 
 响应示例：
 

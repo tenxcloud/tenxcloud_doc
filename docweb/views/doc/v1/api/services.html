@@ -38,7 +38,7 @@
     
 
         
-    <div class="book" data-level="8.2.4" data-basepath="../../.." data-revision="Tue Jan 05 2016 17:07:57 GMT+0800 (CST)">
+    <div class="book" data-level="8.2.4" data-basepath="../../.." data-revision="Thu Jan 07 2016 17:51:33 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -1358,9 +1358,9 @@ binding_domain_name: &#x670D;&#x52A1;&#x6240;&#x7ED1;&#x5B9A;&#x7684;&#x57DF;&#x
 &#x5176;&#x4ED6;&#x9519;&#x8BEF;&#x53C2;&#x89C1;&#x6587;&#x6863;&#x5E95;&#x90E8;
 </code></pre><h3 id="%E8%8E%B7%E5%8F%96%E6%9C%8D%E5%8A%A1%E6%97%A5%E5%BF%97">&#x83B7;&#x53D6;&#x670D;&#x52A1;&#x65E5;&#x5FD7;</h3>
 <p>&#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x670D;&#x52A1;&#x67D0;&#x5929;&#x7684;&#x65E5;&#x5FD7;</p>
-<pre><code>GET /v1/regions/{region}/services/{name}/logs?start_time={start_time}&amp;end_time={end_time}
+<pre><code>GET /v1/regions/{region}/services/{name}/logs?date={date}&amp;from={from_number}&amp;size={total_size}
 </code></pre><p>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;:</p>
-<pre><code>curl &quot;https://api.tenxcloud.com/v1/regions/beijing1/services/service_name/logs?start_time=2015.12.29-13:30:00&amp;end_time=2015.12.29-13:32:00&quot; -H &quot;username:[user_name]&quot; -H &quot;Authorization: token [api_token]&quot;
+<pre><code>curl &quot;https://api.tenxcloud.com/v1/regions/beijing1/services/service_name/logs?date=2015.12.29&amp;from=0&amp;size=100&quot; -H &quot;username:[user_name]&quot; -H &quot;Authorization: token [api_token]&quot;
 </code></pre><p>&#x54CD;&#x5E94;&#x793A;&#x4F8B;&#xFF1A;</p>
 <pre><code>[
   {
