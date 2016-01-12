@@ -1,12 +1,14 @@
 {
     "gitbook": ">=2.0.0",
     "title": "TenxCloud 时速云",
-    "description": "This is such a great book!",
+    "description": "TenxCloud 时速云文档中心",
     "language": "cn",
     "styles": {
       "website": "styles/website.css"
-      },
+    },
     "variables": {
         "myTest": "Hello World"
-    }
+    },
+    "plugins": ["toggle-chapters"]
+    // "plugins": ["expandable-chapters"]
 }
