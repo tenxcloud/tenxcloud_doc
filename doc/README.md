@@ -6,6 +6,7 @@
 
 * [新手指引](/v1/getting_started/README.md)
 * [容器服务](/v1/container/README.md)
+* [高级服务 - 数据库与缓存](/v1/advservices/README.md)
 * [代码构建](/v1/ci/README.md)
 * [镜像服务](/v1/registry/README.md)
 * [主机管理](/v1/host/README.md)

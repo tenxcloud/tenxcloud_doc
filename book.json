@@ -10,5 +10,5 @@
         "myTest": "Hello World"
     },
     "plugins": ["toggle-chapters"]
-    // "plugins": ["expandable-chapters"]
 }
+
