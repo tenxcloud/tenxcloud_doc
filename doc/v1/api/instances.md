@@ -16,7 +16,7 @@
       {
         "name": "test-6902b",
         "creationTimestamp": "2015-11-08T06:30:00Z",
-        “containers”: [
+        "containers": [
           {
             "image": "index.tenxcloud.com/tenxcloud/mysql",
             "command": [
@@ -48,17 +48,19 @@
               "memory": "512Mi"
             },
             "volumeMounts": [
-              "name": "volumeName1",
-              "mountPath": "/data"
+              {
+                "name": "volume-name1",
+                "mountPath": "/data"
+              }
             ]
           }
-        ]
+        ],
         "volumes": [
           {
-            "name", "volumeName1",
+            "name", "volume-name1",
             "disk_name", "disk1",
             "fsType": "ext4",
-            "is_ready_only": false
+            "is_read_only": false
           }
         ],
       },
@@ -84,7 +86,7 @@
       "log_message3"
     ]
 
-### 获取实例监控信息
+### 获取实例监控信息 - Available soon
 
     GET /v1/regions/{region}/services/{name}/instances/{name}/metrics?start_time={start_time}&end_time={end_time}&time_period=1m
 

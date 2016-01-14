@@ -22,18 +22,6 @@ API 详细说明:
    * [服务](services.md)
    * [服务实例](instances.md)
 
-### 存储
-Coming...
-
-### 镜像服务
-Coming...
-
-### 代码构建、集成
-Coming...
-
-### 主机管理
-Coming...
-
 #### API 在各种错误情况，会返回对应的 HTTP code
 
 400	Bad Request：语义或请求参数有误

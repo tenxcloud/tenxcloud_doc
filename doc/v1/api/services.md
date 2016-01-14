@@ -22,7 +22,7 @@
             "created_at": "2015-11-27T08:51:08Z",
             "status": "Running",
             "target_instance_size": 1,
-            “containers”: [
+            "containers": [
               {
                 "image": "index.tenxcloud.com/tenxcloud/mysql",
                 "command": [
@@ -54,21 +54,23 @@
                   "memory": "512Mi"
                 },
                 "volumeMounts": [
-                  "name": "volumeName1",
-                  "mountPath": "/data"
+                  {
+                    "name": "volume-name1",
+                    "mountPath": "/data"
+                  }
                 ]
               }
-            ]
-            “volumes”: [
+            ],
+            "volumes": [
               {
-                "name": "volumeName1",
+                "name": "volume-name1",
                 "disk_name": "disk1",
                 "fsType": "ext4",
-                "is_ready_only": false
+                "is_read_only": false
               }
             ],
-            “default_domain_name“: "myubuntu-demox.tenxapp.com",
-            ”binding_domain_name”: [
+            "default_domain_name": "myubuntu-demox.tenxapp.com",
+            "binding_domain_name": [
               "www.xxxx.cn"
             ]
           }
@@ -95,71 +97,7 @@
       "created_at": "2015-11-27T08:51:08Z",
       "status": "Running",
       "target_instance_size": 1,
-      “containers”: [
-        {
-          "image": "index.tenxcloud.com/tenxcloud/mysql",
-          "command": [
-            "/run.sh"
-          ],
-          "env": [
-            {
-              "name": "MYSQL_HOST",
-              "value": "mysqlhost"
-            },
-            {
-              "name": "MYSQL_USER",
-              "value": "admin"
-            },
-            {
-              "name": "MYSQL_PASS",
-              "value": "password"
-            }
-          ],
-          "ports_mapping": [
-            {
-              "container_port": 22,
-              "protocol": "TCP",
-              "service_port": 50237
-            }
-          ],
-          "resource": {
-            "cpu": "125m",
-            "memory": "512Mi"
-          },
-          "volumeMounts": [
-            "name": "volumeName1",
-            "mountPath": "/data"
-          ]
-        }
-      ]
-      volumes: [
-        {
-          "name": "volumeName1",
-          "disk_name": "disk1",
-          "fsType": "ext4",
-          "is_ready_only": false
-        }
-      ],
-      “default_domain_name“: "myubuntu-demox.tenxapp.com",
-      ”binding_domain_name”: [
-        "www.xxxx.cn"
-      ]
-    }
-
-### 创建服务
-创建一个新服务
-
-    POST /v1/regions/{region}/services
-
-请求示例：
-
-    curl "https://api.tenxcloud.com/v1/regions/beijing1/services/service_name" -H "username:[user_name]" -H "Authorization: token [api_token]" -H "Content-Type: application/json" -X POST --data <request_body>
-
-request_body 示例：
-
-    {
-      "target_instance_size": 1,
-      “containers”: [
+      "containers": [
         {
           "image": "index.tenxcloud.com/tenxcloud/mysql",
           "command": [
@@ -181,8 +119,9 @@ request_body 示例：
           ],
           "ports": [
             {
-              "port": 22,
-              "protocol": "TCP"
+              "container_port": 22,
+              "protocol": "TCP",
+              "service_port": 50237
             }
           ],
           "resource": {
@@ -190,23 +129,89 @@ request_body 示例：
             "memory": "512Mi"
           },
           "volumeMounts": [
-            "name": "volumeName1",
-            "mountPath": "/data"
+            {
+              "name": "volume-name1",
+              "mountPath": "/data"
+            }
           ]
         }
-      ]
-      volumes: [
+      ],
+      "volumes": [
         {
-          "name": "volumeName1",
+          "name": "volume-name1",
           "disk_name": "disk1",
-          "is_ready_only": false
+          "fsType": "ext4",
+          "is_read_only": false
         }
       ],
-      "sync_timezone", true,
-      ”binding_domain_name”: [
+      "default_domain_name": "myubuntu-demox.tenxapp.com",
+      "binding_domain_name": [
         "www.xxxx.cn"
       ]
     }
+
+### 创建服务
+创建一个新服务
+
+    POST /v1/regions/{region}/services
+
+请求示例：
+
+    curl "https://api.tenxcloud.com/v1/regions/beijing1/services/service_name" -H "username:[user_name]" -H "Authorization: token [api_token]" -H "Content-Type: application/json" -X POST --data @service.json
+
+service.json示例：
+
+    {
+    "target_instance_size": 1,
+    "containers": [
+      {
+        "image": "index.tenxcloud.com/tenxcloud/mysql",
+        "command": [
+          "/run.sh"
+        ],
+        "env": [
+          {
+            "name": "MYSQL_HOST",
+            "value": "mysqlhost"
+          },
+          {
+            "name": "MYSQL_USER",
+            "value": "admin"
+          },
+          {
+            "name": "MYSQL_PASS",
+            "value": "password"
+          }
+        ],
+        "ports": [
+          {
+            "port": 22,
+            "protocol": "TCP"
+          }
+        ],
+        "resource": {
+          "memory": 512
+        },
+        "volumeMounts": [
+          {
+            "name": "volume-name1",
+            "mountPath": "/data"
+          }
+        ]
+      }
+    ],
+    "volumes": [
+      {
+        "name": "volume-name1",
+        "disk_name": "disk1",
+        "is_read_only": false
+      }
+    ],
+    "sync_timezone": true,
+    "binding_domain_name": [
+      "www.xxxx.cn"
+    ]
+}
 
 响应将返回创建的服务的详细信息：
 
@@ -217,7 +222,7 @@ request_body 示例：
       "created_at": "2015-11-27T08:51:08Z",
       "status": "Running",
       "target_instance_size": 1,
-      “containers”: [
+      "containers": [
         {
           "image": "index.tenxcloud.com/tenxcloud/mysql",
           "command": [
@@ -249,21 +254,23 @@ request_body 示例：
             "memory": "512Mi"
           },
           "volumeMounts": [
-            "name": "volumeName1",
-            "mountPath": "/data"
+            {
+              "name": "volume-name1",
+              "mountPath": "/data"
+            }
           ]
         }
-      ]
-      volumes: [
+      ],
+      "volumes": [
         {
-          "name": "volumeName1",
+          "name": "volume-name1",
           "disk_name": "disk1",
           "fsType": "ext4",
-          "is_ready_only": false
+          "is_read_only": false
         }
       ],
-      “default_domain_name“: "myubuntu-demox.tenxapp.com",
-      ”binding_domain_name”: [
+      "default_domain_name": "myubuntu-demox.tenxapp.com",
+      "binding_domain_name": [
         "www.xxxx.cn"
       ]
     }
@@ -305,16 +312,15 @@ request_body 示例：
 
     {
       "target_instance_size": 1,
-      “containers”: [
+      "containers": [
         {
           "image": "index.tenxcloud.com/tenxcloud/mysql",
           "resource": {
-            "cpu": "125m",
-            "memory": "512Mi"
+            "memory": 1024
           }
         }
       ],
-      ”binding_domain_name”: [
+      "binding_domain_name": [
         "www.xxxx.cn"
       ]
     }
