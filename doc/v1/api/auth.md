@@ -15,6 +15,6 @@
       "user_name": "user",
       "email": "user@tenxcloud.com",
       "phone": "158xxxxxxxx",
-      "creation_time": "2015-12-28 16:05:06",
-      "last_login_time": "2015-12-28 16:06:12",
+      "creation_time": "2015-12-28T16:05:06+08:00",
+      "last_login_time": "2015-12-28T16:06:12+08:00",
     }

@@ -42,7 +42,7 @@
     
 
         
-    <div class="book" data-level="9.2.4" data-basepath="../../.." data-revision="Tue Jan 12 2016 18:28:47 GMT+0800 (CST)">
+    <div class="book" data-level="9.2.4" data-basepath="../../.." data-revision="Mon Jan 18 2016 09:33:51 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -1100,69 +1100,77 @@
 </code></pre><p>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;&#xFF1A;</p>
 <pre><code>curl &quot;https://api.tenxcloud.com/v1/regions/beijing1/services&quot; -H &quot;username:[user_name]&quot; -H &quot;Authorization: token [api_token]&quot;
 </code></pre><p>&#x54CD;&#x5E94;&#x793A;&#x4F8B;&#xFF1A;</p>
-<pre><code>[
-  {
-    &quot;region&quot;: &quot;beijing1&quot;,
-    &quot;services&quot;: [
-      {
-        &quot;uid&quot;: &quot;00144651-304e-11e5-97b5-525459f27fef&quot;,
-        &quot;name&quot;: &quot;myblog-mysql&quot;,
-        &quot;created_at&quot;: &quot;2015-11-27T08:51:08Z&quot;,
-        &quot;status&quot;: &quot;Running&quot;,
-        &quot;target_instance_size&quot;: 1,
-        &#x201C;containers&#x201D;: [
-          {
-            &quot;image&quot;: &quot;index.tenxcloud.com/tenxcloud/mysql&quot;,
-            &quot;command&quot;: [
-              &quot;/run.sh&quot;
-            ],
-            &quot;env&quot;: [
-              {
-                &quot;name&quot;: &quot;MYSQL_HOST&quot;,
-                &quot;value&quot;: &quot;mysqlhost&quot;
-              },
-              {
-                &quot;name&quot;: &quot;MYSQL_USER&quot;,
-                &quot;value&quot;: &quot;admin&quot;
-              },
-              {
-                &quot;name&quot;: &quot;MYSQL_PASS&quot;,
-                &quot;value&quot;: &quot;password&quot;
-              }
-            ],
-            &quot;ports_mapping&quot;: [
-              {
-                &quot;container_port&quot;: 22,
-                &quot;protocol&quot;: &quot;TCP&quot;,
-                &quot;service_port&quot;: 50237
-              }
-            ],
-            &quot;resource&quot;: {
+<pre><code>{
+  &quot;region&quot;: &quot;beijing1&quot;,
+  &quot;services&quot;: [
+    {
+      &quot;uid&quot;: &quot;00144651-304e-11e5-97b5-525459f27fef&quot;,
+      &quot;name&quot;: &quot;myblog-mysql&quot;,
+      &quot;created_at&quot;: &quot;2015-11-27T08:51:08Z&quot;,
+      &quot;status&quot;: &quot;Running&quot;,
+      &quot;target_instance_size&quot;: 1,
+      &quot;containers&quot;: [
+        {
+          &quot;image&quot;: &quot;index.tenxcloud.com/tenxcloud/mysql&quot;,
+          &quot;command&quot;: [
+            &quot;/run.sh&quot;
+          ],
+          &quot;env&quot;: [
+            {
+              &quot;name&quot;: &quot;MYSQL_HOST&quot;,
+              &quot;value&quot;: &quot;mysqlhost&quot;
+            },
+            {
+              &quot;name&quot;: &quot;MYSQL_USER&quot;,
+              &quot;value&quot;: &quot;admin&quot;
+            },
+            {
+              &quot;name&quot;: &quot;MYSQL_PASS&quot;,
+              &quot;value&quot;: &quot;password&quot;
+            }
+          ],
+          &quot;ports&quot;: [
+            {
+              &quot;container_port&quot;: 22,
+              &quot;protocol&quot;: &quot;TCP&quot;
+            }
+          ],
+          &quot;resource&quot;: {
+            &quot;limits&quot;: {
               &quot;cpu&quot;: &quot;125m&quot;,
               &quot;memory&quot;: &quot;512Mi&quot;
-            },
-            &quot;volumeMounts&quot;: [
-              &quot;name&quot;: &quot;volumeName1&quot;,
+            }
+          },
+          &quot;volumeMounts&quot;: [
+            {
+              &quot;name&quot;: &quot;volume-name1&quot;,
               &quot;mountPath&quot;: &quot;/data&quot;
-            ]
-          }
-        ]
-        &#x201C;volumes&#x201D;: [
-          {
-            &quot;name&quot;: &quot;volumeName1&quot;,
-            &quot;disk_name&quot;: &quot;disk1&quot;,
-            &quot;fsType&quot;: &quot;ext4&quot;,
-            &quot;is_ready_only&quot;: false
-          }
-        ],
-        &#x201C;default_domain_name&#x201C;: &quot;myubuntu-demox.tenxapp.com&quot;,
-        &#x201D;binding_domain_name&#x201D;: [
-          &quot;www.xxxx.cn&quot;
-        ]
-      }
-    ]
-  }
-]
+            }
+          ]
+        }
+      ],
+      &quot;port_mapping&quot;: [
+        {
+          &quot;service_port&quot;: 58767,
+          &quot;container_port&quot;: &quot;22&quot;,
+          &quot;protocol&quot;: &quot;TCP&quot;
+        }
+      ],
+      &quot;volumes&quot;: [
+        {
+          &quot;name&quot;: &quot;volume-name1&quot;,
+          &quot;disk_name&quot;: &quot;disk1&quot;,
+          &quot;fsType&quot;: &quot;ext4&quot;,
+          &quot;is_read_only&quot;: false
+        }
+      ],
+      &quot;default_domain_name&quot;: &quot;myubuntu-demox.tenxapp.com&quot;,
+      &quot;binding_domain_name&quot;: [
+        &quot;www.xxxx.cn&quot;
+      ]
+    }
+  ]
+}
 </code></pre><h3 id="%E8%8E%B7%E5%8F%96%E6%9C%8D%E5%8A%A1%E4%BF%A1%E6%81%AF">&#x83B7;&#x53D6;&#x670D;&#x52A1;&#x4FE1;&#x606F;</h3>
 <p>&#x83B7;&#x53D6;&#x7528;&#x6237;&#x6307;&#x5B9A;&#x670D;&#x52A1;&#x7684;&#x4FE1;&#x606F;&#xFF1A;</p>
 <pre><code>GET /v1/regions/{region}/services/{name}
@@ -1176,7 +1184,7 @@
   &quot;created_at&quot;: &quot;2015-11-27T08:51:08Z&quot;,
   &quot;status&quot;: &quot;Running&quot;,
   &quot;target_instance_size&quot;: 1,
-  &#x201C;containers&#x201D;: [
+  &quot;containers&quot;: [
     {
       &quot;image&quot;: &quot;index.tenxcloud.com/tenxcloud/mysql&quot;,
       &quot;command&quot;: [
@@ -1196,33 +1204,43 @@
           &quot;value&quot;: &quot;password&quot;
         }
       ],
-      &quot;ports_mapping&quot;: [
+      &quot;ports&quot;: [
         {
           &quot;container_port&quot;: 22,
           &quot;protocol&quot;: &quot;TCP&quot;,
-          &quot;service_port&quot;: 50237
         }
       ],
       &quot;resource&quot;: {
-        &quot;cpu&quot;: &quot;125m&quot;,
-        &quot;memory&quot;: &quot;512Mi&quot;
+        &quot;limits&quot; {
+          &quot;cpu&quot;: &quot;125m&quot;,
+          &quot;memory&quot;: &quot;512Mi&quot;
+        }
       },
       &quot;volumeMounts&quot;: [
-        &quot;name&quot;: &quot;volumeName1&quot;,
-        &quot;mountPath&quot;: &quot;/data&quot;
+        {
+          &quot;name&quot;: &quot;volume-name1&quot;,
+          &quot;mountPath&quot;: &quot;/data&quot;
+        }
       ]
     }
-  ]
-  volumes: [
+  ],
+  &quot;port_mapping&quot;: [
     {
-      &quot;name&quot;: &quot;volumeName1&quot;,
-      &quot;disk_name&quot;: &quot;disk1&quot;,
-      &quot;fsType&quot;: &quot;ext4&quot;,
-      &quot;is_ready_only&quot;: false
+      &quot;service_port&quot;: 23432,
+      &quot;container_port&quot;: &quot;22&quot;,
+      &quot;protocol&quot;: &quot;TCP&quot;
     }
   ],
-  &#x201C;default_domain_name&#x201C;: &quot;myubuntu-demox.tenxapp.com&quot;,
-  &#x201D;binding_domain_name&#x201D;: [
+  &quot;volumes&quot;: [
+    {
+      &quot;name&quot;: &quot;volume-name1&quot;,
+      &quot;disk_name&quot;: &quot;disk1&quot;,
+      &quot;fsType&quot;: &quot;ext4&quot;,
+      &quot;is_read_only&quot;: false
+    }
+  ],
+  &quot;default_domain_name&quot;: &quot;myubuntu-demox.tenxapp.com&quot;,
+  &quot;binding_domain_name&quot;: [
     &quot;www.xxxx.cn&quot;
   ]
 }
@@ -1230,11 +1248,11 @@
 <p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x670D;&#x52A1;</p>
 <pre><code>POST /v1/regions/{region}/services
 </code></pre><p>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;&#xFF1A;</p>
-<pre><code>curl &quot;https://api.tenxcloud.com/v1/regions/beijing1/services/service_name&quot; -H &quot;username:[user_name]&quot; -H &quot;Authorization: token [api_token]&quot; -H &quot;Content-Type: application/json&quot; -X POST --data &lt;request_body&gt;
-</code></pre><p>request_body &#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>curl &quot;https://api.tenxcloud.com/v1/regions/beijing1/services/service_name&quot; -H &quot;username:[user_name]&quot; -H &quot;Authorization: token [api_token]&quot; -H &quot;Content-Type: application/json&quot; -X POST --data @service.json
+</code></pre><p>service.json&#x793A;&#x4F8B;&#xFF1A;</p>
 <pre><code>{
   &quot;target_instance_size&quot;: 1,
-  &#x201C;containers&#x201D;: [
+  &quot;containers&quot;: [
     {
       &quot;image&quot;: &quot;index.tenxcloud.com/tenxcloud/mysql&quot;,
       &quot;command&quot;: [
@@ -1261,24 +1279,32 @@
         }
       ],
       &quot;resource&quot;: {
-        &quot;cpu&quot;: &quot;125m&quot;,
-        &quot;memory&quot;: &quot;512Mi&quot;
+        &quot;memory&quot;: 512
       },
       &quot;volumeMounts&quot;: [
-        &quot;name&quot;: &quot;volumeName1&quot;,
-        &quot;mountPath&quot;: &quot;/data&quot;
+        {
+          &quot;name&quot;: &quot;volume-name1&quot;,
+          &quot;mountPath&quot;: &quot;/data&quot;
+        }
       ]
     }
-  ]
-  volumes: [
+  ],
+  &quot;port_mapping&quot;: [
     {
-      &quot;name&quot;: &quot;volumeName1&quot;,
-      &quot;disk_name&quot;: &quot;disk1&quot;,
-      &quot;is_ready_only&quot;: false
+      &quot;service_port&quot;: 23432,
+      &quot;container_port&quot;: &quot;22&quot;,
+      &quot;protocol&quot;: &quot;TCP&quot;
     }
   ],
-  &quot;sync_timezone&quot;, true,
-  &#x201D;binding_domain_name&#x201D;: [
+  &quot;volumes&quot;: [
+    {
+      &quot;name&quot;: &quot;volume-name1&quot;,
+      &quot;disk_name&quot;: &quot;disk1&quot;,
+      &quot;is_read_only&quot;: false
+    }
+  ],
+  &quot;sync_timezone&quot;: true,
+  &quot;binding_domain_name&quot;: [
     &quot;www.xxxx.cn&quot;
   ]
 }
@@ -1290,7 +1316,7 @@
   &quot;created_at&quot;: &quot;2015-11-27T08:51:08Z&quot;,
   &quot;status&quot;: &quot;Running&quot;,
   &quot;target_instance_size&quot;: 1,
-  &#x201C;containers&#x201D;: [
+  &quot;containers&quot;: [
     {
       &quot;image&quot;: &quot;index.tenxcloud.com/tenxcloud/mysql&quot;,
       &quot;command&quot;: [
@@ -1322,21 +1348,23 @@
         &quot;memory&quot;: &quot;512Mi&quot;
       },
       &quot;volumeMounts&quot;: [
-        &quot;name&quot;: &quot;volumeName1&quot;,
-        &quot;mountPath&quot;: &quot;/data&quot;
+        {
+          &quot;name&quot;: &quot;volume-name1&quot;,
+          &quot;mountPath&quot;: &quot;/data&quot;
+        }
       ]
     }
-  ]
-  volumes: [
+  ],
+  &quot;volumes&quot;: [
     {
-      &quot;name&quot;: &quot;volumeName1&quot;,
+      &quot;name&quot;: &quot;volume-name1&quot;,
       &quot;disk_name&quot;: &quot;disk1&quot;,
       &quot;fsType&quot;: &quot;ext4&quot;,
-      &quot;is_ready_only&quot;: false
+      &quot;is_read_only&quot;: false
     }
   ],
-  &#x201C;default_domain_name&#x201C;: &quot;myubuntu-demox.tenxapp.com&quot;,
-  &#x201D;binding_domain_name&#x201D;: [
+  &quot;default_domain_name&quot;: &quot;myubuntu-demox.tenxapp.com&quot;,
+  &quot;binding_domain_name&quot;: [
     &quot;www.xxxx.cn&quot;
   ]
 }
@@ -1352,28 +1380,27 @@
 <p>&#x66F4;&#x65B0;&#x6307;&#x5B9A;&#x670D;&#x52A1;&#x7684;&#x5C5E;&#x6027;&#xFF1A;</p>
 <pre><code>PUT /v1/regions/{region}/services/{name}
 </code></pre><p>&#x76EE;&#x524D;&#x652F;&#x6301;&#x7684;&#x66F4;&#x65B0;&#x5C5E;&#x6027;&#xFF1A;</p>
-<pre><code>target_instance_size: &#x670D;&#x52A1;&#x8282;&#x70B9;&#x7684;&#x6570;&#x91CF;
+<pre><code>target_instance_size: #&#x670D;&#x52A1;&#x8282;&#x70B9;&#x7684;&#x6570;&#x91CF;
 containers:
-  image: &#x5BB9;&#x5668;&#x955C;&#x50CF;&#x540D;&#x79F0;
+  image: #&#x5BB9;&#x5668;&#x955C;&#x50CF;&#x540D;&#x79F0;
   resource:
-    cpu:    &#x5BB9;&#x5668; CPU &#x9650;&#x5236;
-    memory: &#x5BB9;&#x5668; Memory &#x9650;&#x5236;
-binding_domain_name: &#x670D;&#x52A1;&#x6240;&#x7ED1;&#x5B9A;&#x7684;&#x57DF;&#x540D;
+    cpu:    #&#x5BB9;&#x5668; CPU &#x9650;&#x5236;
+    memory: #&#x5BB9;&#x5668; Memory &#x9650;&#x5236;
+binding_domain_name: #&#x670D;&#x52A1;&#x6240;&#x7ED1;&#x5B9A;&#x7684;&#x57DF;&#x540D;
 </code></pre><p>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;&#xFF1A;</p>
 <pre><code>curl &quot;https://api.tenxcloud.com/v1/regions/beijing1/services/service_name&quot; -H &quot;username:[user_name]&quot; -H &quot;Authorization: token [api_token]&quot; -H &quot;Content-Type: application/json&quot; -X PUT --data &lt;request_body&gt;
 </code></pre><p>request_body &#x793A;&#x4F8B;&#xFF1A;</p>
 <pre><code>{
   &quot;target_instance_size&quot;: 1,
-  &#x201C;containers&#x201D;: [
+  &quot;containers&quot;: [
     {
       &quot;image&quot;: &quot;index.tenxcloud.com/tenxcloud/mysql&quot;,
       &quot;resource&quot;: {
-        &quot;cpu&quot;: &quot;125m&quot;,
-        &quot;memory&quot;: &quot;512Mi&quot;
+        &quot;memory&quot;: 1024
       }
     }
   ],
-  &#x201D;binding_domain_name&#x201D;: [
+  &quot;binding_domain_name&quot;: [
     &quot;www.xxxx.cn&quot;
   ]
 }
