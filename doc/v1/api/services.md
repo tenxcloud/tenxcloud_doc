@@ -23,7 +23,8 @@
           "target_instance_size": 1,
           "containers": [
             {
-              "image": "index.tenxcloud.com/tenxcloud/mysql",
+              "name": "myblog-mysql",
+              "image": "index.tenxcloud.com/tenxcloud/mysql:latest",
               "command": [
                 "/run.sh"
               ],
@@ -47,9 +48,8 @@
                   "protocol": "TCP"
                 }
               ],
-              "resource": {
+              "resources": {
                 "limits": {
-                  "cpu": "125m",
                   "memory": "512Mi"
                 }
               },
@@ -58,14 +58,15 @@
                   "name": "volume-name1",
                   "mountPath": "/data"
                 }
-              ]
+              ],
+              "imagePullPolicy": "IfNotPresent"
             }
           ],
           "port_mapping": [
             {
               "service_port": 58767,
-              "container_port": "22",
-              "protocol": "TCP"
+              "container_port": 22,
+              "protocol": "tcp"
             }
           ],
           "volumes": [
@@ -105,7 +106,7 @@
       "target_instance_size": 1,
       "containers": [
         {
-          "image": "index.tenxcloud.com/tenxcloud/mysql",
+          "image": "index.tenxcloud.com/tenxcloud/mysql:latest",
           "command": [
             "/run.sh"
           ],
@@ -129,7 +130,7 @@
               "protocol": "TCP",
             }
           ],
-          "resource": {
+          "resources": {
             "limits" {
               "cpu": "125m",
               "memory": "512Mi"
@@ -140,14 +141,15 @@
               "name": "volume-name1",
               "mountPath": "/data"
             }
-          ]
+          ],
+          "imagePullPolicy": "IfNotPresent"
         }
       ],
       "port_mapping": [
         {
           "service_port": 23432,
-          "container_port": "22",
-          "protocol": "TCP"
+          "container_port": 22,
+          "protocol": "tcp"
         }
       ],
       "volumes": [
@@ -176,6 +178,7 @@
 service.json示例：
 
     {
+      "name": "service_name",
       "target_instance_size": 1,
       "containers": [
         {
@@ -203,8 +206,10 @@ service.json示例：
               "protocol": "TCP"
             }
           ],
-          "resource": {
-            "memory": 512
+          "resources": {
+            "limits": {
+              "memory": 512
+            }
           },
           "volumeMounts": [
             {
@@ -216,9 +221,8 @@ service.json示例：
       ],
       "port_mapping": [
         {
-          "service_port": 23432,
-          "container_port": "22",
-          "protocol": "TCP"
+          "container_port": 22,
+          "protocol": "tcp"
         }
       ],
       "volumes": [
@@ -237,11 +241,7 @@ service.json示例：
 响应将返回创建的服务的详细信息：
 
     {
-      "region": "beijing1",
-      "uid": "00144651-304e-11e5-97b5-525459f27fef",
       "name": "myblog-mysql",
-      "created_at": "2015-11-27T08:51:08Z",
-      "status": "Running",
       "target_instance_size": 1,
       "containers": [
         {
@@ -263,16 +263,16 @@ service.json示例：
               "value": "password"
             }
           ],
-          "ports_mapping": [
+          "ports": [
             {
-              "container_port": 22,
-              "protocol": "TCP",
-              "service_port": 50237
+              "port": 22,
+              "protocol": "TCP"
             }
           ],
-          "resource": {
-            "cpu": "125m",
-            "memory": "512Mi"
+          "resources": {
+            "limits" {
+              "memory": 512
+            }
           },
           "volumeMounts": [
             {
@@ -280,6 +280,13 @@ service.json示例：
               "mountPath": "/data"
             }
           ]
+        }
+      ],
+      "ports_mapping": [
+        {
+          "container_port": 22,
+          "protocol": "TCP",
+          "service_port": 50237
         }
       ],
       "volumes": [
@@ -307,7 +314,7 @@ service.json示例：
 
 响应示例：
 
-    正常：200
+    正常：200 (Service was deleted successfully)
     其他错误参见文档底部
 
 ### 更新服务
@@ -319,10 +326,8 @@ service.json示例：
 
     target_instance_size: #服务节点的数量
     containers:
-      image: #容器镜像名称
-      resource:
-        cpu:    #容器 CPU 限制
-        memory: #容器 Memory 限制
+      resources:
+        memory: # 容器 Memory 限制 (int), 256, 512, 1024, 2048
     binding_domain_name: #服务所绑定的域名
 
 请求示例：
@@ -332,18 +337,16 @@ service.json示例：
 request_body 示例：
 
     {
-      "target_instance_size": 1,
-      "containers": [
-        {
-          "image": "index.tenxcloud.com/tenxcloud/mysql",
-          "resource": {
-            "memory": 1024
+        "target_instance_size": 1,
+        "containers": [
+          {
+            "resource": {
+                "limits": {
+                     "memory": 512
+                }
+            }
           }
-        }
-      ],
-      "binding_domain_name": [
-        "www.xxxx.cn"
-      ]
+        ]
     }
 
 响应示例：
@@ -375,6 +378,21 @@ request_body 示例：
 请求示例:
 
     curl "https://api.tenxcloud.com/v1/regions/beijing1/services/service_name/stop" -H "username:[user_name]" -H "Authorization: token [api_token]" -X PUT
+
+响应示例：
+
+    正常：200
+    其他错误参见文档底部
+
+### 重启服务
+
+停止指定的服务
+
+    PUT /v1/regions/{region}/services/{name}/restart
+
+请求示例:
+
+    curl "https://api.tenxcloud.com/v1/regions/beijing1/services/service_name/restart" -H "username:[user_name]" -H "Authorization: token [api_token]" -X PUT
 
 响应示例：
 

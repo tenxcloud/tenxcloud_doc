@@ -42,7 +42,7 @@
     
 
         
-    <div class="book" data-level="9.2.4" data-basepath="../../.." data-revision="Mon Jan 18 2016 09:33:51 GMT+0800 (CST)">
+    <div class="book" data-level="9.2.4" data-basepath="../../.." data-revision="Wed Jan 20 2016 13:44:44 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -1111,7 +1111,8 @@
       &quot;target_instance_size&quot;: 1,
       &quot;containers&quot;: [
         {
-          &quot;image&quot;: &quot;index.tenxcloud.com/tenxcloud/mysql&quot;,
+          &quot;name&quot;: &quot;myblog-mysql&quot;,
+          &quot;image&quot;: &quot;index.tenxcloud.com/tenxcloud/mysql:latest&quot;,
           &quot;command&quot;: [
             &quot;/run.sh&quot;
           ],
@@ -1135,9 +1136,8 @@
               &quot;protocol&quot;: &quot;TCP&quot;
             }
           ],
-          &quot;resource&quot;: {
+          &quot;resources&quot;: {
             &quot;limits&quot;: {
-              &quot;cpu&quot;: &quot;125m&quot;,
               &quot;memory&quot;: &quot;512Mi&quot;
             }
           },
@@ -1146,14 +1146,15 @@
               &quot;name&quot;: &quot;volume-name1&quot;,
               &quot;mountPath&quot;: &quot;/data&quot;
             }
-          ]
+          ],
+          &quot;imagePullPolicy&quot;: &quot;IfNotPresent&quot;
         }
       ],
       &quot;port_mapping&quot;: [
         {
           &quot;service_port&quot;: 58767,
-          &quot;container_port&quot;: &quot;22&quot;,
-          &quot;protocol&quot;: &quot;TCP&quot;
+          &quot;container_port&quot;: 22,
+          &quot;protocol&quot;: &quot;tcp&quot;
         }
       ],
       &quot;volumes&quot;: [
@@ -1186,7 +1187,7 @@
   &quot;target_instance_size&quot;: 1,
   &quot;containers&quot;: [
     {
-      &quot;image&quot;: &quot;index.tenxcloud.com/tenxcloud/mysql&quot;,
+      &quot;image&quot;: &quot;index.tenxcloud.com/tenxcloud/mysql:latest&quot;,
       &quot;command&quot;: [
         &quot;/run.sh&quot;
       ],
@@ -1210,7 +1211,7 @@
           &quot;protocol&quot;: &quot;TCP&quot;,
         }
       ],
-      &quot;resource&quot;: {
+      &quot;resources&quot;: {
         &quot;limits&quot; {
           &quot;cpu&quot;: &quot;125m&quot;,
           &quot;memory&quot;: &quot;512Mi&quot;
@@ -1221,14 +1222,15 @@
           &quot;name&quot;: &quot;volume-name1&quot;,
           &quot;mountPath&quot;: &quot;/data&quot;
         }
-      ]
+      ],
+      &quot;imagePullPolicy&quot;: &quot;IfNotPresent&quot;
     }
   ],
   &quot;port_mapping&quot;: [
     {
       &quot;service_port&quot;: 23432,
-      &quot;container_port&quot;: &quot;22&quot;,
-      &quot;protocol&quot;: &quot;TCP&quot;
+      &quot;container_port&quot;: 22,
+      &quot;protocol&quot;: &quot;tcp&quot;
     }
   ],
   &quot;volumes&quot;: [
@@ -1251,6 +1253,7 @@
 <pre><code>curl &quot;https://api.tenxcloud.com/v1/regions/beijing1/services/service_name&quot; -H &quot;username:[user_name]&quot; -H &quot;Authorization: token [api_token]&quot; -H &quot;Content-Type: application/json&quot; -X POST --data @service.json
 </code></pre><p>service.json&#x793A;&#x4F8B;&#xFF1A;</p>
 <pre><code>{
+  &quot;name&quot;: &quot;service_name&quot;,
   &quot;target_instance_size&quot;: 1,
   &quot;containers&quot;: [
     {
@@ -1278,8 +1281,10 @@
           &quot;protocol&quot;: &quot;TCP&quot;
         }
       ],
-      &quot;resource&quot;: {
-        &quot;memory&quot;: 512
+      &quot;resources&quot;: {
+        &quot;limits&quot;: {
+          &quot;memory&quot;: 512
+        }
       },
       &quot;volumeMounts&quot;: [
         {
@@ -1291,9 +1296,8 @@
   ],
   &quot;port_mapping&quot;: [
     {
-      &quot;service_port&quot;: 23432,
-      &quot;container_port&quot;: &quot;22&quot;,
-      &quot;protocol&quot;: &quot;TCP&quot;
+      &quot;container_port&quot;: 22,
+      &quot;protocol&quot;: &quot;tcp&quot;
     }
   ],
   &quot;volumes&quot;: [
@@ -1310,11 +1314,7 @@
 }
 </code></pre><p>&#x54CD;&#x5E94;&#x5C06;&#x8FD4;&#x56DE;&#x521B;&#x5EFA;&#x7684;&#x670D;&#x52A1;&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF1A;</p>
 <pre><code>{
-  &quot;region&quot;: &quot;beijing1&quot;,
-  &quot;uid&quot;: &quot;00144651-304e-11e5-97b5-525459f27fef&quot;,
   &quot;name&quot;: &quot;myblog-mysql&quot;,
-  &quot;created_at&quot;: &quot;2015-11-27T08:51:08Z&quot;,
-  &quot;status&quot;: &quot;Running&quot;,
   &quot;target_instance_size&quot;: 1,
   &quot;containers&quot;: [
     {
@@ -1336,16 +1336,16 @@
           &quot;value&quot;: &quot;password&quot;
         }
       ],
-      &quot;ports_mapping&quot;: [
+      &quot;ports&quot;: [
         {
-          &quot;container_port&quot;: 22,
-          &quot;protocol&quot;: &quot;TCP&quot;,
-          &quot;service_port&quot;: 50237
+          &quot;port&quot;: 22,
+          &quot;protocol&quot;: &quot;TCP&quot;
         }
       ],
-      &quot;resource&quot;: {
-        &quot;cpu&quot;: &quot;125m&quot;,
-        &quot;memory&quot;: &quot;512Mi&quot;
+      &quot;resources&quot;: {
+        &quot;limits&quot; {
+          &quot;memory&quot;: 512
+        }
       },
       &quot;volumeMounts&quot;: [
         {
@@ -1353,6 +1353,13 @@
           &quot;mountPath&quot;: &quot;/data&quot;
         }
       ]
+    }
+  ],
+  &quot;ports_mapping&quot;: [
+    {
+      &quot;container_port&quot;: 22,
+      &quot;protocol&quot;: &quot;TCP&quot;,
+      &quot;service_port&quot;: 50237
     }
   ],
   &quot;volumes&quot;: [
@@ -1374,7 +1381,7 @@
 </code></pre><p>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;&#xFF1A;</p>
 <pre><code>curl &quot;https://api.tenxcloud.com/v1/regions/beijing1/services/service_name&quot; -H &quot;username:[user_name]&quot; -H &quot;Authorization: token [api_token]&quot; -X DELETE
 </code></pre><p>&#x54CD;&#x5E94;&#x793A;&#x4F8B;&#xFF1A;</p>
-<pre><code>&#x6B63;&#x5E38;&#xFF1A;200
+<pre><code>&#x6B63;&#x5E38;&#xFF1A;200 (Service was deleted successfully)
 &#x5176;&#x4ED6;&#x9519;&#x8BEF;&#x53C2;&#x89C1;&#x6587;&#x6863;&#x5E95;&#x90E8;
 </code></pre><h3 id="%E6%9B%B4%E6%96%B0%E6%9C%8D%E5%8A%A1">&#x66F4;&#x65B0;&#x670D;&#x52A1;</h3>
 <p>&#x66F4;&#x65B0;&#x6307;&#x5B9A;&#x670D;&#x52A1;&#x7684;&#x5C5E;&#x6027;&#xFF1A;</p>
@@ -1382,27 +1389,23 @@
 </code></pre><p>&#x76EE;&#x524D;&#x652F;&#x6301;&#x7684;&#x66F4;&#x65B0;&#x5C5E;&#x6027;&#xFF1A;</p>
 <pre><code>target_instance_size: #&#x670D;&#x52A1;&#x8282;&#x70B9;&#x7684;&#x6570;&#x91CF;
 containers:
-  image: #&#x5BB9;&#x5668;&#x955C;&#x50CF;&#x540D;&#x79F0;
-  resource:
-    cpu:    #&#x5BB9;&#x5668; CPU &#x9650;&#x5236;
-    memory: #&#x5BB9;&#x5668; Memory &#x9650;&#x5236;
+  resources:
+    memory: # &#x5BB9;&#x5668; Memory &#x9650;&#x5236; (int), 256, 512, 1024, 2048
 binding_domain_name: #&#x670D;&#x52A1;&#x6240;&#x7ED1;&#x5B9A;&#x7684;&#x57DF;&#x540D;
 </code></pre><p>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;&#xFF1A;</p>
 <pre><code>curl &quot;https://api.tenxcloud.com/v1/regions/beijing1/services/service_name&quot; -H &quot;username:[user_name]&quot; -H &quot;Authorization: token [api_token]&quot; -H &quot;Content-Type: application/json&quot; -X PUT --data &lt;request_body&gt;
 </code></pre><p>request_body &#x793A;&#x4F8B;&#xFF1A;</p>
 <pre><code>{
-  &quot;target_instance_size&quot;: 1,
-  &quot;containers&quot;: [
-    {
-      &quot;image&quot;: &quot;index.tenxcloud.com/tenxcloud/mysql&quot;,
-      &quot;resource&quot;: {
-        &quot;memory&quot;: 1024
+    &quot;target_instance_size&quot;: 1,
+    &quot;containers&quot;: [
+      {
+        &quot;resource&quot;: {
+            &quot;limits&quot;: {
+                 &quot;memory&quot;: 512
+            }
+        }
       }
-    }
-  ],
-  &quot;binding_domain_name&quot;: [
-    &quot;www.xxxx.cn&quot;
-  ]
+    ]
 }
 </code></pre><p>&#x54CD;&#x5E94;&#x793A;&#x4F8B;&#xFF1A;</p>
 <pre><code>&#x6B63;&#x5E38;&#xFF1A;200
@@ -1420,6 +1423,14 @@ binding_domain_name: #&#x670D;&#x52A1;&#x6240;&#x7ED1;&#x5B9A;&#x7684;&#x57DF;&#
 <pre><code>PUT /v1/regions/{region}/services/{name}/stop
 </code></pre><p>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;:</p>
 <pre><code>curl &quot;https://api.tenxcloud.com/v1/regions/beijing1/services/service_name/stop&quot; -H &quot;username:[user_name]&quot; -H &quot;Authorization: token [api_token]&quot; -X PUT
+</code></pre><p>&#x54CD;&#x5E94;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>&#x6B63;&#x5E38;&#xFF1A;200
+&#x5176;&#x4ED6;&#x9519;&#x8BEF;&#x53C2;&#x89C1;&#x6587;&#x6863;&#x5E95;&#x90E8;
+</code></pre><h3 id="%E9%87%8D%E5%90%AF%E6%9C%8D%E5%8A%A1">&#x91CD;&#x542F;&#x670D;&#x52A1;</h3>
+<p>&#x505C;&#x6B62;&#x6307;&#x5B9A;&#x7684;&#x670D;&#x52A1;</p>
+<pre><code>PUT /v1/regions/{region}/services/{name}/restart
+</code></pre><p>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;:</p>
+<pre><code>curl &quot;https://api.tenxcloud.com/v1/regions/beijing1/services/service_name/restart&quot; -H &quot;username:[user_name]&quot; -H &quot;Authorization: token [api_token]&quot; -X PUT
 </code></pre><p>&#x54CD;&#x5E94;&#x793A;&#x4F8B;&#xFF1A;</p>
 <pre><code>&#x6B63;&#x5E38;&#xFF1A;200
 &#x5176;&#x4ED6;&#x9519;&#x8BEF;&#x53C2;&#x89C1;&#x6587;&#x6863;&#x5E95;&#x90E8;
