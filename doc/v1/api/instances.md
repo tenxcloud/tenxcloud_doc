@@ -15,18 +15,15 @@
     [
       {
         "name": "test-6902b",
-        "creationTimestamp": "2015-11-08T06:30:00Z",
+        "create_time": "2015-11-08T06:30:00Z",
         "containers": [
           {
-            "image": "index.tenxcloud.com/tenxcloud/mysql",
+            "name": "test",
+            "image": "index.tenxcloud.com/tenxcloud/mysql:latest",
             "command": [
               "/run.sh"
             ],
             "env": [
-              {
-                "name": "MYSQL_HOST",
-                "value": "mysqlhost"
-              },
               {
                 "name": "MYSQL_USER",
                 "value": "admin"
@@ -36,37 +33,41 @@
                 "value": "password"
               }
             ],
-            "ports_mapping": [
+            "ports": [
               {
-                "container_port": 22,
-                "protocol": "TCP",
-                "service_port": 50237
+                "container_port": 3306,
+                "protocol": "TCP"
               }
             ],
-            "resource": {
-              "cpu": "125m",
-              "memory": "512Mi"
+            "resources": {
+              "limits": {
+                "memory": "512Mi"
+              }
             },
             "volumeMounts": [
               {
-                "name": "volume-name1",
-                "mountPath": "/data"
+                "name": "volume-1",
+                "mountPath": "/var/lib/mysql"
               }
-            ]
+            ],
+            "imagePullPolicy": "IfNotPresent"
           }
         ],
         "volumes": [
           {
-            "name", "volume-name1",
-            "disk_name", "disk1",
+            "name": "volume-1",
+            "disk_name": "disk1",
             "fsType": "ext4",
             "is_read_only": false
           }
         ],
-      },
-      {
-        "instance_name": "instance1",
-        "log": "message2"
+        "port_mappings": [
+          {
+            "service_url": "mysql-nkwanglei8lrp.tenxapp.com:46024",
+            "container_port": 3306,
+            "protocol": "tcp"
+          }
+        ]
       }
     ]
 

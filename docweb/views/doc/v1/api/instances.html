@@ -42,7 +42,7 @@
     
 
         
-    <div class="book" data-level="9.2.5" data-basepath="../../.." data-revision="Thu Jan 21 2016 11:46:39 GMT+0800 (CST)">
+    <div class="book" data-level="9.2.5" data-basepath="../../.." data-revision="Thu Jan 21 2016 21:12:40 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -1103,18 +1103,15 @@
 <pre><code>[
   {
     &quot;name&quot;: &quot;test-6902b&quot;,
-    &quot;creationTimestamp&quot;: &quot;2015-11-08T06:30:00Z&quot;,
+    &quot;create_time&quot;: &quot;2015-11-08T06:30:00Z&quot;,
     &quot;containers&quot;: [
       {
-        &quot;image&quot;: &quot;index.tenxcloud.com/tenxcloud/mysql&quot;,
+        &quot;name&quot;: &quot;test&quot;,
+        &quot;image&quot;: &quot;index.tenxcloud.com/tenxcloud/mysql:latest&quot;,
         &quot;command&quot;: [
           &quot;/run.sh&quot;
         ],
         &quot;env&quot;: [
-          {
-            &quot;name&quot;: &quot;MYSQL_HOST&quot;,
-            &quot;value&quot;: &quot;mysqlhost&quot;
-          },
           {
             &quot;name&quot;: &quot;MYSQL_USER&quot;,
             &quot;value&quot;: &quot;admin&quot;
@@ -1124,37 +1121,41 @@
             &quot;value&quot;: &quot;password&quot;
           }
         ],
-        &quot;ports_mapping&quot;: [
+        &quot;ports&quot;: [
           {
-            &quot;container_port&quot;: 22,
-            &quot;protocol&quot;: &quot;TCP&quot;,
-            &quot;service_port&quot;: 50237
+            &quot;container_port&quot;: 3306,
+            &quot;protocol&quot;: &quot;TCP&quot;
           }
         ],
-        &quot;resource&quot;: {
-          &quot;cpu&quot;: &quot;125m&quot;,
-          &quot;memory&quot;: &quot;512Mi&quot;
+        &quot;resources&quot;: {
+          &quot;limits&quot;: {
+            &quot;memory&quot;: &quot;512Mi&quot;
+          }
         },
         &quot;volumeMounts&quot;: [
           {
-            &quot;name&quot;: &quot;volume-name1&quot;,
-            &quot;mountPath&quot;: &quot;/data&quot;
+            &quot;name&quot;: &quot;volume-1&quot;,
+            &quot;mountPath&quot;: &quot;/var/lib/mysql&quot;
           }
-        ]
+        ],
+        &quot;imagePullPolicy&quot;: &quot;IfNotPresent&quot;
       }
     ],
     &quot;volumes&quot;: [
       {
-        &quot;name&quot;, &quot;volume-name1&quot;,
-        &quot;disk_name&quot;, &quot;disk1&quot;,
+        &quot;name&quot;: &quot;volume-1&quot;,
+        &quot;disk_name&quot;: &quot;disk1&quot;,
         &quot;fsType&quot;: &quot;ext4&quot;,
         &quot;is_read_only&quot;: false
       }
     ],
-  },
-  {
-    &quot;instance_name&quot;: &quot;instance1&quot;,
-    &quot;log&quot;: &quot;message2&quot;
+    &quot;port_mappings&quot;: [
+      {
+        &quot;service_url&quot;: &quot;mysql-nkwanglei8lrp.tenxapp.com:46024&quot;,
+        &quot;container_port&quot;: 3306,
+        &quot;protocol&quot;: &quot;tcp&quot;
+      }
+    ]
   }
 ]
 </code></pre><h3 id="%E8%8E%B7%E5%8F%96%E6%9C%8D%E5%8A%A1%E5%AE%9E%E4%BE%8B%E6%97%A5%E5%BF%97">&#x83B7;&#x53D6;&#x670D;&#x52A1;&#x5B9E;&#x4F8B;&#x65E5;&#x5FD7;</h3>

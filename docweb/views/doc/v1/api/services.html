@@ -42,7 +42,7 @@
     
 
         
-    <div class="book" data-level="9.2.4" data-basepath="../../.." data-revision="Thu Jan 21 2016 11:46:39 GMT+0800 (CST)">
+    <div class="book" data-level="9.2.4" data-basepath="../../.." data-revision="Thu Jan 21 2016 21:12:40 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -1148,7 +1148,7 @@
       ],
       &quot;port_mapping&quot;: [
         {
-          &quot;service_port&quot;: 58767,
+          &quot;service_url&quot;: &quot;myubuntu-demox.tenxapp.com:58767&quot;,
           &quot;container_port&quot;: 3306,
           &quot;protocol&quot;: &quot;tcp&quot;
         }
@@ -1161,7 +1161,7 @@
           &quot;is_read_only&quot;: false
         }
       ],
-      &quot;default_domain_name&quot;: &quot;myubuntu-demox.tenxapp.com&quot;,
+      &quot;default_domain_name&quot;: &quot;myubuntu-demox.tenxapp.com:58767&quot;,
       &quot;binding_domain_name&quot;: [
         &quot;www.xxxx.cn&quot;
       ]
@@ -1205,7 +1205,6 @@
       ],
       &quot;resources&quot;: {
         &quot;limits&quot; {
-          &quot;cpu&quot;: &quot;125m&quot;,
           &quot;memory&quot;: &quot;512Mi&quot;
         }
       },
@@ -1220,7 +1219,7 @@
   ],
   &quot;port_mapping&quot;: [
     {
-      &quot;service_port&quot;: 23432,
+      &quot;service_url&quot;: &quot;myubuntu-demox.tenxapp.com:58767&quot;,,
       &quot;container_port&quot;: 3306,
       &quot;protocol&quot;: &quot;tcp&quot;
     }
@@ -1233,7 +1232,7 @@
       &quot;is_read_only&quot;: false
     }
   ],
-  &quot;default_domain_name&quot;: &quot;myubuntu-demox.tenxapp.com&quot;,
+  &quot;default_domain_name&quot;: &quot;myubuntu-demox.tenxapp.com:58767&quot;,
   &quot;binding_domain_name&quot;: [
     &quot;www.xxxx.cn&quot;
   ]
@@ -1342,8 +1341,8 @@
   &quot;port_mapping&quot;: [
     {
       &quot;container_port&quot;: 3306,
-      &quot;protocol&quot;: &quot;TCP&quot;,
-      &quot;service_port&quot;: 50237
+      &quot;protocol&quot;: &quot;tcp&quot;,
+      &quot;service_url&quot;: &quot;myubuntu-demox.tenxapp.com:58767&quot;,
     }
   ],
   &quot;volumes&quot;: [
@@ -1354,7 +1353,7 @@
       &quot;is_read_only&quot;: false
     }
   ],
-  &quot;default_domain_name&quot;: &quot;myubuntu-demox.tenxapp.com&quot;,
+  &quot;default_domain_name&quot;: &quot;myubuntu-demox.tenxapp.com:58767&quot;,,
   &quot;binding_domain_name&quot;: [
     &quot;www.xxxx.cn&quot;
   ]

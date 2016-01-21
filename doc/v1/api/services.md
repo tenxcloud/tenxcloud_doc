@@ -60,7 +60,7 @@
           ],
           "port_mapping": [
             {
-              "service_port": 58767,
+              "service_url": "myubuntu-demox.tenxapp.com:58767",
               "container_port": 3306,
               "protocol": "tcp"
             }
@@ -73,7 +73,7 @@
               "is_read_only": false
             }
           ],
-          "default_domain_name": "myubuntu-demox.tenxapp.com",
+          "default_domain_name": "myubuntu-demox.tenxapp.com:58767",
           "binding_domain_name": [
             "www.xxxx.cn"
           ]
@@ -124,7 +124,6 @@
           ],
           "resources": {
             "limits" {
-              "cpu": "125m",
               "memory": "512Mi"
             }
           },
@@ -139,7 +138,7 @@
       ],
       "port_mapping": [
         {
-          "service_port": 23432,
+          "service_url": "myubuntu-demox.tenxapp.com:58767",,
           "container_port": 3306,
           "protocol": "tcp"
         }
@@ -152,7 +151,7 @@
           "is_read_only": false
         }
       ],
-      "default_domain_name": "myubuntu-demox.tenxapp.com",
+      "default_domain_name": "myubuntu-demox.tenxapp.com:58767",
       "binding_domain_name": [
         "www.xxxx.cn"
       ]
@@ -269,8 +268,8 @@ service.json示例：
       "port_mapping": [
         {
           "container_port": 3306,
-          "protocol": "TCP",
-          "service_port": 50237
+          "protocol": "tcp",
+          "service_url": "myubuntu-demox.tenxapp.com:58767",
         }
       ],
       "volumes": [
@@ -281,7 +280,7 @@ service.json示例：
           "is_read_only": false
         }
       ],
-      "default_domain_name": "myubuntu-demox.tenxapp.com",
+      "default_domain_name": "myubuntu-demox.tenxapp.com:58767",,
       "binding_domain_name": [
         "www.xxxx.cn"
       ]
