@@ -30,10 +30,6 @@
               ],
               "env": [
                 {
-                  "name": "MYSQL_HOST",
-                  "value": "mysqlhost"
-                },
-                {
                   "name": "MYSQL_USER",
                   "value": "admin"
                 },
@@ -44,7 +40,7 @@
               ],
               "ports": [
                 {
-                  "container_port": 22,
+                  "container_port": 3306,
                   "protocol": "TCP"
                 }
               ],
@@ -65,7 +61,7 @@
           "port_mapping": [
             {
               "service_port": 58767,
-              "container_port": 22,
+              "container_port": 3306,
               "protocol": "tcp"
             }
           ],
@@ -112,10 +108,6 @@
           ],
           "env": [
             {
-              "name": "MYSQL_HOST",
-              "value": "mysqlhost"
-            },
-            {
               "name": "MYSQL_USER",
               "value": "admin"
             },
@@ -126,7 +118,7 @@
           ],
           "ports": [
             {
-              "container_port": 22,
+              "container_port": 3306,
               "protocol": "TCP",
             }
           ],
@@ -148,7 +140,7 @@
       "port_mapping": [
         {
           "service_port": 23432,
-          "container_port": 22,
+          "container_port": 3306,
           "protocol": "tcp"
         }
       ],
@@ -182,15 +174,11 @@ service.json示例：
       "target_instance_size": 1,
       "containers": [
         {
-          "image": "index.tenxcloud.com/tenxcloud/mysql",
+          "image": "index.tenxcloud.com/tenxcloud/mysql:latest",
           "command": [
             "/run.sh"
           ],
           "env": [
-            {
-              "name": "MYSQL_HOST",
-              "value": "mysqlhost"
-            },
             {
               "name": "MYSQL_USER",
               "value": "admin"
@@ -202,7 +190,7 @@ service.json示例：
           ],
           "ports": [
             {
-              "port": 22,
+              "port": 3306,
               "protocol": "TCP"
             }
           ],
@@ -221,7 +209,7 @@ service.json示例：
       ],
       "port_mapping": [
         {
-          "container_port": 22,
+          "container_port": 3306,
           "protocol": "tcp"
         }
       ],
@@ -245,15 +233,11 @@ service.json示例：
       "target_instance_size": 1,
       "containers": [
         {
-          "image": "index.tenxcloud.com/tenxcloud/mysql",
+          "image": "index.tenxcloud.com/tenxcloud/mysql:latest",
           "command": [
             "/run.sh"
           ],
           "env": [
-            {
-              "name": "MYSQL_HOST",
-              "value": "mysqlhost"
-            },
             {
               "name": "MYSQL_USER",
               "value": "admin"
@@ -265,7 +249,7 @@ service.json示例：
           ],
           "ports": [
             {
-              "port": 22,
+              "port": 3306,
               "protocol": "TCP"
             }
           ],
@@ -282,9 +266,9 @@ service.json示例：
           ]
         }
       ],
-      "ports_mapping": [
+      "port_mapping": [
         {
-          "container_port": 22,
+          "container_port": 3306,
           "protocol": "TCP",
           "service_port": 50237
         }
@@ -332,7 +316,7 @@ service.json示例：
 
 请求示例：
 
-    curl "https://api.tenxcloud.com/v1/regions/beijing1/services/service_name" -H "username:[user_name]" -H "Authorization: token [api_token]" -H "Content-Type: application/json" -X PUT --data <request_body>
+    curl "https://api.tenxcloud.com/v1/regions/beijing1/services/service_name" -H "username:[user_name]" -H "Authorization: token [api_token]" -H "Content-Type: application/json" -X PUT --data @update_service.json
 
 request_body 示例：
 

@@ -42,7 +42,7 @@
     
 
         
-    <div class="book" data-level="9.2.4" data-basepath="../../.." data-revision="Wed Jan 20 2016 13:44:44 GMT+0800 (CST)">
+    <div class="book" data-level="9.2.4" data-basepath="../../.." data-revision="Thu Jan 21 2016 11:46:39 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -1118,10 +1118,6 @@
           ],
           &quot;env&quot;: [
             {
-              &quot;name&quot;: &quot;MYSQL_HOST&quot;,
-              &quot;value&quot;: &quot;mysqlhost&quot;
-            },
-            {
               &quot;name&quot;: &quot;MYSQL_USER&quot;,
               &quot;value&quot;: &quot;admin&quot;
             },
@@ -1132,7 +1128,7 @@
           ],
           &quot;ports&quot;: [
             {
-              &quot;container_port&quot;: 22,
+              &quot;container_port&quot;: 3306,
               &quot;protocol&quot;: &quot;TCP&quot;
             }
           ],
@@ -1153,7 +1149,7 @@
       &quot;port_mapping&quot;: [
         {
           &quot;service_port&quot;: 58767,
-          &quot;container_port&quot;: 22,
+          &quot;container_port&quot;: 3306,
           &quot;protocol&quot;: &quot;tcp&quot;
         }
       ],
@@ -1193,10 +1189,6 @@
       ],
       &quot;env&quot;: [
         {
-          &quot;name&quot;: &quot;MYSQL_HOST&quot;,
-          &quot;value&quot;: &quot;mysqlhost&quot;
-        },
-        {
           &quot;name&quot;: &quot;MYSQL_USER&quot;,
           &quot;value&quot;: &quot;admin&quot;
         },
@@ -1207,7 +1199,7 @@
       ],
       &quot;ports&quot;: [
         {
-          &quot;container_port&quot;: 22,
+          &quot;container_port&quot;: 3306,
           &quot;protocol&quot;: &quot;TCP&quot;,
         }
       ],
@@ -1229,7 +1221,7 @@
   &quot;port_mapping&quot;: [
     {
       &quot;service_port&quot;: 23432,
-      &quot;container_port&quot;: 22,
+      &quot;container_port&quot;: 3306,
       &quot;protocol&quot;: &quot;tcp&quot;
     }
   ],
@@ -1257,15 +1249,11 @@
   &quot;target_instance_size&quot;: 1,
   &quot;containers&quot;: [
     {
-      &quot;image&quot;: &quot;index.tenxcloud.com/tenxcloud/mysql&quot;,
+      &quot;image&quot;: &quot;index.tenxcloud.com/tenxcloud/mysql:latest&quot;,
       &quot;command&quot;: [
         &quot;/run.sh&quot;
       ],
       &quot;env&quot;: [
-        {
-          &quot;name&quot;: &quot;MYSQL_HOST&quot;,
-          &quot;value&quot;: &quot;mysqlhost&quot;
-        },
         {
           &quot;name&quot;: &quot;MYSQL_USER&quot;,
           &quot;value&quot;: &quot;admin&quot;
@@ -1277,7 +1265,7 @@
       ],
       &quot;ports&quot;: [
         {
-          &quot;port&quot;: 22,
+          &quot;port&quot;: 3306,
           &quot;protocol&quot;: &quot;TCP&quot;
         }
       ],
@@ -1296,7 +1284,7 @@
   ],
   &quot;port_mapping&quot;: [
     {
-      &quot;container_port&quot;: 22,
+      &quot;container_port&quot;: 3306,
       &quot;protocol&quot;: &quot;tcp&quot;
     }
   ],
@@ -1318,15 +1306,11 @@
   &quot;target_instance_size&quot;: 1,
   &quot;containers&quot;: [
     {
-      &quot;image&quot;: &quot;index.tenxcloud.com/tenxcloud/mysql&quot;,
+      &quot;image&quot;: &quot;index.tenxcloud.com/tenxcloud/mysql:latest&quot;,
       &quot;command&quot;: [
         &quot;/run.sh&quot;
       ],
       &quot;env&quot;: [
-        {
-          &quot;name&quot;: &quot;MYSQL_HOST&quot;,
-          &quot;value&quot;: &quot;mysqlhost&quot;
-        },
         {
           &quot;name&quot;: &quot;MYSQL_USER&quot;,
           &quot;value&quot;: &quot;admin&quot;
@@ -1338,7 +1322,7 @@
       ],
       &quot;ports&quot;: [
         {
-          &quot;port&quot;: 22,
+          &quot;port&quot;: 3306,
           &quot;protocol&quot;: &quot;TCP&quot;
         }
       ],
@@ -1355,9 +1339,9 @@
       ]
     }
   ],
-  &quot;ports_mapping&quot;: [
+  &quot;port_mapping&quot;: [
     {
-      &quot;container_port&quot;: 22,
+      &quot;container_port&quot;: 3306,
       &quot;protocol&quot;: &quot;TCP&quot;,
       &quot;service_port&quot;: 50237
     }
@@ -1393,7 +1377,7 @@ containers:
     memory: # &#x5BB9;&#x5668; Memory &#x9650;&#x5236; (int), 256, 512, 1024, 2048
 binding_domain_name: #&#x670D;&#x52A1;&#x6240;&#x7ED1;&#x5B9A;&#x7684;&#x57DF;&#x540D;
 </code></pre><p>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;&#xFF1A;</p>
-<pre><code>curl &quot;https://api.tenxcloud.com/v1/regions/beijing1/services/service_name&quot; -H &quot;username:[user_name]&quot; -H &quot;Authorization: token [api_token]&quot; -H &quot;Content-Type: application/json&quot; -X PUT --data &lt;request_body&gt;
+<pre><code>curl &quot;https://api.tenxcloud.com/v1/regions/beijing1/services/service_name&quot; -H &quot;username:[user_name]&quot; -H &quot;Authorization: token [api_token]&quot; -H &quot;Content-Type: application/json&quot; -X PUT --data @update_service.json
 </code></pre><p>request_body &#x793A;&#x4F8B;&#xFF1A;</p>
 <pre><code>{
     &quot;target_instance_size&quot;: 1,
