@@ -10,17 +10,21 @@
 Bitbucket、Coding、Gitcafe、Oschina这四家代码托管网站均支持设置部署公钥，只要把时速云生成的公钥添加到私有仓库的部署公钥中，就可以在时速云平台上添加私有仓库了。
 
 ![faq-repo-deploy-key](/doc/v1/images/ci/faq-deplpoy-key.jpg)
+
 时速云会为每个私有项目生成一个项目公钥，保证每个私有项目的安全性，将项目公钥添加到对应私有仓库的部署公钥里就可以了哦~
 
 * 构建Bitbucket私有仓库代码
 
 ![faq-bitbucket-private.jpg](/doc/v1/images/ci/faq-bitbucket-private.jpg)
+
 * 构建Coding私有仓库代码
 
 ![faq-coding-private.jpg](/doc/v1/images/ci/faq-coding-private.jpg)
+
 * 构建GitCafe私有仓库代码
 
 ![faq-gitcage-private.jpg](/doc/v1/images/ci/faq-gitcage-private.jpg)
+
 * 构建Oschina私有仓库代码
 
 ![faq-oschina-private.jpg](/doc/v1/images/ci/faq-oschina-private.jpg)
