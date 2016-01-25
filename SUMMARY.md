@@ -48,7 +48,7 @@
        * [如何设置防火墙](doc/v1/host/faq-question-4.md)
        * [如何在IaaS平台上创建AccessKeyId和SecretAccessKey](doc/v1/host/faq-question-5.md)
 * [Stack](doc/v1/stack/README.md)
-* [使用开放 API](doc/v1/api/README.md)
+* [开放 API](doc/v1/api/README.md)
    * [获取 API token](doc/v1/api/intro.md)
    * [使用详细说明](doc/v1/api/detail.md)
        * [API 服务状态](doc/v1/api/status.md)
