@@ -12,5 +12,3 @@
 * [主机管理](/doc/v1/host/README.md)
 * [Stack](/doc/v1/stack/README.md)
 * [开放 API](/doc/v1/api/README.md)
-<!-- * [最佳实践](/doc/v1/best_practice/README.md) -->
-<!-- * [常见问题](/doc/v1/faq/README.md) -->

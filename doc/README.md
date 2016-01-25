@@ -11,6 +11,4 @@
 * [镜像服务](/v1/registry/README.md)
 * [主机管理](/v1/host/README.md)
 * [Stack](/v1/stack/README.md)
-* [开放 API](/doc/v1/api/README.md)
-<!-- [最佳实践](/v1/best_practice/README.md) -->
-<!-- * [常见问题](/v1/faq/README.md)  -->
+* [开放 API](/v1/api/README.md)
