@@ -7,13 +7,13 @@ An approach to developing a single application as a suite of small services, eac
 
 再来比较一下传统的庞大应用和微服务架构的区别
 
-传统应用
+传统应用：
 * 所有的代码及功能都放在一个部署单元
 * 开发测试效率低
 * 不利于多种技术栈的运用
 * 不利于模块化扩展
 
-微服务如果解决这些问题：
+微服务如何解决这些问题：
 * 开发测试效率低 － 单独编译、验证
 * 不利于多种技术栈的运用 － 可以选择最合适的技术
 * 不利于模块化扩展 － 仅扩展有瓶颈的服务
@@ -28,8 +28,8 @@ An approach to developing a single application as a suite of small services, eac
 * 通过编排，加入代码库同步服务，对某个核心服务的代码进行定时更新
 
 #### Stack 层面编排
-设计上与 Docker Compose 相似，但可以支持跨物理节点的服务之间通过 API 进行网络通信
+设计上与 Docker Compose 相似，但可以支持跨物理节点的服务之间通过 API 进行网络通信。
 
-* 以上两种编排均支持用 yaml 文件描述多个容器及其之间的关系，定制各个容器的属性，并可一键部署运行
+    以上两种编排均支持用 yaml 文件描述多个容器及其之间的关系，定制各个容器的属性，并可一键部署运行。
 
 
