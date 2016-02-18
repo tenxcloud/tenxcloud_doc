@@ -1,28 +1,35 @@
-# Stack
-Stack 是指包含多个镜像的服务，设计上与 Docker Compose 相似。Stack 支持用 yaml 文件描述多个容器镜像之间的关系，可自由定制每个镜像的属性，并支持一键部署并运行Stack。
+# 服务编排
+目前时速云支持两个层面的服务编排服务，用于构建微服务架构模式的应用。这里先简单介绍一下微服务的概念：
 
-### Stack 示例
-```
-wordpress:
-  image: tenxcloud/wordpress-stack:latest  <镜像名称>
-  links:  <链接的服务>
-    - mysql
-  ports:  <服务端口号>
-   - port: 80
-     protocol: HTTP
-  replicas: 1  <实例数量>
-  mem_limit: 512Mi  <内存大小>
-  cpu_shares: 125m  <CPU大小>
-  environment:  <环境变量>
-    WORDPRESS_DB_PASSWORD: **Random**
-mysql:
-  image: docker_library/mysql:latest  <镜像名称>
-  ports:  <服务端口号>
-   - port: 3306
-     protocol: TCP
-  replicas: 1  <实例数量>
-  mem_limit: 512Mi  <内存大小>
-  cpu_shares: 125m  <CPU大小>
-  environment:  <环境变量>
-    MYSQL_ROOT_PASSWORD: **Random**
-```
+** Microservice Architectural **
+
+An approach to developing a single application as a suite of small services, each running in its own process and communicating with lightweight mechanisms
+
+再来比较一下传统的庞大应用和微服务架构的区别
+
+传统应用
+* 所有的代码及功能都放在一个部署单元
+* 开发测试效率低
+* 不利于多种技术栈的运用
+* 不利于模块化扩展
+
+微服务如果解决这些问题：
+* 开发测试效率低 － 单独编译、验证
+* 不利于多种技术栈的运用 － 可以选择最合适的技术
+* 不利于模块化扩展 － 仅扩展有瓶颈的服务
+* 容错能力
+
+#### Pod 层面编排
+适用于紧耦合的服务组，保证一组服务始终部署在同一节点，并可以共享网络空间和存储卷。也就是同一个Pod 内的容器可以通过 localhost 访问彼此服务，共享网络空间，容器的端口不能互相冲突；对于同一个存储卷，可以被同一个Pod 的多个容器操作。
+
+通过 Pod 编排，使我们不需要重新构建镜像，就可以把多个服务进行整合。如果一个容器推荐仅包含一个进程，那么Pod更像是可以容纳多个进程的虚拟机。适用场景：
+* 通过编排，实现使用不同日志收集服务收集指定服务日志的功能
+* 通过编排，实现某个服务对不同IaaS平台的适配，把核心服务和指定IaaS 平台 API 的服务进行编排
+* 通过编排，加入代码库同步服务，对某个核心服务的代码进行定时更新
+
+#### Stack 层面编排
+设计上与 Docker Compose 相似，但可以支持跨物理节点的服务之间通过 API 进行网络通信
+
+* 以上两种编排均支持用 yaml 文件描述多个容器及其之间的关系，定制各个容器的属性，并可一键部署运行
+
+

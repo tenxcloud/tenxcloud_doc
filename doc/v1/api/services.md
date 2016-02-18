@@ -160,7 +160,7 @@
 ### 创建服务
 创建一个新服务
 
-    POST /v1/regions/{region}/services
+    POST /v1/regions/{region}/services/service_name
 
 请求示例：
 

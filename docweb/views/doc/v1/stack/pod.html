@@ -5,7 +5,7 @@
         <!-- head:start -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>服务 | TenxCloud 时速云</title>
+        <title>Pod 编排 | TenxCloud 时速云</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.0.2">
@@ -20,10 +20,10 @@
         
     
     
-    <link rel="next" href="../../../doc/v1/api/instances.html" />
+    <link rel="next" href="../../../doc/v1/stack/stack.html" />
     
     
-    <link rel="prev" href="../../../doc/v1/api/regions.html" />
+    <link rel="prev" href="../../../doc/v1/stack/index.html" />
     
 
         <!-- head:end -->
@@ -42,7 +42,7 @@
     
 
         
-    <div class="book" data-level="9.2.4" data-basepath="../../.." data-revision="Thu Feb 18 2016 23:14:01 GMT+0800 (CST)">
+    <div class="book" data-level="8.1" data-basepath="../../.." data-revision="Thu Feb 18 2016 23:14:01 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -844,7 +844,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="8.1" data-path="doc/v1/stack/pod.html">
+        <li class="chapter active" data-level="8.1" data-path="doc/v1/stack/pod.html">
             
                 
                     <a href="../../../doc/v1/stack/pod.html">
@@ -971,7 +971,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="9.2.4" data-path="doc/v1/api/services.html">
+        <li class="chapter " data-level="9.2.4" data-path="doc/v1/api/services.html">
             
                 
                     <a href="../../../doc/v1/api/services.html">
@@ -1129,348 +1129,38 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="%E6%9C%8D%E5%8A%A1">&#x670D;&#x52A1;</h1>
-<h3 id="%E8%8E%B7%E5%8F%96%E6%9C%8D%E5%8A%A1%E5%88%97%E8%A1%A8">&#x83B7;&#x53D6;&#x670D;&#x52A1;&#x5217;&#x8868;</h3>
-<p>&#x83B7;&#x53D6;&#x7528;&#x6237;&#x5728;&#x6307;&#x5B9A;&#x96C6;&#x7FA4;&#x4E0A;&#x7684;&#x670D;&#x52A1;&#x4FE1;&#x606F;</p>
-<pre><code>GET /v1/regions/{region}/services
-</code></pre><p>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;&#xFF1A;</p>
-<pre><code>curl &quot;https://api.tenxcloud.com/v1/regions/beijing1/services&quot; -H &quot;username:[user_name]&quot; -H &quot;Authorization: token [api_token]&quot;
-</code></pre><p>&#x54CD;&#x5E94;&#x793A;&#x4F8B;&#xFF1A;</p>
-<pre><code>{
-  &quot;region&quot;: &quot;beijing1&quot;,
-  &quot;services&quot;: [
-    {
-      &quot;uid&quot;: &quot;00144651-304e-11e5-97b5-525459f27fef&quot;,
-      &quot;name&quot;: &quot;myblog-mysql&quot;,
-      &quot;created_at&quot;: &quot;2015-11-27T08:51:08Z&quot;,
-      &quot;status&quot;: &quot;Running&quot;,
-      &quot;target_instance_size&quot;: 1,
-      &quot;containers&quot;: [
-        {
-          &quot;name&quot;: &quot;myblog-mysql&quot;,
-          &quot;image&quot;: &quot;index.tenxcloud.com/tenxcloud/mysql:latest&quot;,
-          &quot;command&quot;: [
-            &quot;/run.sh&quot;
-          ],
-          &quot;env&quot;: [
-            {
-              &quot;name&quot;: &quot;MYSQL_USER&quot;,
-              &quot;value&quot;: &quot;admin&quot;
-            },
-            {
-              &quot;name&quot;: &quot;MYSQL_PASS&quot;,
-              &quot;value&quot;: &quot;password&quot;
-            }
-          ],
-          &quot;ports&quot;: [
-            {
-              &quot;container_port&quot;: 3306,
-              &quot;protocol&quot;: &quot;TCP&quot;
-            }
-          ],
-          &quot;resources&quot;: {
-            &quot;limits&quot;: {
-              &quot;memory&quot;: &quot;512Mi&quot;
-            }
-          },
-          &quot;volumeMounts&quot;: [
-            {
-              &quot;name&quot;: &quot;volume-name1&quot;,
-              &quot;mountPath&quot;: &quot;/data&quot;
-            }
-          ],
-          &quot;imagePullPolicy&quot;: &quot;IfNotPresent&quot;
-        }
-      ],
-      &quot;port_mapping&quot;: [
-        {
-          &quot;service_url&quot;: &quot;myubuntu-demox.tenxapp.com:58767&quot;,
-          &quot;container_port&quot;: 3306,
-          &quot;protocol&quot;: &quot;tcp&quot;
-        }
-      ],
-      &quot;volumes&quot;: [
-        {
-          &quot;name&quot;: &quot;volume-name1&quot;,
-          &quot;disk_name&quot;: &quot;disk1&quot;,
-          &quot;fsType&quot;: &quot;ext4&quot;,
-          &quot;is_read_only&quot;: false
-        }
-      ],
-      &quot;default_domain_name&quot;: &quot;myubuntu-demox.tenxapp.com:58767&quot;,
-      &quot;binding_domain_name&quot;: [
-        &quot;www.xxxx.cn&quot;
-      ]
-    }
-  ]
-}
-</code></pre><h3 id="%E8%8E%B7%E5%8F%96%E6%9C%8D%E5%8A%A1%E4%BF%A1%E6%81%AF">&#x83B7;&#x53D6;&#x670D;&#x52A1;&#x4FE1;&#x606F;</h3>
-<p>&#x83B7;&#x53D6;&#x7528;&#x6237;&#x6307;&#x5B9A;&#x670D;&#x52A1;&#x7684;&#x4FE1;&#x606F;&#xFF1A;</p>
-<pre><code>GET /v1/regions/{region}/services/{name}
-</code></pre><p>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;&#xFF1A;</p>
-<pre><code>curl &quot;https://api.tenxcloud.com/v1/regions/beijing1/services/service_name&quot; -H &quot;username:[user_name]&quot; -H &quot;Authorization: token [api_token]&quot;
-</code></pre><p>&#x54CD;&#x5E94;&#xFF1A;</p>
-<pre><code>{
-  &quot;region&quot;: &quot;beijing1&quot;,
-  &quot;uid&quot;: &quot;00144651-304e-11e5-97b5-525459f27fef&quot;,
-  &quot;name&quot;: &quot;myblog-mysql&quot;,
-  &quot;created_at&quot;: &quot;2015-11-27T08:51:08Z&quot;,
-  &quot;status&quot;: &quot;Running&quot;,
-  &quot;target_instance_size&quot;: 1,
-  &quot;containers&quot;: [
-    {
-      &quot;image&quot;: &quot;index.tenxcloud.com/tenxcloud/mysql:latest&quot;,
-      &quot;command&quot;: [
-        &quot;/run.sh&quot;
-      ],
-      &quot;env&quot;: [
-        {
-          &quot;name&quot;: &quot;MYSQL_USER&quot;,
-          &quot;value&quot;: &quot;admin&quot;
-        },
-        {
-          &quot;name&quot;: &quot;MYSQL_PASS&quot;,
-          &quot;value&quot;: &quot;password&quot;
-        }
-      ],
-      &quot;ports&quot;: [
-        {
-          &quot;container_port&quot;: 3306,
-          &quot;protocol&quot;: &quot;TCP&quot;,
-        }
-      ],
-      &quot;resources&quot;: {
-        &quot;limits&quot; {
-          &quot;memory&quot;: &quot;512Mi&quot;
-        }
-      },
-      &quot;volumeMounts&quot;: [
-        {
-          &quot;name&quot;: &quot;volume-name1&quot;,
-          &quot;mountPath&quot;: &quot;/data&quot;
-        }
-      ],
-      &quot;imagePullPolicy&quot;: &quot;IfNotPresent&quot;
-    }
-  ],
-  &quot;port_mapping&quot;: [
-    {
-      &quot;service_url&quot;: &quot;myubuntu-demox.tenxapp.com:58767&quot;,,
-      &quot;container_port&quot;: 3306,
-      &quot;protocol&quot;: &quot;tcp&quot;
-    }
-  ],
-  &quot;volumes&quot;: [
-    {
-      &quot;name&quot;: &quot;volume-name1&quot;,
-      &quot;disk_name&quot;: &quot;disk1&quot;,
-      &quot;fsType&quot;: &quot;ext4&quot;,
-      &quot;is_read_only&quot;: false
-    }
-  ],
-  &quot;default_domain_name&quot;: &quot;myubuntu-demox.tenxapp.com:58767&quot;,
-  &quot;binding_domain_name&quot;: [
-    &quot;www.xxxx.cn&quot;
-  ]
-}
-</code></pre><h3 id="%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1">&#x521B;&#x5EFA;&#x670D;&#x52A1;</h3>
-<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x670D;&#x52A1;</p>
-<pre><code>POST /v1/regions/{region}/services/service_name
-</code></pre><p>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;&#xFF1A;</p>
-<pre><code>curl &quot;https://api.tenxcloud.com/v1/regions/beijing1/services/service_name&quot; -H &quot;username:[user_name]&quot; -H &quot;Authorization: token [api_token]&quot; -H &quot;Content-Type: application/json&quot; -X POST --data @service.json
-</code></pre><p>service.json&#x793A;&#x4F8B;&#xFF1A;</p>
-<pre><code>{
-  &quot;name&quot;: &quot;service_name&quot;,
-  &quot;target_instance_size&quot;: 1,
-  &quot;containers&quot;: [
-    {
-      &quot;image&quot;: &quot;index.tenxcloud.com/tenxcloud/mysql:latest&quot;,
-      &quot;command&quot;: [
-        &quot;/run.sh&quot;
-      ],
-      &quot;env&quot;: [
-        {
-          &quot;name&quot;: &quot;MYSQL_USER&quot;,
-          &quot;value&quot;: &quot;admin&quot;
-        },
-        {
-          &quot;name&quot;: &quot;MYSQL_PASS&quot;,
-          &quot;value&quot;: &quot;password&quot;
-        }
-      ],
-      &quot;ports&quot;: [
-        {
-          &quot;port&quot;: 3306,
-          &quot;protocol&quot;: &quot;TCP&quot;
-        }
-      ],
-      &quot;resources&quot;: {
-        &quot;limits&quot;: {
-          &quot;memory&quot;: 512
-        }
-      },
-      &quot;volumeMounts&quot;: [
-        {
-          &quot;name&quot;: &quot;volume-name1&quot;,
-          &quot;mountPath&quot;: &quot;/data&quot;
-        }
-      ]
-    }
-  ],
-  &quot;port_mapping&quot;: [
-    {
-      &quot;container_port&quot;: 3306,
-      &quot;protocol&quot;: &quot;tcp&quot;
-    }
-  ],
-  &quot;volumes&quot;: [
-    {
-      &quot;name&quot;: &quot;volume-name1&quot;,
-      &quot;disk_name&quot;: &quot;disk1&quot;,
-      &quot;is_read_only&quot;: false
-    }
-  ],
-  &quot;sync_timezone&quot;: true,
-  &quot;binding_domain_name&quot;: [
-    &quot;www.xxxx.cn&quot;
-  ]
-}
-</code></pre><p>&#x54CD;&#x5E94;&#x5C06;&#x8FD4;&#x56DE;&#x521B;&#x5EFA;&#x7684;&#x670D;&#x52A1;&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF1A;</p>
-<pre><code>{
-  &quot;name&quot;: &quot;myblog-mysql&quot;,
-  &quot;target_instance_size&quot;: 1,
-  &quot;containers&quot;: [
-    {
-      &quot;image&quot;: &quot;index.tenxcloud.com/tenxcloud/mysql:latest&quot;,
-      &quot;command&quot;: [
-        &quot;/run.sh&quot;
-      ],
-      &quot;env&quot;: [
-        {
-          &quot;name&quot;: &quot;MYSQL_USER&quot;,
-          &quot;value&quot;: &quot;admin&quot;
-        },
-        {
-          &quot;name&quot;: &quot;MYSQL_PASS&quot;,
-          &quot;value&quot;: &quot;password&quot;
-        }
-      ],
-      &quot;ports&quot;: [
-        {
-          &quot;port&quot;: 3306,
-          &quot;protocol&quot;: &quot;TCP&quot;
-        }
-      ],
-      &quot;resources&quot;: {
-        &quot;limits&quot; {
-          &quot;memory&quot;: 512
-        }
-      },
-      &quot;volumeMounts&quot;: [
-        {
-          &quot;name&quot;: &quot;volume-name1&quot;,
-          &quot;mountPath&quot;: &quot;/data&quot;
-        }
-      ]
-    }
-  ],
-  &quot;port_mapping&quot;: [
-    {
-      &quot;container_port&quot;: 3306,
-      &quot;protocol&quot;: &quot;tcp&quot;,
-      &quot;service_url&quot;: &quot;myubuntu-demox.tenxapp.com:58767&quot;,
-    }
-  ],
-  &quot;volumes&quot;: [
-    {
-      &quot;name&quot;: &quot;volume-name1&quot;,
-      &quot;disk_name&quot;: &quot;disk1&quot;,
-      &quot;fsType&quot;: &quot;ext4&quot;,
-      &quot;is_read_only&quot;: false
-    }
-  ],
-  &quot;default_domain_name&quot;: &quot;myubuntu-demox.tenxapp.com:58767&quot;,,
-  &quot;binding_domain_name&quot;: [
-    &quot;www.xxxx.cn&quot;
-  ]
-}
-</code></pre><h3 id="%E5%88%A0%E9%99%A4%E6%9C%8D%E5%8A%A1">&#x5220;&#x9664;&#x670D;&#x52A1;</h3>
-<p>&#x5220;&#x9664;&#x7528;&#x6237;&#x7684;&#x6307;&#x5B9A;&#x670D;&#x52A1;</p>
-<pre><code>DELETE /v1/regions/{region}/services/{name}
-</code></pre><p>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;&#xFF1A;</p>
-<pre><code>curl &quot;https://api.tenxcloud.com/v1/regions/beijing1/services/service_name&quot; -H &quot;username:[user_name]&quot; -H &quot;Authorization: token [api_token]&quot; -X DELETE
-</code></pre><p>&#x54CD;&#x5E94;&#x793A;&#x4F8B;&#xFF1A;</p>
-<pre><code>&#x6B63;&#x5E38;&#xFF1A;200 (Service was deleted successfully)
-&#x5176;&#x4ED6;&#x9519;&#x8BEF;&#x53C2;&#x89C1;&#x6587;&#x6863;&#x5E95;&#x90E8;
-</code></pre><h3 id="%E6%9B%B4%E6%96%B0%E6%9C%8D%E5%8A%A1">&#x66F4;&#x65B0;&#x670D;&#x52A1;</h3>
-<p>&#x66F4;&#x65B0;&#x6307;&#x5B9A;&#x670D;&#x52A1;&#x7684;&#x5C5E;&#x6027;&#xFF1A;</p>
-<pre><code>PUT /v1/regions/{region}/services/{name}
-</code></pre><p>&#x76EE;&#x524D;&#x652F;&#x6301;&#x7684;&#x66F4;&#x65B0;&#x5C5E;&#x6027;&#xFF1A;</p>
-<pre><code>target_instance_size: #&#x670D;&#x52A1;&#x8282;&#x70B9;&#x7684;&#x6570;&#x91CF;
-containers:
-  resources:
-    memory: # &#x5BB9;&#x5668; Memory &#x9650;&#x5236; (int), 256, 512, 1024, 2048
-binding_domain_name: #&#x670D;&#x52A1;&#x6240;&#x7ED1;&#x5B9A;&#x7684;&#x57DF;&#x540D;
-</code></pre><p>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;&#xFF1A;</p>
-<pre><code>curl &quot;https://api.tenxcloud.com/v1/regions/beijing1/services/service_name&quot; -H &quot;username:[user_name]&quot; -H &quot;Authorization: token [api_token]&quot; -H &quot;Content-Type: application/json&quot; -X PUT --data @update_service.json
-</code></pre><p>request_body &#x793A;&#x4F8B;&#xFF1A;</p>
-<pre><code>{
-    &quot;target_instance_size&quot;: 1,
-    &quot;containers&quot;: [
-      {
-        &quot;resource&quot;: {
-            &quot;limits&quot;: {
-                 &quot;memory&quot;: 512
-            }
-        }
-      }
-    ]
-}
-</code></pre><p>&#x54CD;&#x5E94;&#x793A;&#x4F8B;&#xFF1A;</p>
-<pre><code>&#x6B63;&#x5E38;&#xFF1A;200
-&#x5176;&#x4ED6;&#x9519;&#x8BEF;&#x53C2;&#x89C1;&#x6587;&#x6863;&#x5E95;&#x90E8;
-</code></pre><h3 id="%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1">&#x542F;&#x52A8;&#x670D;&#x52A1;</h3>
-<p>&#x542F;&#x52A8;&#x6307;&#x5B9A;&#x7684;&#x670D;&#x52A1;</p>
-<pre><code>PUT /v1/regions/{region}/services/{name}/start
-</code></pre><p>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;:</p>
-<pre><code>curl &quot;https://api.tenxcloud.com/v1/regions/beijing1/services/service_name/start&quot; -H &quot;username:[user_name]&quot; -H &quot;Authorization: token [api_token]&quot; -X PUT
-</code></pre><p>&#x54CD;&#x5E94;&#x793A;&#x4F8B;&#xFF1A;</p>
-<pre><code>&#x6B63;&#x5E38;&#xFF1A;200
-&#x5176;&#x4ED6;&#x9519;&#x8BEF;&#x53C2;&#x89C1;&#x6587;&#x6863;&#x5E95;&#x90E8;
-</code></pre><h3 id="%E5%81%9C%E6%AD%A2%E6%9C%8D%E5%8A%A1">&#x505C;&#x6B62;&#x670D;&#x52A1;</h3>
-<p>&#x505C;&#x6B62;&#x6307;&#x5B9A;&#x7684;&#x670D;&#x52A1;</p>
-<pre><code>PUT /v1/regions/{region}/services/{name}/stop
-</code></pre><p>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;:</p>
-<pre><code>curl &quot;https://api.tenxcloud.com/v1/regions/beijing1/services/service_name/stop&quot; -H &quot;username:[user_name]&quot; -H &quot;Authorization: token [api_token]&quot; -X PUT
-</code></pre><p>&#x54CD;&#x5E94;&#x793A;&#x4F8B;&#xFF1A;</p>
-<pre><code>&#x6B63;&#x5E38;&#xFF1A;200
-&#x5176;&#x4ED6;&#x9519;&#x8BEF;&#x53C2;&#x89C1;&#x6587;&#x6863;&#x5E95;&#x90E8;
-</code></pre><h3 id="%E9%87%8D%E5%90%AF%E6%9C%8D%E5%8A%A1">&#x91CD;&#x542F;&#x670D;&#x52A1;</h3>
-<p>&#x505C;&#x6B62;&#x6307;&#x5B9A;&#x7684;&#x670D;&#x52A1;</p>
-<pre><code>PUT /v1/regions/{region}/services/{name}/restart
-</code></pre><p>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;:</p>
-<pre><code>curl &quot;https://api.tenxcloud.com/v1/regions/beijing1/services/service_name/restart&quot; -H &quot;username:[user_name]&quot; -H &quot;Authorization: token [api_token]&quot; -X PUT
-</code></pre><p>&#x54CD;&#x5E94;&#x793A;&#x4F8B;&#xFF1A;</p>
-<pre><code>&#x6B63;&#x5E38;&#xFF1A;200
-&#x5176;&#x4ED6;&#x9519;&#x8BEF;&#x53C2;&#x89C1;&#x6587;&#x6863;&#x5E95;&#x90E8;
-</code></pre><h3 id="%E8%8E%B7%E5%8F%96%E6%9C%8D%E5%8A%A1%E6%97%A5%E5%BF%97">&#x83B7;&#x53D6;&#x670D;&#x52A1;&#x65E5;&#x5FD7;</h3>
-<p>&#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x670D;&#x52A1;&#x67D0;&#x5929;&#x7684;&#x65E5;&#x5FD7;</p>
-<pre><code>GET /v1/regions/{region}/services/{name}/logs?date={date}&amp;from={from_number}&amp;size={total_size}
-</code></pre><p>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;:</p>
-<pre><code>curl &quot;https://api.tenxcloud.com/v1/regions/beijing1/services/service_name/logs?date=2015.12.29&amp;from=0&amp;size=100&quot; -H &quot;username:[user_name]&quot; -H &quot;Authorization: token [api_token]&quot;
-</code></pre><p>&#x54CD;&#x5E94;&#x793A;&#x4F8B;&#xFF1A;</p>
-<pre><code>[
-  {
-    &quot;instance_name&quot;: &quot;instance1&quot;,
-    &quot;log&quot;: &quot;message1&quot;
-  },
-  {
-    &quot;instance_name&quot;: &quot;instance1&quot;,
-    &quot;log&quot;: &quot;message2&quot;
-  },
-  ...
-]
-</code></pre>
+                        <h1 id="pod-%E7%BC%96%E6%8E%92">Pod &#x7F16;&#x6392;</h1>
+<p>&#x9002;&#x7528;&#x4E8E;&#x7D27;&#x8026;&#x5408;&#x7684;&#x670D;&#x52A1;&#x7EC4;&#xFF0C;&#x4FDD;&#x8BC1;&#x4E00;&#x7EC4;&#x670D;&#x52A1;&#x59CB;&#x7EC8;&#x90E8;&#x7F72;&#x5728;&#x540C;&#x4E00;&#x8282;&#x70B9;&#xFF0C;&#x5E76;&#x53EF;&#x4EE5;&#x5171;&#x4EAB;&#x7F51;&#x7EDC;&#x7A7A;&#x95F4;&#x548C;&#x5B58;&#x50A8;&#x5377;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x540C;&#x4E00;&#x4E2A;Pod &#x5185;&#x7684;&#x5BB9;&#x5668;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; localhost &#x8BBF;&#x95EE;&#x5F7C;&#x6B64;&#x670D;&#x52A1;&#xFF0C;&#x5171;&#x4EAB;&#x7F51;&#x7EDC;&#x7A7A;&#x95F4;&#xFF0C;&#x5BB9;&#x5668;&#x7684;&#x7AEF;&#x53E3;&#x4E0D;&#x80FD;&#x4E92;&#x76F8;&#x51B2;&#x7A81;&#xFF1B;&#x5BF9;&#x4E8E;&#x540C;&#x4E00;&#x4E2A;&#x5B58;&#x50A8;&#x5377;&#xFF0C;&#x53EF;&#x4EE5;&#x88AB;&#x540C;&#x4E00;&#x4E2A;Pod &#x7684;&#x591A;&#x4E2A;&#x5BB9;&#x5668;&#x64CD;&#x4F5C;&#x3002;</p>
+<h3 id="pod-%E7%A4%BA%E4%BE%8B">Pod &#x793A;&#x4F8B;</h3>
+<pre><code>containers: &lt;Pod&#x6240;&#x5305;&#x542B;&#x7684;&#x6240;&#x6709;&#x5BB9;&#x5668;&gt;
+  mysql: &lt;&#x5BB9;&#x5668;&#x540D;&gt;
+    image: index.tenxcloud.com/tenxcloud/mysql &lt;&#x955C;&#x50CF;&#x540D;&gt;
+    ports: &lt;&#x5BB9;&#x5668;&#x7AEF;&#x53E3;&#x53CA;&#x534F;&#x8BAE;&gt;
+     - port: 3306
+       protocol: TCP
+    mem_limit: 512Mi &lt;&#x5185;&#x5B58;&#x9650;&#x989D;&gt;
+    environment: &lt;&#x73AF;&#x5883;&#x53D8;&#x91CF;&gt;
+     - name: MYSQL_ROOT_PASSWORD
+       value: password
+    volumeMounts: &lt;&#x5BB9;&#x5668;&#x5185;&#x6570;&#x636E;&#x5377;&gt;
+     - name: volume1 &lt;&#x5BF9;&#x5E94;&#x4E8E;&#x5171;&#x4EAB;&#x76EE;&#x5F55;&#x540D;&#x5B57;&gt;
+       mountPath: /var/lib/mysql &lt;&#x5BB9;&#x5668;&#x5185;&#x76EE;&#x5F55;&gt;
+  ubuntu:
+    image: index.tenxcloud.com/tenxcloud/ubuntu &lt;&#x955C;&#x50CF;&#x540D;&gt;
+    ports: &lt;&#x5BB9;&#x5668;&#x7AEF;&#x53E3;&#x53CA;&#x534F;&#x8BAE;&gt;
+     - port: 22
+       protocol: TCP
+    mem_limit: 256Mi &lt;&#x5185;&#x5B58;&#x9650;&#x989D;&gt;
+    volumeMounts: &lt;&#x5BB9;&#x5668;&#x5185;&#x6570;&#x636E;&#x5377;&gt;
+     - name: volume1 &lt;&#x5BF9;&#x5E94;&#x4E8E;&#x5171;&#x4EAB;&#x76EE;&#x5F55;&#x540D;&#x5B57;&gt;
+       mountPath: /my_data &lt;&#x5BB9;&#x5668;&#x5185;&#x76EE;&#x5F55;&gt;
+volumes: &lt;&#x53EF;&#x5171;&#x4EAB;&#x6570;&#x636E;&#x5377;&gt;
+ - name: volume1 &lt;&#x5171;&#x4EAB;&#x76EE;&#x5F55;&#x540D;&#x5B57;&gt;
+   type: rbd &lt;&#x5171;&#x4EAB;&#x76EE;&#x5F55;&#x7C7B;&#x578B;&#xFF0C;&#x76EE;&#x524D;&#x4EC5;&#x652F;&#x6301; rbd&gt;
+   disk: disk1 &lt;&#x5BF9;&#x5E94;&#x5E73;&#x53F0;&#x4E0A;&#x7684;&#x201C;&#x5B58;&#x50A8;&#x4E0E;&#x5907;&#x4EFD;&quot;&#x7684;&#x6570;&#x636E;&#x5377;&gt;
+   fsType: ext4 &lt;&#x5B58;&#x50A8;&#x5377;&#x7684;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&gt;
+</code></pre><p>&#x901A;&#x8FC7;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x901A;&#x8FC7; ubuntu &#x7684; ssh &#x670D;&#x52A1;&#x767B;&#x5F55;&#x540E;&#x76F4;&#x63A5;&#x64CD;&#x4F5C; mysql &#x6570;&#x636E;&#x7684;&#x76EE;&#x7684;&#x3002;&#x540C;&#x6837;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x628A; ubuntu &#x670D;&#x52A1;&#x548C;&#x5176;&#x4ED6;&#x7684;&#x6709;&#x72B6;&#x6001;&#x670D;&#x52A1;&#x8FDB;&#x884C;&#x7F16;&#x6392;&#xFF0C;&#x5B9E;&#x73B0;&#x5BF9;&#x670D;&#x52A1;&#x6570;&#x636E;&#x7684;&#x64CD;&#x4F5C;&#x3002;</p>
+
                     
                     </section>
                 
@@ -1480,10 +1170,10 @@ binding_domain_name: #&#x670D;&#x52A1;&#x6240;&#x7ED1;&#x5B9A;&#x7684;&#x57DF;&#
         </div>
 
         
-        <a href="../../../doc/v1/api/regions.html" class="navigation navigation-prev " aria-label="Previous page: 服务区信息"><i class="fa fa-angle-left"></i></a>
+        <a href="../../../doc/v1/stack/index.html" class="navigation navigation-prev " aria-label="Previous page: 服务编排"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../../doc/v1/api/instances.html" class="navigation navigation-next " aria-label="Next page: 服务实例"><i class="fa fa-angle-right"></i></a>
+        <a href="../../../doc/v1/stack/stack.html" class="navigation navigation-next " aria-label="Next page: Stack 编排"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
