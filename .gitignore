@@ -1,5 +1,5 @@
 #过滤文件夹
-
+node_modules/
 _book/
 docweb/node_modules/
 docweb/logs/

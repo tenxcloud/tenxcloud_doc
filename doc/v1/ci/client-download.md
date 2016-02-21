@@ -35,7 +35,7 @@
 注：我们还在继续添加更多更酷的选项，让您更便捷的通过终端操作TenxCloud 容器引擎，尽请期待！
 
 tce 使用详解：
- 1. 通过终端进入代码目录，该目录下必须包含Dockerfile。关于如何编写Dokerfile，可以参考英文官方文档 -> [编写Dockerfile](http://docs.docker.com/reference/builder/)，我们后续会提供中文版，并随时提供技术支持。
+ 1. 通过终端进入代码目录，该目录下必须包含Dockerfile。时速云提供了中文版的 [如何编写Dokerfile](../faq/dockerfile.html)，您可以参考Docker英文官方文档 -> [编写Dockerfile](http://docs.docker.com/reference/builder/)。
  2. 输入<span style="color: #0000ff;">`tce login`</span>，填写用户、密码后完成登录
  3. 输入<span style="color: #0000ff;">`tce push <project Name>:<tag>`</span>，客户端会自动将Dockerfile及引用的本地文件打包成zip，并上传到TenxCloud，由我们的容器引擎创建Docker 项目。这个过程会持续输出Docker build 的相关日志，方便跟踪镜像构建进度。
  注意：在这个过程中，我们会解析Dockerfile里的ADD 和COPY 指令集，打包所依赖的文件和目录，并且指令的源路径必须使用相对路径，不支持使用绝对路径，暂不支持添加空目录，比如：<br/>
