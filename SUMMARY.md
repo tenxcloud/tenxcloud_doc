@@ -32,6 +32,7 @@
    * [FAQ](doc/v1/ci/FAQ.md)
        * [tce push镜像时出错怎么办？](doc/v1/ci/faq-tce-push-error.md)
        * [时速云支持私有代码仓库构建吗？](doc/v1/ci/faq-how-to-build-private-code-repositories.md)
+       * [时速云支持gitlab私有代码仓库构建吗？](doc/v1/ci/faq-how-to-build-private-code-repositories-gitlab.md)
 * [镜像服务](doc/v1/registry/README.md)
    * [浏览镜像](doc/v1/registry/browse-images.md)
    * [修改镜像配置](doc/v1/registry/config-image.md)
