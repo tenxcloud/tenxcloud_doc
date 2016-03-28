@@ -18,6 +18,11 @@
   2. 点击控制器（或服务，或容器仓）的名字，可以查看详情。
   ![host1](/doc/v1/images/host/deploy-app-self-host-2-rc-detail.png)
 ### 日志
-@TODO
+通过该功能，可以查看容器的运行日志（pod级别）。
+![host1](/doc/v1/images/host/deploy-app-self-host-2-log.png)
 ### 事件
+目前支持查看Pod的事件。
+![host1](/doc/v1/images/host/deploy-app-self-host-2-event.png)
 ### 系统
+该页面列出了支持的插件列表，并支持插件安装。目前支持DNS和日志插件。
+![host1](/doc/v1/images/host/deploy-app-self-host-2-plugins.png)

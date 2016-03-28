@@ -9,6 +9,11 @@
     "variables": {
         "myTest": "Hello World"
     },
-    "plugins": ["toggle-chapters"]
+    "plugins": ["toggle-chapters"],
+    "pluginsConfig": {
+       "search": {
+            "maxIndexSize": 100000
+       }
+    }
 }
 
