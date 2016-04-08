@@ -1,0 +1,1277 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book TenxCloud 时速云 -->
+    <head>
+        <!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>添加主机（跨云模式） | TenxCloud 时速云</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+        <link rel="stylesheet" href="../../../styles/website.css">
+    
+
+        
+    
+    
+    <link rel="next" href="../../../doc/v1/host/03-deploy-app.html" />
+    
+    
+    <link rel="prev" href="../../../doc/v1/host/02-add-host-self-host.html" />
+    
+
+        <!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+        
+    <div class="book"
+        data-level="7.4"
+        data-chapter-title="添加主机（跨云模式）"
+        data-filepath="doc/v1/host/02-add-cluster-host-in-tenxcloud.md"
+        data-basepath="../../.."
+        data-revision="Fri Apr 01 2016 17:43:13 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../../../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        时速云帮助文档
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="doc/index.html">
+            
+                
+                    <a href="../../../doc/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        平台介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="doc/v1/getting_started/index.html">
+            
+                
+                    <a href="../../../doc/v1/getting_started/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        新手指引
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="doc/v1/getting_started/tenxcloud.html">
+            
+                
+                    <a href="../../../doc/v1/getting_started/tenxcloud.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        了解时速云
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="doc/v1/getting_started/what-is-container.html">
+            
+                
+                    <a href="../../../doc/v1/getting_started/what-is-container.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        什么是容器服务
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="doc/v1/getting_started/what-is-microservices.html">
+            
+                
+                    <a href="../../../doc/v1/getting_started/what-is-microservices.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        什么是微服务
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="doc/v1/getting_started/caas.html">
+            
+                
+                    <a href="../../../doc/v1/getting_started/caas.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        时速云的优势
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="doc/v1/container/index.html">
+            
+                
+                    <a href="../../../doc/v1/container/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        容器服务
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="doc/v1/container/create.html">
+            
+                
+                    <a href="../../../doc/v1/container/create.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        创建第一个Hello World服务
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="doc/v1/container/bind_domain.html">
+            
+                
+                    <a href="../../../doc/v1/container/bind_domain.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        绑定域名
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="doc/v1/container/start_stop.html">
+            
+                
+                    <a href="../../../doc/v1/container/start_stop.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        停止/启动/重启/删除容器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="doc/v1/container/update.html">
+            
+                
+                    <a href="../../../doc/v1/container/update.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        修改容器配置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="doc/v1/container/update_container_env_and_port.html">
+            
+                
+                    <a href="../../../doc/v1/container/update_container_env_and_port.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        修改容器环境变量和端口
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="doc/v1/advservices/index.html">
+            
+                
+                    <a href="../../../doc/v1/advservices/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        高级服务 - 数据库与缓存
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="doc/v1/advservices/mongo-cluster.html">
+            
+                
+                    <a href="../../../doc/v1/advservices/mongo-cluster.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Mongodb 集群搭建
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="doc/v1/ci/index.html">
+            
+                
+                    <a href="../../../doc/v1/ci/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        代码构建
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="doc/v1/ci/project-add.html">
+            
+                
+                    <a href="../../../doc/v1/ci/project-add.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        新建一个项目
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="doc/v1/ci/project-listcoderepo.html">
+            
+                
+                    <a href="../../../doc/v1/ci/project-listcoderepo.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.1.</b>
+                        
+                        添加源代码
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="doc/v1/ci/project-fill.html">
+            
+                
+                    <a href="../../../doc/v1/ci/project-fill.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.2.</b>
+                        
+                        填写项目信息
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="doc/v1/ci/project-manage.html">
+            
+                
+                    <a href="../../../doc/v1/ci/project-manage.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        管理我的项目
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.1" data-path="doc/v1/ci/project-fast-build.html">
+            
+                
+                    <a href="../../../doc/v1/ci/project-fast-build.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.1.</b>
+                        
+                        构建项目
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.2" data-path="doc/v1/ci/select-build-agent.html">
+            
+                
+                    <a href="../../../doc/v1/ci/select-build-agent.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.2.</b>
+                        
+                        如何选择构建节点
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.3" data-path="doc/v1/ci/project-deploy.html">
+            
+                
+                    <a href="../../../doc/v1/ci/project-deploy.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.3.</b>
+                        
+                        部署项目
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.4" data-path="doc/v1/ci/project-image.html">
+            
+                
+                    <a href="../../../doc/v1/ci/project-image.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.4.</b>
+                        
+                        管理镜像
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.5" data-path="doc/v1/ci/project-other.html">
+            
+                
+                    <a href="../../../doc/v1/ci/project-other.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.5.</b>
+                        
+                        其他操作
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="doc/v1/ci/client-download.html">
+            
+                
+                    <a href="../../../doc/v1/ci/client-download.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        使用 tce 客户端
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.3.1" data-path="doc/v1/ci/fasdf.html">
+            
+                
+                    <a href="../../../doc/v1/ci/fasdf.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.1.</b>
+                        
+                        命令详解
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.2" data-path="doc/v1/ci/samples-nodejs.html">
+            
+                
+                    <a href="../../../doc/v1/ci/samples-nodejs.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.2.</b>
+                        
+                        快速构建Node.js镜像
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.3" data-path="doc/v1/ci/samples-java.html">
+            
+                
+                    <a href="../../../doc/v1/ci/samples-java.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.3.</b>
+                        
+                        快速构建Java镜像
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.4" data-path="doc/v1/ci/golang.html">
+            
+                
+                    <a href="../../../doc/v1/ci/golang.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.4.</b>
+                        
+                        快速构建golang镜像
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="doc/v1/ci/FAQ.html">
+            
+                
+                    <a href="../../../doc/v1/ci/FAQ.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        FAQ
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.4.1" data-path="doc/v1/ci/faq-tce-push-error.html">
+            
+                
+                    <a href="../../../doc/v1/ci/faq-tce-push-error.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.1.</b>
+                        
+                        tce push镜像时出错怎么办？
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4.2" data-path="doc/v1/ci/faq-how-to-build-private-code-repositories.html">
+            
+                
+                    <a href="../../../doc/v1/ci/faq-how-to-build-private-code-repositories.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.2.</b>
+                        
+                        时速云支持私有代码仓库构建吗？
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4.3" data-path="doc/v1/ci/faq-how-to-build-private-code-repositories-gitlab.html">
+            
+                
+                    <a href="../../../doc/v1/ci/faq-how-to-build-private-code-repositories-gitlab.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.3.</b>
+                        
+                        时速云支持gitlab私有代码仓库构建吗？
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="doc/v1/registry/index.html">
+            
+                
+                    <a href="../../../doc/v1/registry/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        镜像服务
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="doc/v1/registry/browse-images.html">
+            
+                
+                    <a href="../../../doc/v1/registry/browse-images.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        浏览镜像
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="doc/v1/registry/config-image.html">
+            
+                
+                    <a href="../../../doc/v1/registry/config-image.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        修改镜像配置
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="doc/v1/host/index.html">
+            
+                
+                    <a href="../../../doc/v1/host/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        私有集群
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="doc/v1/host/00-preface.html">
+            
+                
+                    <a href="../../../doc/v1/host/00-preface.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        为什么使用&quot;私有集群&quot;
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="doc/v1/host/01-add-cluster.html">
+            
+                
+                    <a href="../../../doc/v1/host/01-add-cluster.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        创建集群
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="doc/v1/host/02-add-host-self-host.html">
+            
+                
+                    <a href="../../../doc/v1/host/02-add-host-self-host.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        添加主机（普通模式）
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="7.4" data-path="doc/v1/host/02-add-cluster-host-in-tenxcloud.html">
+            
+                
+                    <a href="../../../doc/v1/host/02-add-cluster-host-in-tenxcloud.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.</b>
+                        
+                        添加主机（跨云模式）
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="doc/v1/host/03-deploy-app.html">
+            
+                
+                    <a href="../../../doc/v1/host/03-deploy-app.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.5.</b>
+                        
+                        应用管理（普通模式）
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="doc/v1/host/03-deploy-app-tenx-host.html">
+            
+                
+                    <a href="../../../doc/v1/host/03-deploy-app-tenx-host.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.6.</b>
+                        
+                        应用管理（跨云模式）
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="doc/v1/host/remove-agent.html">
+            
+                
+                    <a href="../../../doc/v1/host/remove-agent.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.7.</b>
+                        
+                        如何卸载Agent
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8" data-path="doc/v1/host/FAQ.html">
+            
+                
+                    <a href="../../../doc/v1/host/FAQ.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.8.</b>
+                        
+                        FAQ
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.8.1" data-path="doc/v1/host/faq-question-1.html">
+            
+                
+                    <a href="../../../doc/v1/host/faq-question-1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.8.1.</b>
+                        
+                        如何搭建自己的路由和子网？
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8.2" data-path="doc/v1/host/faq-question-2.html">
+            
+                
+                    <a href="../../../doc/v1/host/faq-question-2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.8.2.</b>
+                        
+                        是否可以添加本地虚拟机？
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8.3" data-path="doc/v1/host/faq-question-3.html">
+            
+                
+                    <a href="../../../doc/v1/host/faq-question-3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.8.3.</b>
+                        
+                        私有集群容器一直处于&quot;启动中&quot;
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8.4" data-path="doc/v1/host/faq-question-4.html">
+            
+                
+                    <a href="../../../doc/v1/host/faq-question-4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.8.4.</b>
+                        
+                        如何设置防火墙
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8.5" data-path="doc/v1/host/faq-question-5.html">
+            
+                
+                    <a href="../../../doc/v1/host/faq-question-5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.8.5.</b>
+                        
+                        如何在IaaS平台上创建AccessKeyId和SecretAccessKey
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="doc/v1/stack/index.html">
+            
+                
+                    <a href="../../../doc/v1/stack/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        服务编排
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="doc/v1/stack/pod.html">
+            
+                
+                    <a href="../../../doc/v1/stack/pod.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        Pod 编排
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="doc/v1/stack/stack.html">
+            
+                
+                    <a href="../../../doc/v1/stack/stack.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        Stack 编排
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="doc/v1/api/index.html">
+            
+                
+                    <a href="../../../doc/v1/api/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        开放 API
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1" data-path="doc/v1/api/intro.html">
+            
+                
+                    <a href="../../../doc/v1/api/intro.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.</b>
+                        
+                        获取 API token
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="doc/v1/api/detail.html">
+            
+                
+                    <a href="../../../doc/v1/api/detail.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.</b>
+                        
+                        使用详细说明
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.2.1" data-path="doc/v1/api/status.html">
+            
+                
+                    <a href="../../../doc/v1/api/status.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.1.</b>
+                        
+                        API 服务状态
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2.2" data-path="doc/v1/api/auth.html">
+            
+                
+                    <a href="../../../doc/v1/api/auth.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.2.</b>
+                        
+                        用户信息
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2.3" data-path="doc/v1/api/regions.html">
+            
+                
+                    <a href="../../../doc/v1/api/regions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.3.</b>
+                        
+                        服务区信息
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2.4" data-path="doc/v1/api/services.html">
+            
+                
+                    <a href="../../../doc/v1/api/services.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.4.</b>
+                        
+                        服务
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2.5" data-path="doc/v1/api/instances.html">
+            
+                
+                    <a href="../../../doc/v1/api/instances.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.5.</b>
+                        
+                        服务实例
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="doc/v1/api/api_swagger.html">
+            
+                
+                    <a href="../../../doc/v1/api/api_swagger.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.3.</b>
+                        
+                        通过 swagger UI 查看
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="doc/v1/faq/index.html">
+            
+                
+                    <a href="../../../doc/v1/faq/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        常见问题
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1" data-path="doc/v1/faq/faq.html">
+            
+                
+                    <a href="../../../doc/v1/faq/faq.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.1.</b>
+                        
+                        常见问题
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="doc/v1/faq/dockerfile.html">
+            
+                
+                    <a href="../../../doc/v1/faq/dockerfile.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.2.</b>
+                        
+                        如何编写Dockerfile
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="doc/v1/faq/deploycode.html">
+            
+                
+                    <a href="../../../doc/v1/faq/deploycode.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.3.</b>
+                        
+                        如何部署代码
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../../" >TenxCloud 时速云</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="&#x6DFB;&#x52A0;&#x4E3B;&#x673A;-&#x8DE8;&#x4E91;&#x6A21;&#x5F0F;&#xFF1A;master&#x4F4D;&#x4E8E;&#x65F6;&#x901F;&#x4E91;&#x5E73;&#x53F0;&#x4E0A;&#xFF09;">&#x6DFB;&#x52A0;&#x4E3B;&#x673A; (&#x8DE8;&#x4E91;&#x6A21;&#x5F0F;&#xFF1A;Master&#x4F4D;&#x4E8E;&#x65F6;&#x901F;&#x4E91;&#x5E73;&#x53F0;&#x4E0A;&#xFF09;</h1>
+<p>&#x5047;&#x8BBE;&#x60A8;&#x5DF2;&#x7ECF;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x8DE8;&#x4E91;&#x6A21;&#x5F0F;&#x7684;&#x79C1;&#x6709;&#x96C6;&#x7FA4;&#xFF08;&#x84DD;&#x8272;&#xFF09;&#x3002;&#x6DFB;&#x52A0;&#x4E3B;&#x673A;&#x7684;&#x5177;&#x4F53;&#x6B65;&#x9AA4;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ol>
+<li>&#x8FDB;&#x5165;&#x8981;&#x6DFB;&#x52A0;&#x4E3B;&#x673A;&#x7684;&#x96C6;&#x7FA4;&#xFF0C;&#x70B9;&#x51FB;&#x201C;&#x6DFB;&#x52A0;&#x201D;
+<img src="../images/host/add-host-0-tenx-host.png" alt="host1"></li>
+<li>&#x751F;&#x6210;&#x5B89;&#x88C5;&#x547D;&#x4EE4;&#xFF0C;&#x70B9;&#x51FB;&#x6587;&#x5B57;&#x53F3;&#x8FB9;&#x56FE;&#x6807;&#x590D;&#x5236;&#x6587;&#x672C;
+<img src="../images/host/add-host-1-tenx-host.png" alt="host1"></li>
+<li>ssh&#x767B;&#x9646;&#x8981;&#x6DFB;&#x52A0;&#x7684;&#x4E3B;&#x673A;&#xFF0C;&#x5C06;&#x5B89;&#x88C5;&#x547D;&#x4EE4;&#x7C98;&#x8D34;&#x5230; shell&#x4E2D;
+<img src="../images/host/add-host-2-tenx-host.png" alt="host1"></li>
+<li>&#x6267;&#x884C;&#x7ED3;&#x679C;&#xFF08;&#x672C;&#x4F8B;&#x4E2D;&#x7684;&#x673A;&#x5668;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x8FC7;docker&#xFF0C;&#x6DFB;&#x52A0;&#x6210;&#x529F;&#xFF09;&#x3002;&#x6DFB;&#x52A0;&#x6210;&#x529F;&#x4EE5;&#x540E;&#xFF0C;&#x63A7;&#x5236;&#x53F0;&#x4F1A;&#x6253;&#x5370;&quot;Finished installing TenxCloud Agent, You can deploy containers on this machine now.&quot;.&#x56DE;&#x5230;&#x4E3B;&#x673A;&#x754C;&#x9762;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x4E3B;&#x673A;&#x7684;&#x72B6;&#x6001;&#x4E3A;&quot;&#x5DF2;&#x5C31;&#x7EEA;&quot;&#x3002;
+<img src="../images/host/add-host-3-tenx-host.png" alt="host1"></li>
+</ol>
+<p>&#x7531;&#x4E8E;&#x672C;&#x673A;&#x662F;NAT&#x7F51;&#x7EDC;&#xFF0C;&#x56E0;&#x6B64;&#x5728;&#x4E3B;&#x673A;&#x5217;&#x8868;&#x53EA;&#x663E;&#x793A;&#x5916;&#x7F51;&#x5730;&#x5740;&#xFF0C;&#x8FDB;&#x5165;&#x4E3B;&#x673A;&#x8BE6;&#x60C5;&#x9875;&#x4EE5;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x4E3B;&#x673A;&#x7684;&#x72B6;&#x6001;&#x3002;&#x5BF9;&#x4E8E;NAT&#x7F51;&#x7EDC;&#x7684;&#x4E3B;&#x673A;&#xFF0C;&#x53EA;&#x80FD;&#x8BBF;&#x95EE;&#x5176;&#x5185;&#x7F51;&#x5730;&#x5740;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x521B;&#x5EFA;&#x5E94;&#x7528;&#x4EE5;&#x540E;&#x3002;
+<img src="../images/host/add-host-4-tenx-host.png" alt="host1"></p>
+<h3 id="&#x6CE8;&#x610F;&#xFF1A;">&#x6CE8;&#x610F;&#xFF1A;</h3>
+<ol>
+<li><strong>&#x5BF9;&#x4E8E;&#x5185;&#x7F51;&#x673A;&#x5668;&#xFF0C;&#x9700;&#x8981;&#x80FD;&#x591F;&#x8BBF;&#x95EE;&#x5916;&#x7F51;&#x624D;&#x80FD;&#x6DFB;&#x52A0;&#x3002;</strong>&#x9752;&#x4E91;&#x3001;ucloud&#x3001;&#x817E;&#x8BAF;&#x4E91;&#x7B49;&#x57FA;&#x4E8E;SDN&#x7F51;&#x7EDC;&#x7684;&#x673A;&#x5668;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x516C;&#x7F51;ip&#xFF0C;&#x5219;&#x76F4;&#x63A5;&#x6DFB;&#x52A0;&#x5373;&#x53EF;&#xFF1B;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5206;&#x914D;&#x516C;&#x7F51;ip&#xFF0C;&#x5219;&#x5FC5;&#x987B;&#x81EA;&#x5DF1;&#x642D;&#x5EFA;&#x8DEF;&#x7531;(&#x5982;&#x4F55;&#x642D;&#x5EFA;&#x53C2;&#x8003; IaaS&#x5382;&#x5546;&#x7684;&#x6587;&#x6863;&#xFF09;&#x3002;</li>
+<li><strong>aws&#x3001;&#x9752;&#x4E91;&#x3001;ucloud&#x548C;&#x817E;&#x8BAF;&#x4E91;&#x4E0A;&#x7684;&#x673A;&#x5668;&#x9ED8;&#x8BA4;&#x5F00;&#x542F;&#x9632;&#x706B;&#x5899;&#xFF0C;&#x9700;&#x8981;&#x624B;&#x52A8;&#x8BBE;&#x7F6E;&#x9632;&#x706B;&#x5899;&#x89C4;&#x5219;&#x3002;</strong>&#x6DFB;&#x52A0;&#x8282;&#x70B9;&#x4E4B;&#x524D;&#xFF0C;&#x9700;&#x8981;&#x5F00;&#x542F;inbound udp 8285&#x548C;tcp 10250/16000&#x7AEF;&#x53E3;&#xFF08;8285&#x7528;&#x4E8E;&#x96C6;&#x7FA4;&#x7F51;&#x7EDC;&#x7EC4;&#x5EFA;&#xFF0C;10250&#x7528;&#x4E8E;&#x4E0E;&#x96C6;&#x7FA4;master&#x901A;&#x4FE1;, 16000&#x7528;&#x4E8E;&#x63A2;&#x6D4B;&#x7F51;&#x7EDC;&#x72B6;&#x6001;&#xFF09;&#x3002;&#x521B;&#x5EFA;&#x5BB9;&#x5668;&#x4EE5;&#x540E;&#xFF0C;&#x5982;&#x679C;&#x5141;&#x8BB8;&#x5916;&#x7F51;&#x8BBF;&#x95EE;&#x5BB9;&#x5668;&#xFF0C;&#x5219;&#x8FD8;&#x9700;&#x8981;&#x5F00;&#x542F;&#x5BB9;&#x5668;&#x5E94;&#x7528;&#x7684;&#x5BF9;&#x5916;&#x7AEF;&#x53E3;&#x3002;</li>
+<li><strong>&#x6BCF;&#x6B21;&#x6DFB;&#x52A0;&#x673A;&#x5668;&#x90FD;&#x9700;&#x8981;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x547D;&#x4EE4;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x6DFB;&#x52A0;&#x5931;&#x8D25;</strong></li>
+<li><strong>&#x5141;&#x8BB8;&#x628A;&#x4E00;&#x53F0;&#x4E3B;&#x673A;&#x6DFB;&#x52A0;&#x5230;&#x591A;&#x4E2A;&#x96C6;&#x7FA4;&#x4E2D;&#xFF0C;&#x4EE5;&#x6700;&#x540E;&#x6DFB;&#x52A0;&#x7684;&#x96C6;&#x7FA4;&#x4E3A;&#x51C6;&#xFF0C;&#x5176;&#x4ED6;&#x96C6;&#x7FA4;&#x4E2D;&#x8BE5;&#x4E3B;&#x673A;&#x7684;&#x72B6;&#x6001;&#x5747;&#x4E3A;&quot;&#x672A;&#x5C31;&#x7EEA;&quot;</strong></li>
+<li><strong>tenx-agent&#x662F;&#x4E00;&#x4E2A;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6267;&#x884C;&quot;service tenx-agent stop&quot;&#x6765;&#x65AD;&#x5F00;&#x4E0E;&#x96C6;&#x7FA4;&#x7684;&#x8FDE;&#x63A5;&#x3002;</strong>tenx-agent&#x7EC8;&#x6B62;&#x540E;&#xFF0C;docker&#x8FDB;&#x7A0B;&#x4E5F;&#x4F1A;&#x7EC8;&#x6B62;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&quot;service docker start&quot;&#x91CD;&#x65B0;&#x8FD0;&#x884C;docker</li>
+</ol>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../../../doc/v1/host/02-add-host-self-host.html" class="navigation navigation-prev " aria-label="Previous page: 添加主机（普通模式）"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../../../doc/v1/host/03-deploy-app.html" class="navigation navigation-next " aria-label="Next page: 应用管理（普通模式）"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../../../gitbook/app.js"></script>
+
+    
+    <script src="../../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../../../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../../../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../../../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../../../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"search":{"maxIndexSize":100000},"toggle-chapters":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+    </body>
+    <!-- End of book TenxCloud 时速云 -->
+</html>
