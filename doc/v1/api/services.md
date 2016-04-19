@@ -58,7 +58,7 @@
               "imagePullPolicy": "IfNotPresent"
             }
           ],
-          "port_mapping": [
+          "port_mappings": [
             {
               "service_url": "myubuntu-demox.tenxapp.com:58767",
               "container_port": 3306,
@@ -136,7 +136,7 @@
           "imagePullPolicy": "IfNotPresent"
         }
       ],
-      "port_mapping": [
+      "port_mappings": [
         {
           "service_url": "myubuntu-demox.tenxapp.com:58767",,
           "container_port": 3306,
@@ -169,7 +169,6 @@
 service.json示例：
 
     {
-      "name": "service_name",
       "target_instance_size": 1,
       "containers": [
         {
@@ -195,7 +194,7 @@ service.json示例：
           ],
           "resources": {
             "limits": {
-              "memory": 512
+              "memory": "512Mi"
             }
           },
           "volumeMounts": [
@@ -206,7 +205,7 @@ service.json示例：
           ]
         }
       ],
-      "port_mapping": [
+      "port_mappings": [
         {
           "container_port": 3306,
           "protocol": "tcp"
@@ -254,7 +253,7 @@ service.json示例：
           ],
           "resources": {
             "limits" {
-              "memory": 512
+              "memory": "512Mi"
             }
           },
           "volumeMounts": [
@@ -265,7 +264,7 @@ service.json示例：
           ]
         }
       ],
-      "port_mapping": [
+      "port_mappings": [
         {
           "container_port": 3306,
           "protocol": "tcp",
@@ -325,7 +324,7 @@ request_body 示例：
           {
             "resource": {
                 "limits": {
-                     "memory": 512
+                     "memory": "512Mi"
                 }
             }
           }
