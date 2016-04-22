@@ -1,4 +1,4 @@
-## 绑定域名
+# 绑定域名
 在上一小节中我们新建了一个容器，点击容器名称进入实例详情页，在这里我们可以查看容器的基本信息、实例、端口、监控(cpu|memory|network)、日志以及事件，还可以将容器实例的地址与自己的域名绑定，不过**TenxCloud只允许绑定备案过的域名**，下面我们就来看下如何绑定域名：
 
  ![domain_binding1](/doc/v1/images/container/domain_binding1.jpg)

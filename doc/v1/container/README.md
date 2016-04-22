@@ -9,3 +9,4 @@
    * [弹性伸缩](scale_up_down.md)
    * [回收站](recycle_bin.md)
    * [修改容器环境变量和端口](update_container_env_and_port.md)
+   * [存储卷管理](manage_volume.md)

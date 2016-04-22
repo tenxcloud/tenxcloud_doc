@@ -15,6 +15,7 @@
    * [弹性伸缩](doc/v1/container/scale_up_down.md)
    * [回收站](doc/v1/container/recycle_bin.md)
    * [修改容器环境变量和端口](doc/v1/container/update_container_env_and_port.md)
+   * [存储卷管理](doc/v1/container/manage_volume.md)
 * [高级服务 - 数据库与缓存](doc/v1/advservices/README.md)
    * [Mongodb 集群搭建](doc/v1/advservices/mongo-cluster.md)
 * [代码构建](doc/v1/ci/README.md)
