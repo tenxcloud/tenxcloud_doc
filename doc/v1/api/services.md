@@ -46,7 +46,7 @@
               ],
               "resources": {
                 "limits": {
-                  "memory": "512Mi"
+                  "memory": "512"
                 }
               },
               "volumeMounts": [
@@ -124,7 +124,7 @@
           ],
           "resources": {
             "limits" {
-              "memory": "512Mi"
+              "memory": "512"
             }
           },
           "volumeMounts": [
@@ -194,7 +194,7 @@ service.json示例：
           ],
           "resources": {
             "limits": {
-              "memory": "512Mi"
+              "memory": "512"
             }
           },
           "volumeMounts": [
@@ -253,7 +253,7 @@ service.json示例：
           ],
           "resources": {
             "limits" {
-              "memory": "512Mi"
+              "memory": "512"
             }
           },
           "volumeMounts": [
@@ -324,7 +324,7 @@ request_body 示例：
           {
             "resource": {
                 "limits": {
-                     "memory": "512Mi"
+                     "memory": "512"
                 }
             }
           }
