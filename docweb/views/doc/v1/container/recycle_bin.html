@@ -5,7 +5,7 @@
         <!-- head:start -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>快速构建golang镜像 | TenxCloud 时速云</title>
+        <title>回收站 | TenxCloud 时速云</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -43,10 +43,10 @@
         
     
     
-    <link rel="next" href="../../../doc/v1/ci/FAQ.html" />
+    <link rel="next" href="../../../doc/v1/container/update_container_env_and_port.html" />
     
     
-    <link rel="prev" href="../../../doc/v1/ci/samples-java.html" />
+    <link rel="prev" href="../../../doc/v1/container/scale_up_down.html" />
     
 
         <!-- head:end -->
@@ -55,9 +55,9 @@
         <!-- body:start -->
         
     <div class="book"
-        data-level="5.3.4"
-        data-chapter-title="快速构建golang镜像"
-        data-filepath="doc/v1/ci/golang.md"
+        data-level="3.6"
+        data-chapter-title="回收站"
+        data-filepath="doc/v1/container/recycle_bin.md"
         data-basepath="../../.."
         data-revision="Fri Apr 22 2016 17:48:01 GMT+0800 (中国标准时间)"
         data-innerlanguage="">
@@ -275,7 +275,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.6" data-path="doc/v1/container/recycle_bin.html">
+        <li class="chapter active" data-level="3.6" data-path="doc/v1/container/recycle_bin.html">
             
                 
                     <a href="../../../doc/v1/container/recycle_bin.html">
@@ -570,7 +570,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="5.3.4" data-path="doc/v1/ci/golang.html">
+        <li class="chapter " data-level="5.3.4" data-path="doc/v1/ci/golang.html">
             
                 
                     <a href="../../../doc/v1/ci/golang.html">
@@ -1231,40 +1231,11 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="&#x5FEB;&#x901F;&#x90E8;&#x7F72;golang&#x5E94;&#x7528;">&#x5FEB;&#x901F;&#x90E8;&#x7F72;golang&#x5E94;&#x7528;</h1>
-<p>&#x5982;&#x679C;&#x60A8;&#x9700;&#x8981;&#x5FEB;&#x901F;&#x90E8;&#x7F72;&#x4E00;&#x4E2A;golang&#x7684;&#x5E94;&#x7528;&#x5230;TenxCloud&#x7684;&#x5BB9;&#x5668;&#x5E73;&#x53F0;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x6B65;&#x9AA4;:</p>
-<p>1.&#x9996;&#x5148;&#x5728;&#x4F60;&#x7684;golang&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x4E2D;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;Dockerfile&#x6587;&#x4EF6;&#xFF0C;&#x5982;&#x679C;&#x60A8;&#x5DF2;&#x7ECF;&#x6DFB;&#x52A0;&#x4E86;&#x6B64;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x5FFD;&#x7565;&#x6B64;&#x6B65;&#x3002;</p>
-<p>&#x53C2;&#x8003;gosample&#x9879;&#x76EE;&#xFF1A;<a href="https://github.com/tenxcloud/golang-sample.git" target="_blank">https://github.com/tenxcloud/golang-sample.git</a></p>
-<pre><code># Dockerfile to create a docker image
-# Base image
-FROM golang:1.4.2
-
-# Add project folder to the image
-ADD . $GOPATH/src
-
-ADD run.sh /run.sh
-
-RUN chmod +x /run.sh
-
-# Expose the container port
-EXPOSE 8080
-
-WORKDIR $GOPATH/src
-
-CMD [&quot;/run.sh&quot;]
-</code></pre><p>2.&#x901A;&#x8FC7;&quot;tce login&quot; &#x767B;&#x5F55;TenxCloud&#x5F15;&#x64CE;</p>
-<p>3.&#x8F93;&#x5165;&quot;tce push gosample&quot; &#x5728;TenxCloud&#x4E0A;&#x6784;&#x5EFA;Docker &#x955C;&#x50CF;&#xFF0C;&#x5E76;push&#x5230;TenxCloud&#x7684;&#x79C1;&#x6709;&#x955C;&#x50CF;&#x670D;&#x52A1;&#x5668;&#x4E2D;&#xFF1A;</p>
-<p><img src="../images/samples/gosample/tce_go_push.png" alt="tce1"></p>
-<p>4.&#x767B;&#x5F55; www.tenxcloud.com&#xFF0C;&#x5728;&#x201C;&#x96C6;&#x6210;&#x677F;&#x5757;&#x201D;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x521A;&#x521A;&#x6784;&#x5EFA;&#x7684;&#x201C;gosample&#x201D;&#x9879;&#x76EE;&#x3002;</p>
-<p><img src="../images/samples/gosample/tce_go_cilist.png" alt="tce1"></p>
-<p>5.&#x8FDB;&#x5165;&#x9879;&#x76EE;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x6784;&#x5EFA;&#x65E5;&#x5FD7;&#x6807;&#x7B7E;&#x4E0B;&#xFF0C;&#x540C;&#x6837;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6211;&#x4EEC;&#x955C;&#x50CF;&#x6784;&#x5EFA;&#x7684;&#x65E5;&#x5FD7;&#xFF1A;
-<img src="../images/samples/gosample/tce_go_cilogs.png" alt="tce1"></p>
-<p>6.&#x70B9;&#x51FB;&#x201C;&#x90E8;&#x7F72;&#x201D;&#xFF0C;&#x586B;&#x5199;&#x4FE1;&#x606F;&#xFF0C;&#x70B9;&#x51FB;&#x786E;&#x5B9A;&#xFF0C;&#x9875;&#x9762;&#x8DF3;&#x8F6C;&#x81F3;&#x5BB9;&#x5668;&#x9875;&#xFF0C;&#x5E76;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x521B;&#x5EFA;&#x4E86;gosample&#x7684;&#x5BB9;&#x5668;&#x3002;
-<img src="../images/samples/gosample/tce_go_apply.png" alt="tce1"></p>
-<p>7.&#x7B49;&#x5F85;&#x5B9E;&#x4F8B;&#x8FD0;&#x884C;&#x72B6;&#x6001;&#x53D8;&#x4E3A;&#x2018;&#x8FD0;&#x884C;&#x4E2D;&#x2019;&#x540E;&#xFF0C;&#x70B9;&#x51FB;&#x2018;&#x670D;&#x52A1;&#x5730;&#x5740;&#x2019;&#xFF0C;&#x53EF;&#x76F4;&#x63A5;&#x8FDB;&#x5165;&#x6211;&#x4EEC;&#x7684;gosample&#x9879;&#x76EE;&#x3002;
-<img src="../images/samples/gosample/tce_go_link.png" alt="tce1"></p>
-<p>8.&#x63A5;&#x4E0B;&#x6765;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6211;&#x4EEC;&#x7684;gosample&#x9879;&#x76EE;&#x4E86;&#x3002;
-<img src="../images/samples/gosample/tce_go_success.png" alt="tce1"></p>
+                        <h1 id="&#x56DE;&#x6536;&#x7AD9;">&#x56DE;&#x6536;&#x7AD9;</h1>
+<p>&#x5728;&#x5BB9;&#x5668;&#x670D;&#x52A1;&#x5217;&#x8868;&#x4E2D;&#x5220;&#x9664;&#x7684;&#x670D;&#x52A1;&#x4F1A;&#x653E;&#x5165;&#x56DE;&#x6536;&#x7AD9;&#x4E2D;&#xFF0C;&#x6B64;&#x65F6;&#x201C;&#x56DE;&#x6536;&#x7AD9;&#x201D;&#x4FA7;&#x8FB9;&#x680F;&#x4F1A;&#x663E;&#x793A;&#x5220;&#x9664;&#x7684;&#x670D;&#x52A1;&#x6570;&#x91CF;&#x3002;</p>
+<p> <img src="../images/container/deleted_count.png" alt="show_count"></p>
+<p>&#x5728;&#x56DE;&#x6536;&#x7AD9;&#x9875;&#x9762;&#x53EF;&#x4EE5;&#x70B9;&#x51FB;&#x201C;&#x6062;&#x590D;&#x670D;&#x52A1;&#x201D;&#x6309;&#x94AE;&#x6062;&#x590D;&#x52FE;&#x9009;&#x7684;&#x670D;&#x52A1;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x70B9;&#x51FB;&#x201C;&#x5F7B;&#x5E95;&#x5220;&#x9664;&#x201D;&#x6309;&#x94AE;&#x6C38;&#x4E45;&#x5220;&#x9664;&#x6307;&#x5B9A;&#x670D;&#x52A1;&#x3002;</p>
+<p> <img src="../images/container/operations_of_recycle_bin.png" alt="operation"></p>
 
                     
                     </section>
@@ -1275,10 +1246,10 @@ CMD [&quot;/run.sh&quot;]
         </div>
 
         
-        <a href="../../../doc/v1/ci/samples-java.html" class="navigation navigation-prev " aria-label="Previous page: 快速构建Java镜像"><i class="fa fa-angle-left"></i></a>
+        <a href="../../../doc/v1/container/scale_up_down.html" class="navigation navigation-prev " aria-label="Previous page: 弹性伸缩"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../../doc/v1/ci/FAQ.html" class="navigation navigation-next " aria-label="Next page: FAQ"><i class="fa fa-angle-right"></i></a>
+        <a href="../../../doc/v1/container/update_container_env_and_port.html" class="navigation navigation-next " aria-label="Next page: 修改容器环境变量和端口"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

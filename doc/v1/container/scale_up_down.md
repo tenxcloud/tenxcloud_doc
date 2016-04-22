@@ -1,4 +1,5 @@
 # 弹性伸缩
+
 在容器列表页，勾选容器后，我们可以 **弹性伸缩** 容器实例数量：
 
  ![scale_up](/doc/v1/images/container/scale_up_1.png)

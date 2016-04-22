@@ -13,6 +13,7 @@
    * [停止/启动/重启/删除容器](doc/v1/container/start_stop.md)
    * [修改容器配置](doc/v1/container/update.md)
    * [弹性伸缩](doc/v1/container/scale_up_down.md)
+   * [回收站](doc/v1/container/recycle_bin.md)
    * [修改容器环境变量和端口](doc/v1/container/update_container_env_and_port.md)
 * [高级服务 - 数据库与缓存](doc/v1/advservices/README.md)
    * [Mongodb 集群搭建](doc/v1/advservices/mongo-cluster.md)

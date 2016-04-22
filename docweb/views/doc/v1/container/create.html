@@ -59,7 +59,7 @@
         data-chapter-title="创建第一个Hello World服务"
         data-filepath="doc/v1/container/create.md"
         data-basepath="../../.."
-        data-revision="Fri Apr 22 2016 17:06:24 GMT+0800 (中国标准时间)"
+        data-revision="Fri Apr 22 2016 17:48:01 GMT+0800 (中国标准时间)"
         data-innerlanguage="">
     
 
@@ -275,14 +275,29 @@
             
         </li>
     
-        <li class="chapter " data-level="3.6" data-path="doc/v1/container/update_container_env_and_port.html">
+        <li class="chapter " data-level="3.6" data-path="doc/v1/container/recycle_bin.html">
+            
+                
+                    <a href="../../../doc/v1/container/recycle_bin.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        回收站
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="doc/v1/container/update_container_env_and_port.html">
             
                 
                     <a href="../../../doc/v1/container/update_container_env_and_port.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.6.</b>
+                            <b>3.7.</b>
                         
                         修改容器环境变量和端口
                     </a>
@@ -1219,19 +1234,20 @@
                         <h2 id="&#x521B;&#x5EFA;&#x7B2C;&#x4E00;&#x4E2A;hello-world&#x670D;&#x52A1;">&#x521B;&#x5EFA;&#x7B2C;&#x4E00;&#x4E2A;Hello World&#x670D;&#x52A1;</h2>
 <p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x53EA;&#x9700;&#x8981;&#x4E0B;&#x9762;&#x51E0;&#x4E2A;&#x7B80;&#x5355;&#x6B65;&#x9AA4;&#xFF1A;</p>
 <ol>
-<li><p>&#x8FDB;&#x5165; &#x201C;&#x5BB9;&#x5668;&#x670D;&#x52A1;&#x201D; -&gt; &#x201C;&#x670D;&#x52A1;&#x201D; &#x9875;&#x9762;&#xFF0C;&#x70B9;&#x51FB; &#x201C;&#x521B;&#x5EFA;&#x201D; &#x6309;&#x94AE;:
-<img src="../images/container/create_container_1.png" alt="create1"></p>
+<li><p>&#x8FDB;&#x5165; &#x201C;&#x5BB9;&#x5668;&#x670D;&#x52A1;&#x201D; -&gt; &#x201C;&#x670D;&#x52A1;&#x201D; &#x9875;&#x9762;&#xFF0C;&#x70B9;&#x51FB; &#x201C;&#x521B;&#x5EFA;&#x201D; &#x6309;&#x94AE;:</p>
+<p><img src="../images/container/create_container_1.png" alt="create1"></p>
 </li>
-<li><p>&#x5728;&#x65B0;&#x7684;&#x9875;&#x9762;&#x4E2D;&#x9009;&#x62E9;&#x955C;&#x50CF;&#xFF0C;&#x53EF;&#x4EE5;&#x6309;&#x7167;&#x5206;&#x7C7B;&#x67E5;&#x770B;&#x53EF;&#x7528;&#x955C;&#x50CF;&#x3002;&#x8FD9;&#x91CC;&#x5728;&#x641C;&#x7D22;&#x6846;&#x4E2D;&#x8F93;&#x5165;&#x201C;hello-world&#x201D;&#x5E76;&#x70B9;&#x51FB;&#x201C;&#x641C;&#x7D22;&#x201D;&#xFF0C;&#x5728;&#x7ED3;&#x679C;&#x4E2D;&#x627E;&#x5230;&#x201C;tenxcloud/hello-world&#x201D;&#x5E76;&#x70B9;&#x51FB;&#x201C;&#x90E8;&#x7F72;&#x201D;&#x6309;&#x94AE;&#x3002;
-<img src="../images/container/create_container_2.png" alt="create2"></p>
+<li><p>&#x5728;&#x65B0;&#x7684;&#x9875;&#x9762;&#x4E2D;&#x9009;&#x62E9;&#x955C;&#x50CF;&#xFF0C;&#x53EF;&#x4EE5;&#x6309;&#x7167;&#x5206;&#x7C7B;&#x67E5;&#x770B;&#x53EF;&#x7528;&#x955C;&#x50CF;&#x3002;&#x8FD9;&#x91CC;&#x5728;&#x641C;&#x7D22;&#x6846;&#x4E2D;&#x8F93;&#x5165;&#x201C;hello-world&#x201D;&#x5E76;&#x70B9;&#x51FB;&#x201C;&#x641C;&#x7D22;&#x201D;&#xFF0C;&#x5728;&#x7ED3;&#x679C;&#x4E2D;&#x627E;&#x5230;&#x201C;tenxcloud/hello-world&#x201D;&#x5E76;&#x70B9;&#x51FB;&#x201C;&#x90E8;&#x7F72;&#x201D;&#x6309;&#x94AE;&#x3002;</p>
+<p><img src="../images/container/create_container_2.png" alt="create2"></p>
 </li>
-<li><p>&#x5728;&#x65B0;&#x7684;&#x9875;&#x9762;&#x4E2D;&#x8F93;&#x5165;&#x670D;&#x52A1;&#x540D;&#x79F0;&#xFF0C;&#x5982;&#x201C;hello-world&#x201D;&#x3002;&#x70B9;&#x51FB;&#x201C;&#x521B;&#x5EFA;&#x201D;&#x6309;&#x94AE;&#x3002;
-<img src="../images/container/create_container_3.png" alt="create3"></p>
+<li><p>&#x5728;&#x65B0;&#x7684;&#x9875;&#x9762;&#x4E2D;&#x8F93;&#x5165;&#x670D;&#x52A1;&#x540D;&#x79F0;&#xFF0C;&#x5982;&#x201C;hello-world&#x201D;&#x3002;&#x70B9;&#x51FB;&#x201C;&#x521B;&#x5EFA;&#x201D;&#x6309;&#x94AE;&#x3002;</p>
+<p><img src="../images/container/create_container_3.png" alt="create3"></p>
 </li>
 </ol>
 <ol>
-<li>&#x6B64;&#x65F6;&#x4F1A;&#x8DF3;&#x8F6C;&#x56DE;&#x5230;&#x5BB9;&#x5668;&#x670D;&#x52A1;&#x5217;&#x8868;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6709;&#x4E00;&#x4E2A;&#x6B63;&#x5728;&#x521B;&#x5EFA;&#x7684;&#x5BB9;&#x5668;&#x670D;&#x52A1;&#x3002;&#x901A;&#x8FC7;&#x5237;&#x65B0;&#x6309;&#x94AE;&#x67E5;&#x770B;&#x5BB9;&#x5668;&#x5E94;&#x7528;&#x7684;&#x6700;&#x65B0;&#x72B6;&#x6001;&#xFF0C;&#x5F85;&#x72B6;&#x6001;&#x53D8;&#x4E3A;&#x201C;&#x8FD0;&#x884C;&#x4E2D;&#x201D;&#x540E;&#xFF0C;&#x4FBF;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x201C;&#x670D;&#x52A1;&#x5730;&#x5740;&#x201D;&#x8BBF;&#x95EE;&#x5BB9;&#x5668;&#x7684;&#x670D;&#x52A1;&#x63A5;&#x53E3;&#x4E86;&#x3002;
-<img src="../images/container/create_container_4.png" alt="create4"></li>
+<li><p>&#x6B64;&#x65F6;&#x4F1A;&#x8DF3;&#x8F6C;&#x56DE;&#x5230;&#x5BB9;&#x5668;&#x670D;&#x52A1;&#x5217;&#x8868;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6709;&#x4E00;&#x4E2A;&#x6B63;&#x5728;&#x521B;&#x5EFA;&#x7684;&#x5BB9;&#x5668;&#x670D;&#x52A1;&#x3002;&#x901A;&#x8FC7;&#x5237;&#x65B0;&#x6309;&#x94AE;&#x67E5;&#x770B;&#x5BB9;&#x5668;&#x5E94;&#x7528;&#x7684;&#x6700;&#x65B0;&#x72B6;&#x6001;&#xFF0C;&#x5F85;&#x72B6;&#x6001;&#x53D8;&#x4E3A;&#x201C;&#x8FD0;&#x884C;&#x4E2D;&#x201D;&#x540E;&#xFF0C;&#x4FBF;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x201C;&#x670D;&#x52A1;&#x5730;&#x5740;&#x201D;&#x8BBF;&#x95EE;&#x5BB9;&#x5668;&#x7684;&#x670D;&#x52A1;&#x63A5;&#x53E3;&#x4E86;&#x3002;</p>
+<p><img src="../images/container/create_container_4.png" alt="create4"></p>
+</li>
 </ol>
 
                     

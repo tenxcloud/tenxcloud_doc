@@ -6,3 +6,6 @@
    * [绑定域名](bind_domain.md)
    * [停止/启动/重启/删除容器](start_stop.md)
    * [修改容器配置](update.md)
+   * [弹性伸缩](scale_up_down.md)
+   * [回收站](recycle_bin.md)
+   * [修改容器环境变量和端口](update_container_env_and_port.md)
