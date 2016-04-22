@@ -5,7 +5,7 @@
         <!-- head:start -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>用户信息 | TenxCloud 时速云</title>
+        <title>弹性伸缩 | TenxCloud 时速云</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -43,10 +43,10 @@
         
     
     
-    <link rel="next" href="../../../doc/v1/api/regions.html" />
+    <link rel="next" href="../../../doc/v1/container/update_container_env_and_port.html" />
     
     
-    <link rel="prev" href="../../../doc/v1/api/status.html" />
+    <link rel="prev" href="../../../doc/v1/container/update.html" />
     
 
         <!-- head:end -->
@@ -55,9 +55,9 @@
         <!-- body:start -->
         
     <div class="book"
-        data-level="9.2.2"
-        data-chapter-title="用户信息"
-        data-filepath="doc/v1/api/auth.md"
+        data-level="3.5"
+        data-chapter-title="弹性伸缩"
+        data-filepath="doc/v1/container/scale_up_down.md"
         data-basepath="../../.."
         data-revision="Fri Apr 22 2016 17:06:24 GMT+0800 (中国标准时间)"
         data-innerlanguage="">
@@ -260,7 +260,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.5" data-path="doc/v1/container/scale_up_down.html">
+        <li class="chapter active" data-level="3.5" data-path="doc/v1/container/scale_up_down.html">
             
                 
                     <a href="../../../doc/v1/container/scale_up_down.html">
@@ -1032,7 +1032,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="9.2.2" data-path="doc/v1/api/auth.html">
+        <li class="chapter " data-level="9.2.2" data-path="doc/v1/api/auth.html">
             
                 
                     <a href="../../../doc/v1/api/auth.html">
@@ -1216,20 +1216,14 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="&#x7528;&#x6237;&#x4FE1;&#x606F;">&#x7528;&#x6237;&#x4FE1;&#x606F;</h1>
-<p>&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x62EC;&#x7528;&#x6237;&#x540D;&#x3001;&#x90AE;&#x4EF6;&#x5730;&#x5740;&#x3001;&#x7535;&#x8BDD;&#x7B49;&#x57FA;&#x672C;&#x4FE1;&#x606F;&#x3002;</p>
-<pre><code>GET /v1/auth
-</code></pre><p>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;&#xFF1A;</p>
-<pre><code>curl &quot;https://api.tenxcloud.com/v1/auth&quot; -H &quot;username:[user_name]&quot; -H &quot;Authorization: token [api_token]&quot;
-</code></pre><p>&#x54CD;&#x5E94;&#x793A;&#x4F8B;&#xFF1A;</p>
-<pre><code>{
-  &quot;user_name&quot;: &quot;user&quot;,
-  &quot;email&quot;: &quot;user@tenxcloud.com&quot;,
-  &quot;phone&quot;: &quot;158xxxxxxxx&quot;,
-  &quot;creation_time&quot;: &quot;2015-12-28T16:05:06+08:00&quot;,
-  &quot;last_login_time&quot;: &quot;2015-12-28T16:06:12+08:00&quot;,
-}
-</code></pre>
+                        <h1 id="&#x5F39;&#x6027;&#x4F38;&#x7F29;">&#x5F39;&#x6027;&#x4F38;&#x7F29;</h1>
+<p>&#x5728;&#x5BB9;&#x5668;&#x5217;&#x8868;&#x9875;&#xFF0C;&#x52FE;&#x9009;&#x5BB9;&#x5668;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5; <strong>&#x5F39;&#x6027;&#x4F38;&#x7F29;</strong> &#x5BB9;&#x5668;&#x5B9E;&#x4F8B;&#x6570;&#x91CF;&#xFF1A;</p>
+<p> <img src="../images/container/scale_up_1.png" alt="scale_up"></p>
+<p>&#x5728;&#x5F39;&#x51FA;&#x6846;&#x4E2D;&#x9009;&#x62E9;&#x5B9E;&#x4F8B;&#x6570;&#x91CF;&#xFF0C;&#x5E76;&#x70B9;&#x51FB;&#x201C;&#x4FDD;&#x5B58;&#x201D;&#x6309;&#x94AE;&#xFF1A;</p>
+<p> <img src="../images/container/scale_up_2.png" alt="scale_up"></p>
+<p>&#x6B64;&#x65F6;&#x5C06;&#x8FD4;&#x56DE;&#x5BB9;&#x5668;&#x670D;&#x52A1;&#x5217;&#x8868;&#x9875;&#xFF0C;&#x5C55;&#x5F00;&#x4E4B;&#x524D;&#x6269;&#x5BB9;&#x7684;&#x670D;&#x52A1;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5B9E;&#x4F8B;&#x6570;&#x91CF;&#x6539;&#x53D8;&#x4E86;&#xFF1A;</p>
+<p> <img src="../images/container/scale_up_3.png" alt="scale_up"></p>
+
                     
                     </section>
                 
@@ -1239,10 +1233,10 @@
         </div>
 
         
-        <a href="../../../doc/v1/api/status.html" class="navigation navigation-prev " aria-label="Previous page: API 服务状态"><i class="fa fa-angle-left"></i></a>
+        <a href="../../../doc/v1/container/update.html" class="navigation navigation-prev " aria-label="Previous page: 修改容器配置"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../../doc/v1/api/regions.html" class="navigation navigation-next " aria-label="Next page: 服务区信息"><i class="fa fa-angle-right"></i></a>
+        <a href="../../../doc/v1/container/update_container_env_and_port.html" class="navigation navigation-next " aria-label="Next page: 修改容器环境变量和端口"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
