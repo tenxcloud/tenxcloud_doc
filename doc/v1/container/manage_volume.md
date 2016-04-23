@@ -25,3 +25,21 @@
 2. 弹出框中选择文件系统格式后，点击“确定”按钮即可。
 
  ![format_volume2](/doc/v1/images/container/format_volume_2.png)
+
+## 存储卷扩容
+
+1. 在存储卷列表页面点击“功能”列的“扩容”按钮可以增加对应的存储卷容量。
+
+ ![extend_volume1](/doc/v1/images/container/extend_volume_1.png)
+
+2. 在弹出框中修改存储卷大小，点击“保存”按钮即可。
+
+ ![extend_volume2](/doc/v1/images/container/extend_volume_2.png)
+
+    注意：存储卷只能扩容，不支持缩容。
+
+## 存储卷删除
+
+1. 在存储卷列表页面进行勾选，点击“删除”按钮。在弹出框点击“确定”按钮。
+
+ ![delete_volume](/doc/v1/images/container/delete_volume.png)
