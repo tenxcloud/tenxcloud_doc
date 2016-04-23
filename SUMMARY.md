@@ -18,6 +18,7 @@
    * [修改容器环境变量和端口](doc/v1/container/update_container_env_and_port.md)
    * [存储卷管理](doc/v1/container/manage_volume.md)
    * [存储卷使用](doc/v1/container/use_volume.md)
+   * [访问其他内部容器](doc/v1/container/access_container.md)
 * [高级服务 - 数据库与缓存](doc/v1/advservices/README.md)
    * [Mongodb 集群搭建](doc/v1/advservices/mongo-cluster.md)
 * [代码构建](doc/v1/ci/README.md)
