@@ -5,6 +5,6 @@
 
 * [构建项目](project-fast-build.md)
 * [如何选择构建节点](select-build-agent.md)
-* [管理镜像](project-image.md)
 * [部署项目](project-deploy.md)
+* [管理镜像](project-image.md)
 * [其他操作](project-other.md)
