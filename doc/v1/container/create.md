@@ -24,64 +24,64 @@
 
 1. 打开命令行工具，执行以下命令拉取ubuntu镜像，并运行一个容器。
 
-```
-sudo docker pull index.tenxcloud.com/tenxcloud/ubuntu
-
-sudo docker run -ti index.tenxcloud.com/tenxcloud/ubuntu /bin/bash
-```
+ ```
+ sudo docker pull index.tenxcloud.com/tenxcloud/ubuntu
+ 
+ sudo docker run -ti index.tenxcloud.com/tenxcloud/ubuntu /bin/bash
+ ```
 
 2. 在容器中创建my-run.sh文件，并添加以下内容。
 
-```
-#!/bin/sh
-
-echo this is my-run.sh
-echo "========================================"
-
-./run.sh
-```
+ ```
+ #!/bin/sh
+ 
+ echo this is my-run.sh
+ echo "========================================"
+ 
+ ./run.sh
+ ```
 
 3. 赋予脚本可执行权限并退出容器。
 
-```
-chmod 755 my-run.sh
-
-exit
-```
+ ```
+ chmod 755 my-run.sh
+ 
+ exit
+ ```
 
 4. 创建新镜像，名称为index.tenxcloud.com/<username>/my-ubuntu。
 
-```
-sudo docker commit $(docker ps -lq) index.tenxcloud.com/<username>/my-ubuntu
-```
+ ```
+ sudo docker commit $(docker ps -lq) index.tenxcloud.com/<username>/my-ubuntu
+ ```
 
 5. 执行以下命令检验效果。
 
-```
-$ sudo docker run -d index.tenxcloud.com/<username>/my-ubuntu ./my-run.sh
-
-$ sudo docker logs $(docker ps -lq)
-this is my-run.sh
-===========================
-=> Setting a random password to the root user
-=> Done!
-========================================================================
-You can now connect to this Ubuntu container via SSH using:
-
-    ssh -p <port> root@<host>
-and enter the root password 'rNwVcky2sC3W' when prompted
-
-Please remember to change the above password as soon as possible!
-========================================================================
-```
+ ```
+ $ sudo docker run -d index.tenxcloud.com/<username>/my-ubuntu ./my-run.sh
+ 
+ $ sudo docker logs $(docker ps -lq)
+ this is my-run.sh
+ ===========================
+ => Setting a random password to the root user
+ => Done!
+ ========================================================================
+ You can now connect to this Ubuntu container via SSH using:
+ 
+     ssh -p <port> root@<host>
+ and enter the root password 'rNwVcky2sC3W' when prompted
+ 
+ Please remember to change the above password as soon as possible!
+ ========================================================================
+ ```
 
 6. 执行以下命令登录时速云镜像仓库并推送新镜像。
 
-```
-sudo docker login index.tenxcloud.com
-
-sudo docker push index.tenxcloud.com/tenx_huangxin/my-ubuntu
-```
+ ```
+ sudo docker login index.tenxcloud.com
+ 
+ sudo docker push index.tenxcloud.com/tenx_huangxin/my-ubuntu
+ ```
 
 7. 进入时速云控制台，在“镜像仓库” -> “我的镜像”页面中找到my-ubuntu镜像并点击进入详情页面。将镜像解锁，并点击“部署镜像”按钮。
 
