@@ -59,7 +59,7 @@
         data-chapter-title="创建第一个Hello World服务"
         data-filepath="doc/v1/container/create.md"
         data-basepath="../../.."
-        data-revision="Sat Apr 23 2016 18:11:32 GMT+0800 (中国标准时间)"
+        data-revision="Sun Apr 24 2016 17:31:07 GMT+0800 (中国标准时间)"
         data-innerlanguage="">
     
 
@@ -1307,8 +1307,70 @@
 <p><img src="../images/container/create_container_4.png" alt="create4"></p>
 </li>
 </ol>
-<p><strong> &#x8BF4;&#x660E;&#xFF1A;</strong> 
-&#x5728;&#x7B2C;&#x4E09;&#x6B65;&#x7684;&#x201C;&#x5BB9;&#x5668;&#x914D;&#x7F6E;&#x201D;&#x9875;&#x9762;&#x4E2D;&#x6709;&#x201C;&#x66F4;&#x65B0;&#x955C;&#x50CF;&#x201D;&#x548C;&#x201C;&#x4E0E;&#x8282;&#x70B9;&#x540C;&#x6B65;&#x201D;&#x4E24;&#x4E2A;&#x590D;&#x9009;&#x6846;&#xFF0C;&#x5176;&#x542B;&#x4E49;&#x5982;&#x4E0B;</p>
+<h1 id="&#x5B9A;&#x5236;&#x6267;&#x884C;&#x547D;&#x4EE4;">&#x5B9A;&#x5236;&#x6267;&#x884C;&#x547D;&#x4EE4;</h1>
+<p>&#x5728;&#x5BB9;&#x5668;&#x914D;&#x7F6E;&#x9875;&#x9762;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x6267;&#x884C;&#x547D;&#x4EE4;&#xFF0C;&#x4ECE;&#x800C;&#x6539;&#x53D8;&#x5BB9;&#x5668;&#x542F;&#x52A8;&#x540E;&#x7684;&#x6267;&#x884C;&#x6307;&#x4EE4;&#x3002;&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x5C06;&#x57FA;&#x4E8E;ubuntu&#x955C;&#x50CF;&#x6765;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x955C;&#x50CF;&#xFF0C;&#x5E76;&#x5728;&#x5176;&#x4E2D;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x53EF;&#x6267;&#x884C;&#x811A;&#x672C;&#x3002;&#x7136;&#x540E;&#x4F7F;&#x7528;&#x65B0;&#x7684;&#x955C;&#x50CF;&#x6784;&#x5EFA;&#x5BB9;&#x5668;&#x670D;&#x52A1;&#xFF0C;&#x5E76;&#x6267;&#x884C;&#x8FD9;&#x4E2A;&#x65B0;&#x5EFA;&#x7684;&#x811A;&#x672C;&#x3002;</p>
+<ol>
+<li>&#x6253;&#x5F00;&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;&#xFF0C;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x62C9;&#x53D6;ubuntu&#x955C;&#x50CF;&#xFF0C;&#x5E76;&#x8FD0;&#x884C;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x3002;</li>
+</ol>
+<pre><code>sudo docker pull index.tenxcloud.com/tenxcloud/ubuntu
+
+sudo docker run -ti index.tenxcloud.com/tenxcloud/ubuntu /bin/bash
+</code></pre><ol>
+<li>&#x5728;&#x5BB9;&#x5668;&#x4E2D;&#x521B;&#x5EFA;my-run.sh&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x6DFB;&#x52A0;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#x3002;</li>
+</ol>
+<pre><code>#!/bin/sh
+
+echo this is my-run.sh
+echo &quot;========================================&quot;
+
+./run.sh
+</code></pre><ol>
+<li>&#x8D4B;&#x4E88;&#x811A;&#x672C;&#x53EF;&#x6267;&#x884C;&#x6743;&#x9650;&#x5E76;&#x9000;&#x51FA;&#x5BB9;&#x5668;&#x3002;</li>
+</ol>
+<pre><code>chmod 755 my-run.sh
+
+exit
+</code></pre><ol>
+<li>&#x521B;&#x5EFA;&#x65B0;&#x955C;&#x50CF;&#xFF0C;&#x540D;&#x79F0;&#x4E3A;index.tenxcloud.com/<username>/my-ubuntu&#x3002;</username></li>
+</ol>
+<pre><code>sudo docker commit $(docker ps -lq) index.tenxcloud.com/&lt;username&gt;/my-ubuntu
+</code></pre><ol>
+<li>&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x68C0;&#x9A8C;&#x6548;&#x679C;&#x3002;</li>
+</ol>
+<pre><code>$ sudo docker run -d index.tenxcloud.com/&lt;username&gt;/my-ubuntu ./my-run.sh
+
+$ sudo docker logs $(docker ps -lq)
+this is my-run.sh
+===========================
+=&gt; Setting a random password to the root user
+=&gt; Done!
+========================================================================
+You can now connect to this Ubuntu container via SSH using:
+
+    ssh -p &lt;port&gt; root@&lt;host&gt;
+and enter the root password &apos;rNwVcky2sC3W&apos; when prompted
+
+Please remember to change the above password as soon as possible!
+========================================================================
+</code></pre><ol>
+<li>&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x767B;&#x5F55;&#x65F6;&#x901F;&#x4E91;&#x955C;&#x50CF;&#x4ED3;&#x5E93;&#x5E76;&#x63A8;&#x9001;&#x65B0;&#x955C;&#x50CF;&#x3002;</li>
+</ol>
+<pre><code>sudo docker login index.tenxcloud.com
+
+sudo docker push index.tenxcloud.com/tenx_huangxin/my-ubuntu
+</code></pre><ol>
+<li><p>&#x8FDB;&#x5165;&#x65F6;&#x901F;&#x4E91;&#x63A7;&#x5236;&#x53F0;&#xFF0C;&#x5728;&#x201C;&#x955C;&#x50CF;&#x4ED3;&#x5E93;&#x201D; -&gt; &#x201C;&#x6211;&#x7684;&#x955C;&#x50CF;&#x201D;&#x9875;&#x9762;&#x4E2D;&#x627E;&#x5230;my-ubuntu&#x955C;&#x50CF;&#x5E76;&#x70B9;&#x51FB;&#x8FDB;&#x5165;&#x8BE6;&#x60C5;&#x9875;&#x9762;&#x3002;&#x5C06;&#x955C;&#x50CF;&#x89E3;&#x9501;&#xFF0C;&#x5E76;&#x70B9;&#x51FB;&#x201C;&#x90E8;&#x7F72;&#x955C;&#x50CF;&#x201D;&#x6309;&#x94AE;&#x3002;</p>
+<p><img src="../images/container/modify_exec_cmd_1.png" alt="modify_exec_cmd1"></p>
+</li>
+<li><p>&#x5728;&#x201C;&#x5BB9;&#x5668;&#x914D;&#x7F6E;&#x201D;&#x9875;&#x9762;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#x4FEE;&#x6539;&#x201C;&#x6267;&#x884C;&#x547D;&#x4EE4;&#x201D;&#xFF0C;&#x5E76;&#x70B9;&#x51FB;&#x201C;&#x521B;&#x5EFA;&#x201D;&#x6309;&#x94AE;&#x3002;</p>
+<p><img src="../images/container/modify_exec_cmd_2.png" alt="modify_exec_cmd2"></p>
+</li>
+<li><p>&#x8FD4;&#x56DE;&#x5BB9;&#x5668;&#x670D;&#x52A1;&#x5217;&#x8868;&#x9875;&#x9762;&#xFF0C;&#x70B9;&#x51FB;&#x521A;&#x521B;&#x5EFA;&#x7684;&#x670D;&#x52A1;&#x540D;&#x79F0;&#xFF0C;&#x67E5;&#x770B;&#x65E5;&#x5FD7;&#x4FE1;&#x606F;&#xFF08;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x65E5;&#x5FD7;&#x53EF;&#x5C1D;&#x8BD5;&#x7B49;&#x5F85;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x518D;&#x6B21;&#x5237;&#x65B0;&#xFF09;&#x3002;&#x53EF;&#x4EE5;&#x5728;&#x65E5;&#x5FD7;&#x4E2D;&#x770B;&#x5230;&#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x5728;my-run.sh&#x811A;&#x672C;&#x4E2D;&#x52A0;&#x5165;&#x7684;echo&#x5185;&#x5BB9;&#x3002;</p>
+<p><img src="../images/container/modify_exec_cmd_3.png" alt="modify_exec_cmd3"></p>
+</li>
+</ol>
+<h1 id="&#x590D;&#x9009;&#x6846;&#x8BBE;&#x7F6E;&#x8BF4;&#x660E;">&#x590D;&#x9009;&#x6846;&#x8BBE;&#x7F6E;&#x8BF4;&#x660E;</h1>
+<p>&#x5728;&#x521B;&#x5EFA;hello-world&#x7B2C;&#x4E09;&#x6B65;&#x7684;&#x201C;&#x5BB9;&#x5668;&#x914D;&#x7F6E;&#x201D;&#x9875;&#x9762;&#x4E2D;&#x6709;&#x201C;&#x66F4;&#x65B0;&#x955C;&#x50CF;&#x201D;&#x548C;&#x201C;&#x4E0E;&#x8282;&#x70B9;&#x540C;&#x6B65;&#x201D;&#x4E24;&#x4E2A;&#x590D;&#x9009;&#x6846;&#xFF0C;&#x5176;&#x542B;&#x4E49;&#x5982;&#x4E0B;</p>
 <ul>
 <li><p>&#x590D;&#x9009;&#x6846;&#x201C;&#x66F4;&#x65B0;&#x955C;&#x50CF;&#x201D;&#x7528;&#x6765;&#x8BBE;&#x7F6E;&#x5728;&#x521B;&#x5EFA;&#x670D;&#x52A1;&#x65F6;&#x662F;&#x5426;&#x62C9;&#x53D6;&#x6700;&#x65B0;&#x955C;&#x50CF;&#x3002;&#x9996;&#x6B21;&#x521B;&#x5EFA;&#x540E;&#xFF0C;&#x955C;&#x50CF;&#x4F1A;&#x88AB;&#x7F13;&#x5B58;&#x3002;&#x672A;&#x52FE;&#x9009;&#x201C;&#x66F4;&#x65B0;&#x955C;&#x50CF;&#x201D;&#x65F6;&#xFF0C;&#x5C06;&#x4F1A;&#x4F18;&#x5148;&#x4F7F;&#x7528;&#x7F13;&#x5B58;&#x7684;&#x955C;&#x50CF;&#x521B;&#x5EFA;&#x670D;&#x52A1;&#x3002;&#x52FE;&#x9009;&#x201C;&#x66F4;&#x65B0;&#x955C;&#x50CF;&#x201D;&#x65F6;&#xFF0C;&#x5C06;&#x4F1A;&#x62C9;&#x53D6;&#x6700;&#x65B0;&#x955C;&#x50CF;&#x521B;&#x5EFA;&#x670D;&#x52A1;&#x3002;</p>
 </li>
