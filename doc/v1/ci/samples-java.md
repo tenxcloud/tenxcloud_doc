@@ -30,15 +30,13 @@ CMD ["/run.sh"]
 
 ![tce1](/doc/v1/images/samples/login_push.png)
 
-4.登录 www.tenxcloud.com，在“镜像板块”的“我的镜像”中，可以看到刚刚构建的“tomcatsample”镜像。
+4.登录 www.tenxcloud.com，在“镜像仓库”的“我的镜像”中，可以看到刚刚构建的“tomcatsample”镜像。
 
 ![tce1](/doc/v1/images/samples/tce_web_tomcat.png)
 
 5.切换到“容器
 服务”，在私有镜像中就能看到自己的镜像，并创建相应的容器服务了：
 ![tce1](/doc/v1/images/samples/tce_create_tomcat.png)
-
-注意：如果镜像没有 expose 任何端口，将不能创建容器服务，我们也可以在“我的镜像”中选择镜像，并在“服务接口”中配置镜像的端口和环境变量等信息。
 
 6.创建过程中可以点击实例，进入查看日志和事件，事件出现运行成功，那么已经创建实例成功。
 ![tce1](/doc/v1/images/samples/tce_creating_tomcat.png)

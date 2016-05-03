@@ -5,8 +5,8 @@
 
 直接点击**添加源代码**，选择Github即可。
 
-![faq-repo-list](/doc/v1/images/ci/faq-repo-list.jpg)
-#### 2.构建Bitbucket、Coding、Gitcafe、Oschina私有仓库代码
+![faq-repo-list](/doc/v1/images/ci/ci-listcoderepo3.jpg)
+#### 2.构建Bitbucket、Coding私有仓库代码
 Bitbucket、Coding、Gitcafe、Oschina这四家代码托管网站均支持设置部署公钥，只要把时速云生成的公钥添加到私有仓库的部署公钥中，就可以在时速云平台上添加私有仓库了。
 
 ![faq-repo-deploy-key](/doc/v1/images/ci/faq-deplpoy-key.jpg)
@@ -21,13 +21,5 @@ Bitbucket、Coding、Gitcafe、Oschina这四家代码托管网站均支持设置
 
 ![faq-coding-private.jpg](/doc/v1/images/ci/faq-coding-private.jpg)
 
-* 构建GitCafe私有仓库代码
-
-![faq-gitcage-private.jpg](/doc/v1/images/ci/faq-gitcage-private.jpg)
-
-* 构建Oschina私有仓库代码
-
-![faq-oschina-private.jpg](/doc/v1/images/ci/faq-oschina-private.jpg)
-
-**ps：1.部署公钥用于部署项目之用，只拥有只读权限；2.使用快速构建部署Coding、Gitcafe、Oschina私有仓库时需填写SSH地址并添加时速云部署公钥。**
+**ps：1.部署公钥用于部署项目之用，只拥有只读权限；2.使用快速构建部署Coding私有仓库时需填写SSH地址并添加时速云部署公钥。**
 

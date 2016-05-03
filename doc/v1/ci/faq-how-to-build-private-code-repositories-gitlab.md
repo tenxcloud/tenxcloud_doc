@@ -1,5 +1,5 @@
 # 时速云支持gitlab私有代码仓库构建吗？
-*答：支持，时速云支持Github、Bitbucket、Coding、Gitcafe、Oschina、Gitlab私有仓库代码。*
+*答：支持，时速云支持Github、Bitbucket、Coding、Gitlab私有仓库代码。*
 
 #### 1.构建Gitlab私有仓库代码
 
@@ -36,5 +36,5 @@ Gitlab的private_token位置参考下图
 
 时速云会为每个私有项目生成一个项目公钥，保证每个私有项目的安全性，将项目公钥添加到对应私有仓库的部署公钥里就可以了哦~
 
-**ps：1.部署公钥用于部署项目之用，只拥有只读权限；2.使用快速构建部署Coding、Gitcafe、Oschina、Gitlab私有仓库时需填写SSH地址并添加时速云部署公钥。**
+**ps：1.部署公钥用于部署项目之用，只拥有只读权限；2.使用快速构建部署Coding、Gitlab私有仓库时需填写SSH地址并添加时速云部署公钥。**
 

@@ -28,6 +28,7 @@
    * [管理我的项目](doc/v1/ci/project-manage.md)
        * [构建项目](doc/v1/ci/project-fast-build.md)
        * [如何选择构建节点](doc/v1/ci/select-build-agent.md)
+       * [持续集成](doc/v1/ci/project-ci.md)
        * [部署项目](doc/v1/ci/project-deploy.md)
        * [管理镜像](doc/v1/ci/project-image.md)
        * [其他操作](doc/v1/ci/project-other.md)
