@@ -46,6 +46,7 @@ CMD ["/run.sh"]
 ![tce1](/doc/v1/images/samples/gosample/tce_go_link.png)
 
 8.接下来就可以看到我们的gosample项目了。
+
 ![tce1](/doc/v1/images/samples/gosample/tce_go_success.png)
 
 
