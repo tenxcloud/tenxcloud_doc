@@ -7,12 +7,12 @@
 
 #### **如何使用 tce 客户端**
 1.   在 [www.tenxcloud.com](https://www.tenxcloud.com "时速云") 上注册用户
-2.   登录并进入第二个功能块 “构建”，点击绿色按钮“下载客户端”，在后面的页面中选择客户端的运行平台下载即可
+2.   进入“代码构建” -> “客户端”，在页面中选择客户端的运行平台下载即可
 ![tce1](../images/ci/tce-1.png)
 
-3.   为了使用方便，下载后将tce的路径加入到系统的PATH下，以便在任意目录均可运行。可以参考以下步骤：</br>
- **Windows**: [添加到系统Path](http://jingyan.baidu.com/article/db55b6099d1e0d4ba30a2fc0.html)</br>
- **Linux**:  [添加到系统Path](http://zhidao.baidu.com/link?url=psqItfkdfNFruHE9WS-phqcjqyYyyzOPHbvIquTCib_EdSTRz1Xpp4BYs0zsBxYh8yZvE-w33BdKxLKEV9nyqK)</br>
+3.   为了使用方便，下载后将tce的路径加入到系统的PATH下，以便在任意目录均可运行。可以参考以下步骤：<br/>
+ **Windows**: [添加到系统Path](http://jingyan.baidu.com/article/db55b6099d1e0d4ba30a2fc0.html)<br/>
+ **Linux**:  [添加到系统Path](http://zhidao.baidu.com/link?url=psqItfkdfNFruHE9WS-phqcjqyYyyzOPHbvIquTCib_EdSTRz1Xpp4BYs0zsBxYh8yZvE-w33BdKxLKEV9nyqK)<br/>
  **Mac**:  修改 /etc/paths，将tce所在路径加上
 
 #### **tce 用法说明书**
@@ -47,10 +47,8 @@ tce 使用详解：
 
  5. 如果构建项目过程中连接出了问题，中断了日志输出，或者想查看某一项目的构建过程，输入<span style="color: #0000ff;">`tce logs <project name>`</span>，继续查看构建日志。
  6. 镜像创建成功后，你可以通过
- [镜像控制台](https://www.tenxcloud.com/console/docker-registry) -> “我的镜像” 查看；还可以定义该镜像的服务接口，比如容器端口、环境变量等。
-![tce1](/doc/v1/images/samples/port_path.png)
- 5. 接下来我们就可以根据这个镜像创建容器了，一种方法是进入到 “容器”
+ “镜像仓库” -> “我的镜像” 查看。
+ 7. 接下来我们就可以根据这个镜像创建容器了，一种方法是进入到 “容器”
  控制台，令一种方法是通过`tce run`创建容器。这样我们就成功启动了一个容器服务啦！
-![tce1](/doc/v1/images/samples/tce_start.png)
- 4. 最后输入<span style="color: #0000ff;">`tce projects`</span>，查看通过tce构建的所有项目。或者输入<span style="color: #0000ff;">`tce projects -a`</span>，查看所有构建项目（包括GitHub等）
- 8. 如果想对应用内部进行操作，可以使用`tce exec`命令来查询日志，调试问题等等。
+ 8. 最后输入<span style="color: #0000ff;">`tce projects`</span>，查看通过tce构建的所有项目。或者输入<span style="color: #0000ff;">`tce projects -a`</span>，查看所有构建项目（包括GitHub等）
+ 9. 如果想对应用内部进行操作，可以使用`tce exec`命令来查询日志，调试问题等等。
