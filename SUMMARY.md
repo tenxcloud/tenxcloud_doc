@@ -61,6 +61,7 @@
 * [服务编排](doc/v1/stack/README.md)
    * [Pod 编排](doc/v1/stack/pod.md)
    * [Stack 编排](doc/v1/stack/stack.md)
+   * [编排示例](doc/v1/stack/stack-sample.md)
 * [开放 API](doc/v1/api/README.md)
    * [获取 API token](doc/v1/api/intro.md)
    * [使用详细说明](doc/v1/api/detail.md)
