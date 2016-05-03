@@ -45,6 +45,7 @@ CMD ["/run.sh"]
 ![tce1](/doc/v1/images/samples/tce_success_tomcat.png)
 
 8.接下来就可以看到我们的tomcat项目了。
+
 ![tce1](/doc/v1/images/samples/tce_running_tomcat.png)
 
 
