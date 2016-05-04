@@ -18,7 +18,7 @@
 
 * 注：
  * 源代码中一定要有Dockerfile，否则构建会失败，可以点击GitHub地址查看自己的项目。
- * 系统会自动获取**Dokerfile**中EXPOSE的**容器端口**，如需重新设定，在项目构建完成后，在**项目详情页->操作->修改镜像**中重新设定。
+ * 系统会自动获取**Dockerfile**中EXPOSE的**容器端口**，如需重新设定，在项目构建完成后，在**项目详情页->操作->修改镜像**中重新设定。
 
 下面是**golang-sample**项目下**/**的Dockerfile：
 
@@ -37,7 +37,7 @@ WORKDIR $GOPATH/src
 
 CMD ["/run.sh"]
 ```
-关于如何编写Dokerfile，可以参考英文官方文档 -> [编写Dockerfile](http://docs.docker.com/reference/builder/)，我们后续会提供中文版，并随时提供技术支持。
+关于如何编写Dockerfile，可以参考英文官方文档 -> [编写Dockerfile](http://docs.docker.com/reference/builder/)，我们后续会提供中文版，并随时提供技术支持。
 
 点击 **“创建”**，页面跳转到项目详情页，开始构建该项目的第一个镜像。
 ![addproject2](/doc/v1/images/ci/ci-addproject2.jpg)
