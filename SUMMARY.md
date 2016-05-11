@@ -75,4 +75,9 @@
    * [常见问题](doc/v1/faq/faq.md)
    * [如何编写Dockerfile](doc/v1/faq/dockerfile.md)
    * [如何部署代码](doc/v1/faq/deploycode.md)
-
+       * [部署PHP运行时](doc/v1/faq/deploycode-php.md)
+       * [部署python运行时](doc/v1/faq/deploycode-python.md)
+       * [部署golang运行时](doc/v1/faq/deploycode-golang.md)
+       * [部署nodejs运行时](doc/v1/faq/deploycode-node.md)
+       * [部署java运行时](doc/v1/faq/deploycode-java.md)
+       * [部署lamp运行时](doc/v1/faq/deploycode-lamp.md)
