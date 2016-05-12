@@ -1,4 +1,4 @@
-# 如何部署代码
+# 部署应用代码
 * [部署PHP运行时](deploycode-php.md)
 * [部署python运行时](deploycode-python.md)
 * [部署golang运行时](deploycode-golang.md)
