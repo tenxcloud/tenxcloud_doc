@@ -6,10 +6,11 @@
 
 * [新手指引](/doc/v1/getting_started/README.md)
 * [容器服务](/doc/v1/container/README.md)
-* [高级服务-数据库与缓存](/doc/v1/advservices/README.md)
+* [高级服务 - 数据库与缓存](/doc/v1/advservices/README.md)
+* [部署应用代码](/doc/v1/deploycode/README.md)
 * [代码构建](/doc/v1/ci/README.md)
 * [镜像服务](/doc/v1/registry/README.md)
 * [私有集群](/doc/v1/host/README.md)
-* [Stack](/doc/v1/stack/README.md)
+* [服务编排](/doc/v1/stack/README.md)
 * [开放 API](/doc/v1/api/README.md)
 * [常见问题](/doc/v1/faq/README.md)
