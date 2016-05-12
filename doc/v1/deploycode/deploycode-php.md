@@ -9,28 +9,28 @@
 ### 一、通过“运行时”环境部署代码（适合开发测试环境下使用）
 1.点击“创建”按钮
 
-![创建服务](/doc/v1/images/faq/create.jpg)
+![创建服务](/doc/v1/images/deploycode/deploy-php/create.jpg)
 
 2.选择“运行时”镜像，您可以选择PHP，Node.js，Java，Python等运行时环境，每个镜像都包含了示例代码，并开放了SSH，您可以像操作云主机一样，您可以像操作云主机一样，使用 SSH/Putty或sftp 等工具连接容器，上传自己的应用代码。
 
-![选择镜像](/doc/v1/images/faq/select.jpg)
+![选择镜像](/doc/v1/images/deploycode/deploy-php/select.jpg)
 
 3.点击“部署”后，进入到容器基本配置页面，输入“服务名称”，选择“容器配置”（建议512M内存以上），勾选服务类型“有状态服务”，有状态服务支持将外部存储卷挂载在容器上，从而实现数据的持久化。存储卷里的内容通常存储用户的应用代码。默认目录为“/app”
 
-![容器配置](/doc/v1/images/faq/basic.jpg)
+![容器配置](/doc/v1/images/deploycode/deploy-php/basic.jpg)
 
 下图为存储卷配置，选择一个已创建的存储卷的情况
-![图为存储卷配置，选择一个已创建的存储卷](/doc/v1/images/faq/beijing2.jpg)
+![图为存储卷配置，选择一个已创建的存储卷](/doc/v1/images/deploycode/deploy-php/beijing2.jpg)
 
 下图为北京一区默认的存储卷，无需手动创建的情况
-![图为北京一区默认的存储卷，无需手动创建](/doc/v1/images/faq/beijing1.jpg)
+![图为北京一区默认的存储卷，无需手动创建](/doc/v1/images/deploycode/deploy-php/beijing1.jpg)
 
 下图为存储卷配置，在没有创建过任何存储卷的情况下，可直接创建一个存储卷
-![图为存储卷配置，在没有创建过任何存储卷的情况下，可直接创建](/doc/v1/images/faq/hangzhou.jpg)
+![图为存储卷配置，在没有创建过任何存储卷的情况下，可直接创建](/doc/v1/images/deploycode/deploy-php/hangzhou.jpg)
 
 3.在“高级设置”中，可以设置容器的SSH密码（默认是随机密码，用户名为root，从日志中可以查看到），以及其他参数或者端口设置。
 
-![高级设置](/doc/v1/images/faq/advance.jpg)
+![高级设置](/doc/v1/images/deploycode/deploy-php/advance.jpg)
 
 常用的参数
 ```
@@ -41,27 +41,27 @@ Tomcat管理密码：TOMCAT_PASS （（适用于“java”镜像，默认用户�
 
 4.点击“创建”，稍等数秒，容器便创建成功了。如下图所示：
 
-![创建成功](/doc/v1/images/faq/ok.jpg)
+![创建成功](/doc/v1/images/deploycode/deploy-php/ok.jpg)
 
 打开“服务地址”，我们将看到示例的应用：
 
-![示例的应用](/doc/v1/images/faq/sample.jpg)
+![示例的应用](/doc/v1/images/deploycode/deploy-php/sample.jpg)
 
 5.您可以选择自己熟悉的工具，比如Shell或者Putty等连接容器。
 进入“容器详情”里，选择“端口”标签，可以查看“22”端口对应的服务地址：
 
-![进入“容器详情”里，选择“端口”标签，可以查看“22”端口对应的服务地址](/doc/v1/images/faq/info.jpg)
+![进入“容器详情”里，选择“端口”标签，可以查看“22”端口对应的服务地址](/doc/v1/images/deploycode/deploy-php/info.jpg)
 
 在“日志”里查看生成的密码：
 
-![在“日志”里查看生成的密码](/doc/v1/images/faq/log.jpg)
+![在“日志”里查看生成的密码](/doc/v1/images/deploycode/deploy-php/log.jpg)
 
 连接容器，例如：
 ```
 ssh root@<hostname> -p <port>
 ```
 
-![连接容器](/doc/v1/images/faq/connect.jpg)
+![连接容器](/doc/v1/images/deploycode/deploy-php/connect.jpg)
 
 6.上传应用代码至 “/app” 目录下。可使用“scp”命令或sftp工具如filezilla上传。
 ```
