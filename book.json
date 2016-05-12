@@ -1,7 +1,7 @@
 {
     "gitbook": ">=2.0.0",
-    "title": "TenxCloud 时速云",
-    "description": "TenxCloud 时速云文档中心",
+    "title": "时速云",
+    "description": "时速云TenxCloud文档中心",
     "language": "zh-hans",
     "styles": {
       "website": "styles/website.css"
