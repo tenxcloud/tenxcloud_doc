@@ -6,12 +6,6 @@
    * [常见问题](faq.md)
    * [如何编写Dockerfile](dockerfile.md)
    * [如何部署代码](deploycode.md)
-    * [部署PHP运行时](deploycode-php.md)
-    * [部署python运行时](deploycode-python.md)
-    * [部署nodejs运行时](deploycode-node.md)
-    * [部署java运行时](deploycode-java.md)
-    * [部署lamp运行时](deploycode-lamp.md)
-
     * [部署 PHP 应用](deploycode-php.md)
     * [部署 Python 应用](deploycode-python.md)
     * [部署 Golang 应用](deploycode-golang.md)

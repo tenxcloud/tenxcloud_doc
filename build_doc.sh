@@ -11,12 +11,12 @@ build_doc() {
   set +x
 }
 
-if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
+if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
   cat << EOF
 Run the command the build release of the doc:
 sh build_doc.sh
 EOF
-注意： Windows下也可使用（需要安装git）
+#注意： Windows下也可使用（需要安装git）
 else
   echo "start build doc"
   build_doc

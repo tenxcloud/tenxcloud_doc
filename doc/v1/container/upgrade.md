@@ -26,7 +26,7 @@
 
  ![upgrade6](/doc/v1/images/container/upgrade_6.png)
 
-7. 几秒钟之后会看到升级的服务自动停止了服务，再过几秒钟又会自动启动。
+7. 几秒钟之后会看到升级的服务将创建新的容器，再过几秒钟新的容器运行后将取代旧容器。
 
  ![upgrade7-1](/doc/v1/images/container/upgrade_7-1.png)
  

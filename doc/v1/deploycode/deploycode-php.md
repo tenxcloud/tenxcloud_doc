@@ -1,36 +1,36 @@
 # 部署 PHP 应用
 
 时速云支持两种部署应用代码的方式：
-* <strong>1.通过官方提供的“运行时”环境部署代码</strong>
-* <strong>2.将应用代码打包成自定义的镜像来发布</strong>
+* **1.通过官方提供的“运行时”环境部署代码**
+* **2.将应用代码打包成自定义的镜像来发布**
 
 第一种方式的特点是快速方便，可像操作云主机一样部署代码。第二种方式将应用代码直接打包成镜像来发布，这样的好处是应用代码随着镜像一起发布，可以发布成“无状态的服务”，从而提高了应用的部署和运行效率。
 
 ### 一、通过“运行时”环境部署代码
 1.点击“创建”按钮
 
-![创建服务](/doc/v1/images/faq/create.jpg)
+![创建服务](/doc/v1/images/deploycode/deploy-php/create.jpg)
 
 2.选择“运行时”镜像，您可以选择PHP，Node.js，Java，Python等运行时环境，每个镜像都包含了示例代码，并开放了SSH，您可以像操作云主机一样，您可以像操作云主机一样，使用 SSH/Putty或sftp 等工具连接容器，上传自己的应用代码。
 
-![选择镜像](/doc/v1/images/faq/select.jpg)
+![选择镜像](/doc/v1/images/deploycode/deploy-php/select.jpg)
 
 3.点击“部署”后，进入到容器基本配置页面，输入“服务名称”，选择“容器配置”（建议512M内存以上），勾选服务类型“有状态服务”，有状态服务支持将外部存储卷挂载在容器上，从而实现数据的持久化。存储卷里的内容通常存储用户的应用代码。默认目录为“/app”
 
-![容器配置](/doc/v1/images/faq/basic.jpg)
+![容器配置](/doc/v1/images/deploycode/deploy-php/basic.jpg)
 
 下图为存储卷配置，选择一个已创建的存储卷的情况
-![图为存储卷配置，选择一个已创建的存储卷](/doc/v1/images/faq/beijing2.jpg)
+![图为存储卷配置，选择一个已创建的存储卷](/doc/v1/images/deploycode/deploy-php/beijing2.jpg)
 
 下图为北京一区默认的存储卷，无需手动创建的情况
-![图为北京一区默认的存储卷，无需手动创建](/doc/v1/images/faq/beijing1.jpg)
+![图为北京一区默认的存储卷，无需手动创建](/doc/v1/images/deploycode/deploy-php/beijing1.jpg)
 
 下图为存储卷配置，在没有创建过任何存储卷的情况下，可直接创建一个存储卷
-![图为存储卷配置，在没有创建过任何存储卷的情况下，可直接创建](/doc/v1/images/faq/hangzhou.jpg)
+![图为存储卷配置，在没有创建过任何存储卷的情况下，可直接创建](/doc/v1/images/deploycode/deploy-php/hangzhou.jpg)
 
 3.在“高级设置”中，可以设置容器的SSH密码（默认是随机密码，用户名为root，从日志中可以查看到），以及其他参数或者端口设置。
 
-![高级设置](/doc/v1/images/faq/advance.jpg)
+![高级设置](/doc/v1/images/deploycode/deploy-php/advance.jpg)
 
 常用的参数
 ```
@@ -41,38 +41,38 @@ Tomcat管理密码：TOMCAT_PASS （（适用于“java”镜像，默认用户�
 
 4.点击“创建”，稍等数秒，容器便创建成功了。如下图所示：
 
-![创建成功](/doc/v1/images/faq/ok.jpg)
+![创建成功](/doc/v1/images/deploycode/deploy-php/ok.jpg)
 
 打开“服务地址”，我们将看到示例的应用：
 
-![示例的应用](/doc/v1/images/faq/sample.jpg)
+![示例的应用](/doc/v1/images/deploycode/deploy-php/sample.jpg)
 
 5.您可以选择自己熟悉的工具，比如Shell或者Putty等连接容器。
 进入“容器详情”里，选择“端口”标签，可以查看“22”端口对应的服务地址：
 
-![进入“容器详情”里，选择“端口”标签，可以查看“22”端口对应的服务地址](/doc/v1/images/faq/info.jpg)
+![进入“容器详情”里，选择“端口”标签，可以查看“22”端口对应的服务地址](/doc/v1/images/deploycode/deploy-php/info.jpg)
 
 在“日志”里查看生成的密码：
 
-![在“日志”里查看生成的密码](/doc/v1/images/faq/log.jpg)
+![在“日志”里查看生成的密码](/doc/v1/images/deploycode/deploy-php/log.jpg)
 
 连接容器，例如：
 ```
 ssh root@<hostname> -p <port>
 ```
 
-![连接容器](/doc/v1/images/faq/connect.jpg)
+![连接容器](/doc/v1/images/deploycode/deploy-php/connect.jpg)
 
 6.上传应用代码至 “/app” 目录下。可使用“scp”命令或sftp工具如filezilla上传。
 ```
 scp <file.zip> -p <port> root@<hostname>:<path>
 ```
-<strong>注意：存储卷挂载的默认目录为“/app”，内含示例代码，除“/app”目录下的内容可以永久存储外，容器其他目录文件只可以临时修改，即容器停止或者重新部署后数据会恢复到修改前的状态。如确有必要修改，请参照官方的“运行时”镜像构建自己定制的镜像。</strong>
+**注意：存储卷挂载的默认目录为“/app”，内含示例代码，除“/app”目录下的内容可以永久存储外，容器其他目录文件只可以临时修改，即容器停止或者重新部署后数据会恢复到修改前的状态。如确有必要修改，请参照官方的“运行时”镜像构建自己定制的镜像。**
 
 
 ### 二、将应用代码打包成自定义的镜像来发布
 通过代码构建，可以将应用代码打包成镜像来发布，这样的好处是应用代码随着镜像一起发布，可以发布成“无状态的服务”，从而提高了应用的部署和运行效率，并且可以弹性扩展多个实例，还可以和“持续集成”结合，实现开发、测试、部署、运行、管理的自动化以及快速交付。
 
-请参考 [如何编写Dockerfile](dockerfile.md) 和 [代码构建](../../v1/ci/index.html) 功能，构建成自定义镜像来发布。
+请参考 [如何编写Dockerfile](../faq/dockerfile.md) 和 [代码构建](../../v1/ci/index.html) 功能，构建成自定义镜像来发布。
 
 
