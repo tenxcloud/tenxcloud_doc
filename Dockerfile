@@ -8,7 +8,7 @@ MAINTAINER TenxCloud Team <service@tenxcloud.com>
 # Add files
 RUN apt-get install git
 
-RUN apt-get install gitbook
+RUN npm install -g gitbook-cli
 
 RUN git clone https://github.com/tenxcloud/tenxcloud_doc
 
