@@ -21,4 +21,4 @@ RUN chmod +x run.sh
 RUN chmod +x build_doc.sh
 
 # Define default command.
-CMD ["./run.sh"]
+CMD ["./build_doc.sh", "./run.sh"]

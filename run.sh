@@ -2,8 +2,6 @@
 
 git pull
 
-build_doc.sh
-
 cd docweb
 
 npm install
