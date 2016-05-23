@@ -19,6 +19,7 @@
    * [存储卷管理](doc/v1/container/manage_volume.md)
    * [存储卷使用](doc/v1/container/use_volume.md)
    * [访问其他内部容器](doc/v1/container/access_container.md)
+   * [工作任务](doc/v1/container/job.md)
 * [高级服务 - 数据库与缓存](doc/v1/advservices/README.md)
    * [Mongodb 集群搭建](doc/v1/advservices/mongo-cluster.md)
 * [部署应用代码](doc/v1/deploycode/README.md)
