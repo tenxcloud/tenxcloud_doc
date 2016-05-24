@@ -1,5 +1,5 @@
 # 时速云支持私有代码仓库构建吗？
-*答：支持，时速云支持Github、Bitbucket、Coding、Gitcafe、Oschina私有仓库代码。*
+*答：支持，时速云支持Github、Bitbucket、Coding、Gitlab私有仓库代码。*
 
 #### 1.构建Github私有仓库代码
 
@@ -7,7 +7,7 @@
 
 ![faq-repo-list](/doc/v1/images/ci/ci-listcoderepo3.jpg)
 #### 2.构建Bitbucket、Coding私有仓库代码
-Bitbucket、Coding、Gitcafe、Oschina这四家代码托管网站均支持设置部署公钥，只要把时速云生成的公钥添加到私有仓库的部署公钥中，就可以在时速云平台上添加私有仓库了。
+Bitbucket、Coding这两家代码托管网站均支持设置部署公钥，只要把时速云生成的公钥添加到私有仓库的部署公钥中，就可以在时速云平台上添加私有仓库了。
 
 ![faq-repo-deploy-key](/doc/v1/images/ci/faq-deplpoy-key.jpg)
 

@@ -39,6 +39,7 @@
        * [持续集成](doc/v1/ci/project-ci.md)
        * [部署项目](doc/v1/ci/project-deploy.md)
        * [管理镜像](doc/v1/ci/project-image.md)
+       * [为私有仓库添加公钥](doc/v1/ci/add-public-key.md)
        * [其他操作](doc/v1/ci/project-other.md)
    * [使用 tce 客户端](doc/v1/ci/client-download.md)
        * [命令详解](doc/v1/ci/fasdf.md)
