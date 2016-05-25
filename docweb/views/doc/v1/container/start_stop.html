@@ -5,7 +5,7 @@
         <!-- head:start -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>停止/启动/重启/删除容器 | 时速云</title>
+        <title>停止/启动/重新部署/删除容器 | 时速云</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -56,10 +56,10 @@
         
     <div class="book"
         data-level="3.3"
-        data-chapter-title="停止/启动/重启/删除容器"
+        data-chapter-title="停止/启动/重新部署/删除容器"
         data-filepath="doc/v1/container/start_stop.md"
         data-basepath="../../.."
-        data-revision="Wed May 25 2016 15:56:53 GMT+0800 (CST)"
+        data-revision="Wed May 25 2016 17:14:04 GMT+0800 (CST)"
         data-innerlanguage="">
     
 
@@ -239,7 +239,7 @@
                         
                             <b>3.3.</b>
                         
-                        停止/启动/重启/删除容器
+                        停止/启动/重新部署/删除容器
                     </a>
             
             
@@ -1447,15 +1447,17 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="&#x505C;&#x6B62;&#x542F;&#x52A8;&#x91CD;&#x542F;&#x5220;&#x9664;&#x5BB9;&#x5668;">&#x505C;&#x6B62;/&#x542F;&#x52A8;/&#x91CD;&#x542F;/&#x5220;&#x9664;&#x5BB9;&#x5668;</h1>
-<p>&#x5728;&#x5BB9;&#x5668;&#x5217;&#x8868;&#x9875;&#xFF0C;&#x52FE;&#x9009;&#x5BB9;&#x5668;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x5BF9;&#x5E94;&#x7684; <strong>&#x505C;&#x6B62;/&#x542F;&#x52A8;/&#x91CD;&#x542F;/&#x5220;&#x9664;</strong> &#x5BB9;&#x5668;&#x7B49;&#x64CD;&#x4F5C;&#xFF1A;</p>
+                        <h1 id="&#x505C;&#x6B62;&#x542F;&#x52A8;&#x91CD;&#x65B0;&#x90E8;&#x7F72;&#x5220;&#x9664;&#x5BB9;&#x5668;">&#x505C;&#x6B62;/&#x542F;&#x52A8;/&#x91CD;&#x65B0;&#x90E8;&#x7F72;/&#x5220;&#x9664;&#x5BB9;&#x5668;</h1>
+<p>&#x5728;&#x5BB9;&#x5668;&#x5217;&#x8868;&#x9875;&#xFF0C;&#x52FE;&#x9009;&#x5BB9;&#x5668;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x5BF9;&#x5E94;&#x7684; <strong>&#x505C;&#x6B62;/&#x542F;&#x52A8;/&#x91CD;&#x65B0;&#x90E8;&#x7F72;/&#x5220;&#x9664;</strong> &#x5BB9;&#x5668;&#x7B49;&#x64CD;&#x4F5C;&#xFF1A;</p>
 <p> <img src="../images/container/container_handle1.jpg" alt="container_handle1">
- <img src="../images/container/container_handle2.jpg" alt="container_handle2"></p>
+ <img src="../images/container/container_handle2.jpg" alt="container_handle2">
+ <img src="../images/container/container_handle3.jpg" alt="container_handle3"></p>
 <h4 id="&#x6CE8;&#xFF1A;">&#x6CE8;&#xFF1A;</h4>
-<ol>
-<li><strong>&#x505C;&#x6B62;/&#x542F;&#x52A8;/&#x91CD;&#x542F;/&#x5220;&#x9664;</strong>&#x5747;&#x53EF;&#x4EE5;&#x6279;&#x91CF;&#x64CD;&#x4F5C;&#xFF0C;&#x4F46;&#x662F;<strong>&#x505C;&#x6B62;/&#x542F;&#x52A8;</strong>&#x64CD;&#x4F5C;&#x5BF9;&#x5BB9;&#x5668;&#x72B6;&#x6001;&#x6709;&#x8981;&#x6C42;&#xFF0C;&#x5BB9;&#x5668;&#x72B6;&#x6001;&#x4E0D;&#x80FD;&#x4E0E;&#x64CD;&#x4F5C;&#x76F8;&#x540C;&#xFF0C;&#x6B63;&#x5728;&#x521D;&#x59CB;&#x5316;&#x7684;&#x5BB9;&#x5668;&#x5219;&#x4E0D;&#x80FD;&#x8FDB;&#x884C;<strong>&#x505C;&#x6B62;/&#x542F;&#x52A8;</strong>&#x64CD;&#x4F5C;</li>
-<li>&#x5982;&#x679C;&#x60A8;&#x7684;&#x5BB9;&#x5668;&#x662F;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF08;ubuntu&#x3001;debian&#x3001;centos&#xFF09;&#xFF0C;<strong>&#x505C;&#x6B62;/&#x91CD;&#x542F;</strong>&#x540E;&#x6570;&#x636E;&#x4F1A;&#x4E22;&#x5931;</li>
-</ol>
+<ul>
+<li><strong>&#x505C;&#x6B62;/&#x542F;&#x52A8;/&#x91CD;&#x65B0;&#x90E8;&#x7F72;/&#x5220;&#x9664;</strong>&#x5747;&#x53EF;&#x4EE5;&#x6279;&#x91CF;&#x64CD;&#x4F5C;&#xFF0C;&#x4F46;&#x662F;<strong>&#x505C;&#x6B62;/&#x542F;&#x52A8;</strong>&#x64CD;&#x4F5C;&#x5BF9;&#x5BB9;&#x5668;&#x72B6;&#x6001;&#x6709;&#x8981;&#x6C42;&#xFF0C;&#x5BB9;&#x5668;&#x72B6;&#x6001;&#x4E0D;&#x80FD;&#x4E0E;&#x64CD;&#x4F5C;&#x76F8;&#x540C;&#xFF0C;&#x6B63;&#x5728;&#x521D;&#x59CB;&#x5316;&#x7684;&#x5BB9;&#x5668;&#x5219;&#x4E0D;&#x80FD;&#x8FDB;&#x884C;<strong>&#x505C;&#x6B62;/&#x542F;&#x52A8;</strong>&#x64CD;&#x4F5C;</li>
+<li>&#x5982;&#x679C;&#x60A8;&#x7684;&#x5BB9;&#x5668;&#x662F;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF08;ubuntu&#x3001;debian&#x3001;centos&#xFF09;&#xFF0C;<strong>&#x505C;&#x6B62;/&#x91CD;&#x65B0;&#x90E8;&#x7F72;</strong>&#x540E;&#x6570;&#x636E;&#x4F1A;&#x4E22;&#x5931;</li>
+<li><strong>&#x91CD;&#x65B0;&#x90E8;&#x7F72;</strong>&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;<strong>&#x91CD;&#x542F;</strong>&#x670D;&#x52A1;&#x7684;&#x5347;&#x7EA7;&#x7248;,&#x5728;<strong>&#x91CD;&#x65B0;&#x90E8;&#x7F72;</strong>&#x65F6;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x955C;&#x50CF;&#x7248;&#x672C;</li>
+</ul>
 
                     
                     </section>

@@ -10,7 +10,7 @@
 * [容器服务](doc/v1/container/README.md)
    * [创建第一个Hello World服务](doc/v1/container/create.md)
    * [绑定域名](doc/v1/container/bind_domain.md)
-   * [停止/启动/重启/删除容器](doc/v1/container/start_stop.md)
+   * [停止/启动/重新部署/删除容器](doc/v1/container/start_stop.md)
    * [修改容器配置](doc/v1/container/update.md)
    * [弹性伸缩](doc/v1/container/scale_up_down.md)
    * [灰度升级](doc/v1/container/upgrade.md)

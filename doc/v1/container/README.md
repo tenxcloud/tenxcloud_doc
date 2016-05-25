@@ -4,7 +4,7 @@
 本章主要通过以下几个方面来介绍容器服务的主要功能：
    * [新建一个容器](create.md)
    * [绑定域名](bind_domain.md)
-   * [停止/启动/重启/删除容器](start_stop.md)
+   * [停止/启动/重新部署/删除容器](start_stop.md)
    * [修改容器配置](update.md)
    * [弹性伸缩](scale_up_down.md)
    * [灰度升级](upgrade.md)
