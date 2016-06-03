@@ -46,7 +46,7 @@
               ],
               "resources": {
                 "limits": {
-                  "memory": "512"
+                  "memory": "512Mi"
                 }
               },
               "volumeMounts": [
@@ -85,11 +85,11 @@
 
 获取用户指定服务的信息：
 
-    GET /v1/regions/{region}/services/{name}
+    GET /v1/regions/{region}/services/{service-name}
 
 请求示例：
 
-    curl "https://api.tenxcloud.com/v1/regions/beijing1/services/service_name" -H "username:[user_name]" -H "Authorization: token [api_token]"
+    curl "https://api.tenxcloud.com/v1/regions/beijing1/services/myservice" -H "username:[user_name]" -H "Authorization: token [api_token]"
 
 响应：
 
@@ -124,7 +124,7 @@
           ],
           "resources": {
             "limits" {
-              "memory": "512"
+              "memory": "512Mi"
             }
           },
           "volumeMounts": [
@@ -160,11 +160,11 @@
 ### 创建服务
 创建一个新服务
 
-    POST /v1/regions/{region}/services/service_name
+    POST /v1/regions/{region}/services/{service-name}
 
 请求示例：
 
-    curl "https://api.tenxcloud.com/v1/regions/beijing1/services/service_name" -H "username:[user_name]" -H "Authorization: token [api_token]" -H "Content-Type: application/json" -X POST --data @service.json
+    curl "https://api.tenxcloud.com/v1/regions/beijing1/services/service-name" -H "username:[user_name]" -H "Authorization: token [api_token]" -H "Content-Type: application/json" -X POST --data @service.json
 
 service.json示例：
 
@@ -194,7 +194,7 @@ service.json示例：
           ],
           "resources": {
             "limits": {
-              "memory": "512"
+              "memory": "512Mi"
             }
           },
           "volumeMounts": [
@@ -253,7 +253,7 @@ service.json示例：
           ],
           "resources": {
             "limits" {
-              "memory": "512"
+              "memory": "512Mi"
             }
           },
           "volumeMounts": [
@@ -288,11 +288,11 @@ service.json示例：
 ### 删除服务
 删除用户的指定服务
 
-    DELETE /v1/regions/{region}/services/{name}
+    DELETE /v1/regions/{region}/services/{service-name}
 
 请求示例：
 
-    curl "https://api.tenxcloud.com/v1/regions/beijing1/services/service_name" -H "username:[user_name]" -H "Authorization: token [api_token]" -X DELETE
+    curl "https://api.tenxcloud.com/v1/regions/beijing1/services/service-name" -H "username:[user_name]" -H "Authorization: token [api_token]" -X DELETE
 
 响应示例：
 
@@ -302,7 +302,7 @@ service.json示例：
 ### 更新服务
 更新指定服务的属性：
 
-    PUT /v1/regions/{region}/services/{name}
+    PUT /v1/regions/{region}/services/{service-name}
 
 目前支持的更新属性：
 
@@ -314,7 +314,7 @@ service.json示例：
 
 请求示例：
 
-    curl "https://api.tenxcloud.com/v1/regions/beijing1/services/service_name" -H "username:[user_name]" -H "Authorization: token [api_token]" -H "Content-Type: application/json" -X PUT --data @update_service.json
+    curl "https://api.tenxcloud.com/v1/regions/beijing1/services/service-name" -H "username:[user_name]" -H "Authorization: token [api_token]" -H "Content-Type: application/json" -X PUT --data @update_service.json
 
 request_body 示例：
 
@@ -324,7 +324,7 @@ request_body 示例：
           {
             "resource": {
                 "limits": {
-                     "memory": "512"
+                     "memory": "512Mi"
                 }
             }
           }
@@ -340,11 +340,11 @@ request_body 示例：
 
 启动指定的服务
 
-    PUT /v1/regions/{region}/services/{name}/start
+    PUT /v1/regions/{region}/services/{service-name}/start
 
 请求示例:
 
-    curl "https://api.tenxcloud.com/v1/regions/beijing1/services/service_name/start" -H "username:[user_name]" -H "Authorization: token [api_token]" -X PUT
+    curl "https://api.tenxcloud.com/v1/regions/beijing1/services/service-name/start" -H "username:[user_name]" -H "Authorization: token [api_token]" -X PUT
 
 响应示例：
 
@@ -355,11 +355,11 @@ request_body 示例：
 
 停止指定的服务
 
-    PUT /v1/regions/{region}/services/{name}/stop
+    PUT /v1/regions/{region}/services/{service-name}/stop
 
 请求示例:
 
-    curl "https://api.tenxcloud.com/v1/regions/beijing1/services/service_name/stop" -H "username:[user_name]" -H "Authorization: token [api_token]" -X PUT
+    curl "https://api.tenxcloud.com/v1/regions/beijing1/services/service-name/stop" -H "username:[user_name]" -H "Authorization: token [api_token]" -X PUT
 
 响应示例：
 
@@ -370,11 +370,11 @@ request_body 示例：
 
 停止指定的服务
 
-    PUT /v1/regions/{region}/services/{name}/restart
+    PUT /v1/regions/{region}/services/{service-name}/restart
 
 请求示例:
 
-    curl "https://api.tenxcloud.com/v1/regions/beijing1/services/service_name/restart" -H "username:[user_name]" -H "Authorization: token [api_token]" -X PUT
+    curl "https://api.tenxcloud.com/v1/regions/beijing1/services/service-name/restart" -H "username:[user_name]" -H "Authorization: token [api_token]" -X PUT
 
 响应示例：
 
@@ -385,11 +385,11 @@ request_body 示例：
 
 获取指定服务某天的日志
 
-    GET /v1/regions/{region}/services/{name}/logs?date={date}&from={from_number}&size={total_size}
+    GET /v1/regions/{region}/services/{service-name}/logs?date={date}&from={from_number}&size={total_size}
 
 请求示例:
 
-    curl "https://api.tenxcloud.com/v1/regions/beijing1/services/service_name/logs?date=2015.12.29&from=0&size=100" -H "username:[user_name]" -H "Authorization: token [api_token]"
+    curl "https://api.tenxcloud.com/v1/regions/beijing1/services/service-name/logs?date=2015.12.29&from=0&size=100" -H "username:[user_name]" -H "Authorization: token [api_token]"
 
 响应示例：
 

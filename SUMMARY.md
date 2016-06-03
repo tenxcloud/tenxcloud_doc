@@ -79,6 +79,7 @@
        * [服务区信息](doc/v1/api/regions.md)
        * [服务](doc/v1/api/services.md)
        * [服务实例](doc/v1/api/instances.md)
+       * [工作任务](doc/v1/api/jobs.md)
    * [通过 swagger UI 查看](doc/v1/api/api_swagger.md)
 * [常见问题](doc/v1/faq/README.md)
    * [常见问题](doc/v1/faq/faq.md)

@@ -5,7 +5,7 @@
         <!-- head:start -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>管理镜像 | 时速云</title>
+        <title>工作任务 | 时速云</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.0.2">
@@ -20,10 +20,10 @@
         
     
     
-    <link rel="next" href="../../../doc/v1/ci/add-public-key.html" />
+    <link rel="next" href="../../../doc/v1/api/api_swagger.html" />
     
     
-    <link rel="prev" href="../../../doc/v1/ci/project-deploy.html" />
+    <link rel="prev" href="../../../doc/v1/api/instances.html" />
     
 
         <!-- head:end -->
@@ -42,7 +42,7 @@
     
 
         
-    <div class="book" data-level="6.2.5" data-basepath="../../.." data-revision="Sat Jun 04 2016 06:27:15 GMT+0800 (CST)">
+    <div class="book" data-level="10.2.6" data-basepath="../../.." data-revision="Sat Jun 04 2016 06:27:15 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -659,7 +659,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="6.2.5" data-path="doc/v1/ci/project-image.html">
+        <li class="chapter " data-level="6.2.5" data-path="doc/v1/ci/project-image.html">
             
                 
                     <a href="../../../doc/v1/ci/project-image.html">
@@ -1322,7 +1322,7 @@
             
         </li>
     
-        <li class="chapter " data-level="10.2.6" data-path="doc/v1/api/jobs.html">
+        <li class="chapter active" data-level="10.2.6" data-path="doc/v1/api/jobs.html">
             
                 
                     <a href="../../../doc/v1/api/jobs.html">
@@ -1516,19 +1516,322 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h3 id="%E7%AE%A1%E7%90%86%E9%95%9C%E5%83%8F">&#x7BA1;&#x7406;&#x955C;&#x50CF;</h3>
-<p> <img src="../images/ci/ci-manage6.jpg" alt="manage6"></p>
-<p>&#x5728;&#x8BE6;&#x60C5;&#x9875;&#x70B9;&#x51FB; <strong>&#x201C;&#x64CD;&#x4F5C;&#x201D;</strong>&#xFF0C;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x955C;&#x50CF;&#x548C;&#x5220;&#x9664;&#x9879;&#x76EE;&#xFF0C; <strong>&#x201C;&#x5220;&#x9664;&#x9879;&#x76EE;&#x4F1A;&#x5C06;&#x9879;&#x76EE;&#x3001;&#x6784;&#x5EFA;&#x8BB0;&#x5F55;&#x4EE5;&#x53CA;&#x955C;&#x50CF;&#x90FD;&#x6E05;&#x9664;&#xFF0C;&#x800C;&#x4E14;&#x955C;&#x50CF;&#x4E0D;&#x80FD;&#x627E;&#x56DE;&#xFF0C;&#x8BF7;&#x614E;&#x91CD;&#x9009;&#x62E9;&#x3002;&#x201D;</strong></p>
-<p>&#x70B9;&#x51FB; <strong>&#x201C;&#x4FEE;&#x6539;&#x955C;&#x50CF;&#x201D;</strong> &#x4F1A;&#x8FDB;&#x5165;&#x955C;&#x50CF;&#x8BE6;&#x60C5;&#x9875;&#xFF0C;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x955C;&#x50CF;&#x7684;&#x63CF;&#x8FF0;&#x4FE1;&#x606F;&#x3001;&#x670D;&#x52A1;&#x63A5;&#x53E3;&#x7B49;&#xFF1A;</p>
-<p> <img src="../images/ci/ci-manage7.jpg" alt="manage7"></p>
-<p>&#x5176;&#x4E2D;&#x955C;&#x50CF;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#x7F16;&#x8F91;&#x91C7;&#x7528;Markdown&#x7F16;&#x8F91;&#x5668;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x719F;&#x6089;Markdown&#x8BED;&#x6CD5;&#x53EF;&#x4EE5;&#x70B9;&#x51FB;&#x4EE5;&#x4E0B;&#x94FE;&#x63A5;&#x67E5;&#x770B;&#xFF1A;</p>
-<ul>
-<li><p><a href="http://help.gitbook.com/format/markdown.html" target="_blank">Markdown&#x8BED;&#x6CD5;&#x53C2;&#x8003;&#x4E00;</a></p>
-</li>
-<li><p><a href="http://lab.lepture.com/editor/markdown" target="_blank">Markdown&#x8BED;&#x6CD5;&#x53C2;&#x8003;&#x4E8C;</a></p>
-</li>
-</ul>
-
+                        <h1 id="%E5%B7%A5%E4%BD%9C%E4%BB%BB%E5%8A%A1">&#x5DE5;&#x4F5C;&#x4EFB;&#x52A1;</h1>
+<h3 id="%E8%8E%B7%E5%8F%96%E5%B7%A5%E4%BD%9C%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8">&#x83B7;&#x53D6;&#x5DE5;&#x4F5C;&#x4EFB;&#x52A1;&#x5217;&#x8868;</h3>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;&#x76EE;&#x524D;&#x4EC5;&#x652F;&#x6301;&#x5728;&#x5317;&#x7F8E;&#xFF08;us&#xFF09;&#x533A;&#x8FD0;&#x884C;&#x5DE5;&#x4F5C;&#x4EFB;&#x52A1;</strong></p>
+<p>&#x83B7;&#x53D6;&#x7528;&#x6237;&#x5728;&#x6307;&#x5B9A;&#x96C6;&#x7FA4;&#x4E0A;&#x7684;&#x5DE5;&#x4F5C;&#x4EFB;&#x52A1;</p>
+<pre><code>GET /v1/regions/{region}/jobs
+</code></pre><p>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>curl &quot;https://api.tenxcloud.com/v1/regions/us/jobs&quot; -H &quot;username:[user_name]&quot; -H &quot;Authorization: token [api_token]&quot;
+</code></pre><p>&#x54CD;&#x5E94;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>{
+  &quot;jobs&quot;: [
+      {
+        &quot;metadata&quot;: {
+          &quot;name&quot;: &quot;job&quot;,
+          &quot;namespace&quot;: &quot;default&quot;,
+          &quot;selfLink&quot;: &quot;/apis/batch/v1/namespaces/default/jobs/job&quot;,
+          &quot;uid&quot;: &quot;11794165-1c18-11e6-9b6e-00259031e55c&quot;,
+          &quot;resourceVersion&quot;: &quot;120120&quot;,
+          &quot;creationTimestamp&quot;: &quot;2016-05-17T10:13:57Z&quot;,
+          &quot;labels&quot;: {
+            &quot;name&quot;: &quot;job&quot;
+          }
+        },
+        &quot;spec&quot;: {
+          &quot;parallelism&quot;: 1,
+          &quot;completions&quot;: 1,
+          &quot;selector&quot;: {
+            &quot;matchLabels&quot;: {
+              &quot;controller-uid&quot;: &quot;11794165-1c18-11e6-9b6e-00259031e55c&quot;
+            }
+          },
+          &quot;template&quot;: {
+            &quot;metadata&quot;: {
+              &quot;name&quot;: &quot;job&quot;,
+              &quot;creationTimestamp&quot;: null,
+              &quot;labels&quot;: {
+                &quot;controller-uid&quot;: &quot;11794165-1c18-11e6-9b6e-00259031e55c&quot;,
+                &quot;job-name&quot;: &quot;job&quot;,
+                &quot;name&quot;: &quot;job&quot;
+              }
+            },
+            &quot;spec&quot;: {
+              &quot;volumes&quot;: null,
+              &quot;containers&quot;: [
+                {
+                  &quot;name&quot;: &quot;job&quot;,
+                  &quot;image&quot;: &quot;index.tenxcloud.com/tenxcloud/perl_job:latest&quot;,
+                  &quot;resources&quot;: {
+                    &quot;limits&quot;: {
+                      &quot;cpu&quot;: &quot;125m&quot;,
+                      &quot;memory&quot;: &quot;512Mi&quot;
+                    }
+                  },
+                  &quot;terminationMessagePath&quot;: &quot;/dev/termination-log&quot;,
+                  &quot;imagePullPolicy&quot;: &quot;Always&quot;
+                }
+              ],
+              &quot;restartPolicy&quot;: &quot;OnFailure&quot;,
+              &quot;terminationGracePeriodSeconds&quot;: 30,
+              &quot;dnsPolicy&quot;: &quot;ClusterFirst&quot;,
+              &quot;serviceAccountName&quot;: &quot;&quot;,
+              &quot;securityContext&quot;: {}
+            }
+          }
+        },
+        &quot;status&quot;: {
+          &quot;conditions&quot;: [
+            {
+              &quot;type&quot;: &quot;Complete&quot;,
+              &quot;status&quot;: &quot;True&quot;,
+              &quot;lastProbeTime&quot;: &quot;2016-05-17T10:16:19Z&quot;,
+              &quot;lastTransitionTime&quot;: &quot;2016-05-17T10:16:19Z&quot;
+            }
+          ],
+          &quot;startTime&quot;: &quot;2016-05-17T10:13:58Z&quot;,
+          &quot;completionTime&quot;: &quot;2016-05-17T10:16:19Z&quot;,
+          &quot;succeeded&quot;: 1
+        }
+      }
+   ]
+}
+</code></pre><h3 id="%E8%8E%B7%E5%8F%96%E5%B7%A5%E4%BD%9C%E4%BB%BB%E5%8A%A1%E4%BF%A1%E6%81%AF">&#x83B7;&#x53D6;&#x5DE5;&#x4F5C;&#x4EFB;&#x52A1;&#x4FE1;&#x606F;</h3>
+<p>&#x83B7;&#x53D6;&#x7528;&#x6237;&#x6307;&#x5B9A;&#x5DE5;&#x4F5C;&#x4EFB;&#x52A1;&#x7684;&#x4FE1;&#x606F;&#xFF1A;</p>
+<pre><code>GET /v1/regions/{region}/jobs/{job_name}
+</code></pre><p>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>curl &quot;https://api.tenxcloud.com/v1/regions/us/jobs/myjob&quot; -H &quot;username:[user_name]&quot; -H &quot;Authorization: token [api_token]&quot;
+</code></pre><p>&#x54CD;&#x5E94;&#xFF1A;</p>
+<pre><code>{
+  &quot;instance_names&quot;: [&quot;myjob-xycda&quot;],
+  &quot;metadata&quot;: {
+    &quot;name&quot;: &quot;myjob&quot;,
+    &quot;namespace&quot;: &quot;default&quot;,
+    &quot;selfLink&quot;: &quot;/apis/batch/v1/namespaces/default/jobs/myjob&quot;,
+    &quot;uid&quot;: &quot;a8da9543-215e-11e6-9b6e-00259031e55c&quot;,
+    &quot;resourceVersion&quot;: &quot;259227&quot;,
+    &quot;creationTimestamp&quot;: &quot;2016-05-24T03:21:52Z&quot;,
+    &quot;labels&quot;: {
+      &quot;name&quot;: &quot;myjob&quot;
+    }
+  },
+  &quot;spec&quot;: {
+    &quot;parallelism&quot;: 1,
+    &quot;completions&quot;: 1,
+    &quot;selector&quot;: {
+      &quot;matchLabels&quot;: {
+        &quot;controller-uid&quot;: &quot;a8da9543-215e-11e6-9b6e-00259031e55c&quot;
+      }
+    },
+    &quot;template&quot;: {
+      &quot;metadata&quot;: {
+        &quot;name&quot;: &quot;myjob&quot;,
+        &quot;creationTimestamp&quot;: null,
+        &quot;labels&quot;: {
+          &quot;controller-uid&quot;: &quot;a8da9543-215e-11e6-9b6e-00259031e55c&quot;,
+          &quot;job-name&quot;: &quot;myjob&quot;,
+          &quot;name&quot;: &quot;myjob&quot;
+        }
+      },
+      &quot;spec&quot;: {
+        &quot;volumes&quot;: null,
+        &quot;containers&quot;: [
+          {
+            &quot;name&quot;: &quot;myjob&quot;,
+            &quot;image&quot;: &quot;index.tenxcloud.com/tenxcloud/perl_job:latest&quot;,
+            &quot;resources&quot;: {
+              &quot;limits&quot;: {
+                &quot;cpu&quot;: &quot;125m&quot;,
+                &quot;memory&quot;: &quot;512Mi&quot;
+              }
+            },
+            &quot;terminationMessagePath&quot;: &quot;/dev/termination-log&quot;,
+            &quot;imagePullPolicy&quot;: &quot;Always&quot;
+          }
+        ],
+        &quot;restartPolicy&quot;: &quot;OnFailure&quot;,
+        &quot;terminationGracePeriodSeconds&quot;: 30,
+        &quot;dnsPolicy&quot;: &quot;ClusterFirst&quot;,
+        &quot;serviceAccountName&quot;: &quot;&quot;,
+        &quot;securityContext&quot;: {}
+      }
+    }
+  },
+  &quot;status&quot;: {
+    &quot;conditions&quot;: [
+      {
+        &quot;type&quot;: &quot;Complete&quot;,
+        &quot;status&quot;: &quot;True&quot;,
+        &quot;lastProbeTime&quot;: &quot;2016-05-24T03:24:44Z&quot;,
+        &quot;lastTransitionTime&quot;: &quot;2016-05-24T03:24:44Z&quot;
+      }
+    ],
+    &quot;startTime&quot;: &quot;2016-05-24T03:21:52Z&quot;,
+    &quot;completionTime&quot;: &quot;2016-05-24T03:24:44Z&quot;,
+    &quot;succeeded&quot;: 1
+  }
+}
+</code></pre><p>&#x6CE8;&#x610F;&#xFF1A;&#x5176;&#x4E2D;&#x7684; instance_name &#x7A0D;&#x540E;&#x4F1A;&#x7528;&#x6765;&#x67E5;&#x8BE2;&#x5DE5;&#x4F5C;&#x4EFB;&#x52A1;&#x5B9E;&#x4F8B;&#x7684;&#x65E5;&#x5FD7;</p>
+<h3 id="%E5%88%9B%E5%BB%BA%E5%B7%A5%E4%BD%9C%E4%BB%BB%E5%8A%A1">&#x521B;&#x5EFA;&#x5DE5;&#x4F5C;&#x4EFB;&#x52A1;</h3>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5DE5;&#x4F5C;&#x4EFB;&#x52A1;</p>
+<pre><code>POST /v1/regions/{region}/jobs/{job_name}
+</code></pre><p>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>curl &quot;https://api.tenxcloud.com/v1/regions/us/jobs/{job-name}&quot; -H &quot;username:[user_name]&quot; -H &quot;Authorization: token [api_token]&quot; -H &quot;Content-Type: application/json&quot; -X POST --data @job.json
+</code></pre><p>job.json&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>{
+  &quot;containers&quot;: [
+    {
+      &quot;image&quot;: &quot;index.tenxcloud.com/tenxcloud/perl_job:latest&quot;,
+      &quot;pull_always&quot;: true,
+      &quot;command&quot;: [
+        &quot;echo&quot;,
+        &quot;test-cmd&quot;
+      ],
+      &quot;env&quot;: [
+        {
+          &quot;name&quot;: &quot;KEY&quot;,
+          &quot;value&quot;: &quot;value&quot;
+        }
+      ],
+      &quot;ports&quot;: [
+        { &quot;port&quot;: 22, &quot;protocol&quot;: &quot;TCP&quot; }
+      ],
+      &quot;resources&quot;: {
+        &quot;limits&quot;: {
+          &quot;memory&quot;: &quot;512Mi&quot;
+        }
+      },
+      &quot;volumeMounts&quot;: [
+        {
+          &quot;name&quot;: &quot;volume-name1&quot;,
+          &quot;mountPath&quot;: &quot;/data&quot;
+        }
+      ]
+    }
+  ],
+  &quot;volumes&quot;: [
+    {
+      &quot;name&quot;: &quot;volume-name1&quot;,
+      &quot;type&quot;: &quot;host&quot;
+    }
+  ],
+  &quot;sync_timezone&quot;: true
+}
+</code></pre><p>&#x54CD;&#x5E94;&#x5C06;&#x8FD4;&#x56DE;&#x521B;&#x5EFA;&#x7684;&#x5DE5;&#x4F5C;&#x4EFB;&#x52A1;&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF1A;</p>
+<pre><code>{
+  &quot;job&quot;: {
+    &quot;metadata&quot;: {
+      &quot;name&quot;: &quot;job-api&quot;,
+      &quot;namespace&quot;: &quot;default&quot;,
+      &quot;selfLink&quot;: &quot;/apis/batch/v1/namespaces/default/jobs/job-api&quot;,
+      &quot;uid&quot;: &quot;b7ab995e-297d-11e6-a010-00259031e55c&quot;,
+      &quot;resourceVersion&quot;: &quot;464351&quot;,
+      &quot;creationTimestamp&quot;: &quot;2016-06-03T11:24:21Z&quot;,
+      &quot;labels&quot;: {
+        &quot;name&quot;: &quot;job-api&quot;
+      }
+    },
+    &quot;spec&quot;: {
+      &quot;parallelism&quot;: 1,
+      &quot;completions&quot;: 1,
+      &quot;selector&quot;: {
+        &quot;matchLabels&quot;: {
+          &quot;controller-uid&quot;: &quot;b7ab995e-297d-11e6-a010-00259031e55c&quot;
+        }
+      },
+      &quot;template&quot;: {
+        &quot;metadata&quot;: {
+          &quot;name&quot;: &quot;job-api&quot;,
+          &quot;namespace&quot;: &quot;default&quot;,
+          &quot;creationTimestamp&quot;: null,
+          &quot;labels&quot;: {
+            &quot;controller-uid&quot;: &quot;b7ab995e-297d-11e6-a010-00259031e55c&quot;,
+            &quot;job-name&quot;: &quot;job-api&quot;,
+            &quot;name&quot;: &quot;job-api&quot;
+          }
+        },
+        &quot;spec&quot;: {
+          &quot;volumes&quot;: [
+            {
+              &quot;name&quot;: &quot;volume-name1&quot;,
+              &quot;hostPath&quot;: {
+                &quot;path&quot;: &quot;/tenxcloud/app_data/nkwanglei8lrp/job/job-api/volume-name1&quot;
+              }
+            },
+            {
+              &quot;name&quot;: &quot;tenxcloud-time-zone&quot;,
+              &quot;hostPath&quot;: {
+                &quot;path&quot;: &quot;/etc/localtime&quot;
+              }
+            }
+          ],
+          &quot;containers&quot;: [
+            {
+              &quot;name&quot;: &quot;job-api&quot;,
+              &quot;image&quot;: &quot;index.tenxcloud.com/tenxcloud/perl_job:latest&quot;,
+              &quot;command&quot;: [
+                &quot;echo&quot;,
+                &quot;test-cmd&quot;
+              ],
+              &quot;env&quot;: [
+                {
+                  &quot;name&quot;: &quot;KEY&quot;,
+                  &quot;value&quot;: &quot;value&quot;
+                }
+              ],
+              &quot;resources&quot;: {
+                &quot;limits&quot;: {
+                  &quot;memory&quot;: &quot;512Mi&quot;
+                }
+              },
+              &quot;volumeMounts&quot;: [
+                {
+                  &quot;name&quot;: &quot;volume-name1&quot;,
+                  &quot;mountPath&quot;: &quot;/data&quot;
+                },
+                {
+                  &quot;name&quot;: &quot;tenxcloud-time-zone&quot;,
+                  &quot;readOnly&quot;: true,
+                  &quot;mountPath&quot;: &quot;/etc/localtime&quot;
+                }
+              ],
+              &quot;terminationMessagePath&quot;: &quot;/dev/termination-log&quot;,
+              &quot;imagePullPolicy&quot;: &quot;Always&quot;
+            }
+          ],
+          &quot;restartPolicy&quot;: &quot;OnFailure&quot;,
+          &quot;terminationGracePeriodSeconds&quot;: 30,
+          &quot;dnsPolicy&quot;: &quot;ClusterFirst&quot;,
+          &quot;serviceAccountName&quot;: &quot;&quot;,
+          &quot;securityContext&quot;: {}
+        }
+      }
+    },
+    &quot;status&quot;: {}
+  }
+}
+</code></pre><h3 id="%E5%88%A0%E9%99%A4%E5%B7%A5%E4%BD%9C%E4%BB%BB%E5%8A%A1">&#x5220;&#x9664;&#x5DE5;&#x4F5C;&#x4EFB;&#x52A1;</h3>
+<p>&#x5220;&#x9664;&#x7528;&#x6237;&#x7684;&#x6307;&#x5B9A;&#x5DE5;&#x4F5C;&#x4EFB;&#x52A1;</p>
+<pre><code>DELETE /v1/regions/{region}/jobs/{job-name}
+</code></pre><p>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>curl &quot;https://api.tenxcloud.com/v1/regions/us/jobs/job-api&quot; -H &quot;username:[user_name]&quot; -H &quot;Authorization: token [api_token]&quot; -X DELETE
+</code></pre><p>&#x54CD;&#x5E94;&#x793A;&#x4F8B;&#xFF1A;</p>
+<p>200 OK</p>
+<pre><code>{
+  &quot;jobName&quot;: &quot;job-api&quot;
+}
+</code></pre><h3 id="%E8%8E%B7%E5%8F%96%E5%B7%A5%E4%BD%9C%E4%BB%BB%E5%8A%A1%E6%97%A5%E5%BF%97">&#x83B7;&#x53D6;&#x5DE5;&#x4F5C;&#x4EFB;&#x52A1;&#x65E5;&#x5FD7;</h3>
+<p>&#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x5DE5;&#x4F5C;&#x4EFB;&#x52A1;&#x7684;&#x65E5;&#x5FD7;</p>
+<pre><code>GET /v1/regions/{region}/services/{name}/instances/{instance_name}/logs?date={date}&amp;from={from_number}&amp;size={total_size}
+</code></pre><p>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;:</p>
+<pre><code>curl &quot;https://api.tenxcloud.com/v1/regions/us/services/job-api/instances/testjob2-wu5d0/logs?date=2015.12.29&amp;from=0&amp;size=100&quot; -H &quot;username:[user_name]&quot; -H &quot;Authorization: token [api_token]&quot;
+</code></pre><p>&#x54CD;&#x5E94;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>[
+  &quot;log_message1&quot;,
+  &quot;log_message2&quot;,
+  &quot;log_message3&quot;
+]
+</code></pre>
                     
                     </section>
                 
@@ -1538,10 +1841,10 @@
         </div>
 
         
-        <a href="../../../doc/v1/ci/project-deploy.html" class="navigation navigation-prev " aria-label="Previous page: 部署项目"><i class="fa fa-angle-left"></i></a>
+        <a href="../../../doc/v1/api/instances.html" class="navigation navigation-prev " aria-label="Previous page: 服务实例"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../../doc/v1/ci/add-public-key.html" class="navigation navigation-next " aria-label="Next page: 为私有仓库添加公钥"><i class="fa fa-angle-right"></i></a>
+        <a href="../../../doc/v1/api/api_swagger.html" class="navigation navigation-next " aria-label="Next page: 通过 swagger UI 查看"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
