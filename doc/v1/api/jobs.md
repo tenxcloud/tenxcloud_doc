@@ -338,11 +338,11 @@ job.json示例：
 
 获取指定工作任务的日志
 
-    GET /v1/regions/{region}/services/{name}/instances/{instance_name}/logs?date={date}&from={from_number}&size={total_size}
+    GET /v1/regions/{region}/jobs/{name}/instances/{instance_name}/logs?date={date}&from={from_number}&size={total_size}
 
 请求示例:
 
-    curl "https://api.tenxcloud.com/v1/regions/us/services/job-api/instances/testjob2-wu5d0/logs?date=2015.12.29&from=0&size=100" -H "username:[user_name]" -H "Authorization: token [api_token]"
+    curl "https://api.tenxcloud.com/v1/regions/us/jobs/job-api/instances/job-api-wu5d0/logs?date=2015.12.29&from=0&size=100" -H "username:[user_name]" -H "Authorization: token [api_token]"
 
 响应示例：
 
