@@ -1,26 +1,29 @@
 # 如何卸载 tenx-agent
 #### ubuntu
-<code>service tenx-agent stop<br/>
-rm -rf /opt/bin/*<br/>
-rm /usr/bin/tenx-agent<br/>
-rm /etc/init/tenx-agent.conf<br/>
-rm /etc/default/docker<br/>
-touch /etc/default/docker<br/>
-service docker restart</code>
+```
+service tenx-agent stop
+rm /usr/bin/tenx-agent
+rm /etc/init/tenx-agent.conf
+service docker restart
+```
 
-<h5>ubuntu下卸载docker</h5>
-<code>apt-get purge lxc-docker</code><br />
-<code>apt-get autoremove -y</code>
+##### ubuntu下卸载docker
+```
+apt-get purge lxc-docker
+apt-get autoremove -y
+```
 
 #### centos
-<code>systemctl stop tenx-agent<br/>
-systemctl disable tenx-agent.service<br/>
-rm /usr/lib/systemd/system/tenx-agent.service<br/>
-systemctl daemon-reload<br/>
-rm /usr/bin/tenx-agent<br/>
-rm -rf /opt/bin/*<br/>
-rm /etc/sysconfig/docker<br/>
+```
+systemctl stop tenx-agent
+systemctl disable tenx-agent.service
+rm /usr/lib/systemd/system/tenx-agent.service
+systemctl daemon-reload
+rm /usr/bin/tenx-agent
 systemctl restart docker
-</code>
-<h5>centos下卸载docker</h5>
-<code>yum erase docker</code>
+```
+
+##### centos下卸载docker
+```
+yum erase docker
+```
