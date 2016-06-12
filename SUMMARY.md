@@ -84,3 +84,4 @@
 * [常见问题](doc/v1/faq/README.md)
    * [常见问题](doc/v1/faq/faq.md)
    * [如何编写Dockerfile](doc/v1/faq/dockerfile.md)
+   * [如何使用ssh访问容器](doc/v1/faq/ssh.md)
