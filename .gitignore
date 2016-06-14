@@ -5,4 +5,4 @@ docweb/node_modules/
 docweb/logs/
 .DS_Store
 nohup.out
-
+*.swp
