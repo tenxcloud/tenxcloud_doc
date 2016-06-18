@@ -80,6 +80,7 @@
        * [服务](doc/v1/api/services.md)
        * [服务实例](doc/v1/api/instances.md)
        * [工作任务](doc/v1/api/jobs.md)
+       * [存储与备份](doc/v1/api/volumes.md)
    * [通过 swagger UI 查看](doc/v1/api/api_swagger.md)
 * [常见问题](doc/v1/faq/README.md)
    * [常见问题](doc/v1/faq/faq.md)

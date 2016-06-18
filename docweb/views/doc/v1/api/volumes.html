@@ -5,7 +5,7 @@
         <!-- head:start -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>持续集成 | 时速云</title>
+        <title>存储与备份 | 时速云</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.0.2">
@@ -20,10 +20,10 @@
         
     
     
-    <link rel="next" href="../../../doc/v1/ci/project-deploy.html" />
+    <link rel="next" href="../../../doc/v1/api/api_swagger.html" />
     
     
-    <link rel="prev" href="../../../doc/v1/ci/select-build-agent.html" />
+    <link rel="prev" href="../../../doc/v1/api/jobs.html" />
     
 
         <!-- head:end -->
@@ -42,7 +42,7 @@
     
 
         
-    <div class="book" data-level="6.2.3" data-basepath="../../.." data-revision="Sat Jun 18 2016 09:39:51 GMT+0800 (CST)">
+    <div class="book" data-level="10.2.7" data-basepath="../../.." data-revision="Sat Jun 18 2016 09:39:51 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -629,7 +629,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="6.2.3" data-path="doc/v1/ci/project-ci.html">
+        <li class="chapter " data-level="6.2.3" data-path="doc/v1/ci/project-ci.html">
             
                 
                     <a href="../../../doc/v1/ci/project-ci.html">
@@ -1337,7 +1337,7 @@
             
         </li>
     
-        <li class="chapter " data-level="10.2.7" data-path="doc/v1/api/volumes.html">
+        <li class="chapter active" data-level="10.2.7" data-path="doc/v1/api/volumes.html">
             
                 
                     <a href="../../../doc/v1/api/volumes.html">
@@ -1576,17 +1576,57 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h3 id="%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90">&#x6301;&#x7EED;&#x96C6;&#x6210;</h3>
-<p>&#x5728;&#x9879;&#x76EE;&#x8BE6;&#x60C5;&#x9875;&#xFF0C;&#x70B9;&#x51FB;<strong>&#x6301;&#x7EED;&#x96C6;&#x6210;</strong>&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x9879;&#x76EE;&#x89E6;&#x53D1;&#x6784;&#x5EFA;&#x7B56;&#x7565;&#xFF1A;</p>
-<p> <img src="../images/ci/ci-manage9.jpg" alt="manage9"></p>
-<p><strong>&#x4EE5;&#x4EE3;&#x7801;&#x5206;&#x652F;&#x540D;&#x4E3A;tag</strong>&#x4F1A;&#x7528;&#x5F53;&#x524D;&#x5206;&#x652F;&#x540D;&#x79F0;&#x4F5C;&#x4E3A;&#x6784;&#x5EFA;&#x65F6;&#x7684;tag&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x7684;&#x7B2C;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x3002;
-<strong>&#x6307;&#x5B9A;tag</strong>&#x4F1A;&#x4EE5;&#x7528;&#x6237;&#x8F93;&#x5165;&#x7684;&#x5185;&#x5BB9;&#x4E3A;&#x6784;&#x5EFA;&#x65F6;&#x7684;tag&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x7684;&#x7B2C;&#x4E8C;&#x6761;&#x8BB0;&#x5F55;&#x3002;
-<strong>&#x65F6;&#x95F4;&#x6233;&#x4E3A;tag</strong>&#x4F1A;&#x7528;&#x65F6;&#x95F4;&#x6233;&#x4F5C;&#x4E3A;&#x6784;&#x5EFA;&#x65F6;&#x7684;tag&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x7684;&#x7B2C;&#x4E09;&#x6761;&#x8BB0;&#x5F55;&#x3002;</p>
-<p> <img src="../images/ci/ci-manage10.jpg" alt="manage10"></p>
-<p>&#x5F00;&#x542F;&#x4EE3;&#x7801;&#x89E6;&#x53D1;&#x6784;&#x5EFA;&#x529F;&#x80FD;&#x540E;&#xFF0C;&#x5F53;push&#x6700;&#x65B0;&#x9879;&#x76EE;&#x4EE3;&#x7801;&#x4E4B;&#x540E;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x89E6;&#x53D1;&#x9879;&#x76EE;&#x6784;&#x5EFA;&#x3002;</p>
-<p>&#x6CE8;&#xFF1A;&#x5728;<strong>&#x201C;&#x6DFB;&#x52A0;&#x6E90;&#x4EE3;&#x7801;&#x201D;</strong>&#x65F6;&#x4F7F;&#x7528;&#x4E2A;&#x4EBA;&#x4ED3;&#x5E93;&#x4E2D;&#x7684;&#x9879;&#x76EE;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x201C;&#x586B;&#x5199;&#x9879;&#x76EE;&#x4FE1;&#x606F;&#x201D;&#x9875;&#x9762;&#x9009;&#x62E9;&#x89E6;&#x53D1;&#x6784;&#x5EFA;&#x7B56;&#x7565;&#xFF1A;</p>
-<p> <img src="../images/ci/ci-manage11.jpg" alt="manage11"></p>
-
+                        <h1 id="%E5%AD%98%E5%82%A8%E4%B8%8E%E5%A4%87%E4%BB%BD">&#x5B58;&#x50A8;&#x4E0E;&#x5907;&#x4EFD;</h1>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;&#x76EE;&#x524D;&#x4EC5;&#x652F;&#x6301;&#x5728;&#x5317;&#x4EAC;2&#x533A;&#x521B;&#x5EFA;&#x5B58;&#x50A8;&#x5377;</strong></p>
+<h3 id="%E8%8E%B7%E5%8F%96%E5%AD%98%E5%82%A8%E5%8D%B7%E5%88%97%E8%A1%A8">&#x83B7;&#x53D6;&#x5B58;&#x50A8;&#x5377;&#x5217;&#x8868;</h3>
+<p>&#x83B7;&#x53D6;&#x7528;&#x6237;&#x5728;&#x6307;&#x5B9A;&#x96C6;&#x7FA4;&#x4E0A;&#x7684;&#x5B58;&#x50A8;&#x5377;</p>
+<pre><code>GET /v1/regions/{region}/volumes
+</code></pre><p>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>curl &quot;https://api.tenxcloud.com/v1/regions/beijing2/volumes&quot; -H &quot;username:[user_name]&quot; -H &quot;Authorization: token [api_token]&quot;
+</code></pre><p>&#x54CD;&#x5E94;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>{
+  &quot;region&quot;: &quot;beijing2&quot;,
+  &quot;volumes&quot;: [
+    {
+      &quot;disk_name&quot;: &quot;disk1&quot;,
+      &quot;diskType&quot;: &quot;rbd&quot;,
+      &quot;fsType&quot;: &quot;ext4&quot;,
+      &quot;size&quot;: 1024
+    },
+    {
+      &quot;disk_name&quot;: &quot;disk2&quot;,
+      &quot;diskType&quot;: &quot;rbd&quot;,
+      &quot;fsType&quot;: &quot;ext4&quot;,
+      &quot;size&quot;: 1024
+    }
+  ]
+}
+</code></pre><h3 id="%E5%88%9B%E5%BB%BA%E5%AD%98%E5%82%A8%E5%8D%B7">&#x521B;&#x5EFA;&#x5B58;&#x50A8;&#x5377;</h3>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5B58;&#x50A8;&#x5377;</p>
+<pre><code>POST /v1/regions/{region}/volumes/{volume-name}
+</code></pre><p>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>curl &quot;https://api.tenxcloud.com/v1/regions/beijing2/volume/volume-name&quot; -H &quot;username:[user_name]&quot; -H &quot;Authorization: token [api_token]&quot; -H &quot;Content-Type: application/json&quot; -X POST --data @volume.json
+</code></pre><p>&#x5176;&#x4E2D;volume.json &#x793A;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>{
+  &quot;diskType&quot;: &quot;rbd&quot;,  # &#x76EE;&#x524D;&#x652F;&#x6301;rbd&#x548C;nfs&#xFF0C;&#x5176;&#x4E2D;rbd &#x4E0D;&#x80FD;&#x5728;&#x670D;&#x52A1;&#x4E4B;&#x95F4;&#x5171;&#x4EAB;&#x3001;nfs&#x53EF;&#x4EE5;&#x5728;&#x591A;&#x4E2A;&#x5BB9;&#x5668;&#x95F4;&#x5171;&#x4EAB;
+  &quot;fsType&quot;: &quot;ext4&quot;,  #&#x652F;&#x6301; ext4 &#x548C; xfs&#x4E24;&#x79CD;&#x6587;&#x4EF6;&#x683C;&#x5F0F;
+  &quot;size&quot;: 1024 # &#x5B58;&#x50A8;&#x5927;&#x5C0F;&#xFF0C;&#x5355;&#x4F4D;M&#xFF0C;&#x8303;&#x56F4; 1024(1G) ~ 40960(40G) &#x4E4B;&#x95F4;
+}
+</code></pre><p>&#x54CD;&#x5E94;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>{
+  &quot;disk_name&quot;: &quot;volume-name&quot;,
+  &quot;diskType&quot;: &quot;rbd&quot;,
+  &quot;fsType&quot;: &quot;ext4&quot;,
+  &quot;size&quot;: 1024
+}
+</code></pre><h3 id="%E5%88%A0%E9%99%A4%E5%AD%98%E5%82%A8%E5%8D%B7">&#x5220;&#x9664;&#x5B58;&#x50A8;&#x5377;</h3>
+<p>&#x5220;&#x9664;&#x67D0;&#x4E2A;&#x5B58;&#x50A8;&#x5377;</p>
+<pre><code>DELETE /v1/regions/{region}/volumes/{volume-name}
+</code></pre><p>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>curl &quot;https://api.tenxcloud.com/v1/regions/beijing2/volume/volume-name&quot; -H &quot;username:[user_name]&quot; -H &quot;Authorization: token [api_token]&quot; -X DELETE
+</code></pre><p>&#x54CD;&#x5E94;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>Volume was deleted successfully.
+</code></pre>
                     
                     </section>
                 
@@ -1596,10 +1636,10 @@
         </div>
 
         
-        <a href="../../../doc/v1/ci/select-build-agent.html" class="navigation navigation-prev " aria-label="Previous page: 如何选择构建节点"><i class="fa fa-angle-left"></i></a>
+        <a href="../../../doc/v1/api/jobs.html" class="navigation navigation-prev " aria-label="Previous page: 工作任务"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../../doc/v1/ci/project-deploy.html" class="navigation navigation-next " aria-label="Next page: 部署项目"><i class="fa fa-angle-right"></i></a>
+        <a href="../../../doc/v1/api/api_swagger.html" class="navigation navigation-next " aria-label="Next page: 通过 swagger UI 查看"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
