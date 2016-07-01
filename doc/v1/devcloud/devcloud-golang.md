@@ -122,42 +122,42 @@ $ git push -u origin master
 
 将代码上传到 GitHub 以后，就可以通过[时速云](https://console.tenxcloud.com)进行镜像构建和应用部署了。
 
-1. 登录[时速云](https://console.tenxcloud.com)，然后进入`控制台`。
+#### 1. 登录[时速云](https://console.tenxcloud.com)，然后进入`控制台`。
 
 ![控制台](/doc/v1/images/devcloud/devcloud-golang/console.png)
 
-2. 进入`代码构建`，选择`添加源代码`。
+#### 2. 进入`代码构建`，选择`添加源代码`。
 
 ![添加源代码](/doc/v1/images/devcloud/devcloud-golang/addsource.png)
 
-3. 选择 `GitHub`-`同步源代码`，输入自己的GitHub用户名、密码登录。
+#### 3. 选择 `GitHub`-`同步源代码`，输入自己的GitHub用户名、密码登录。
 
 ![同步源代码](/doc/v1/images/devcloud/devcloud-golang/syncsource.png)
 
-4. 选择GitHub项目 `<your_username>/go-docker-example`，作为镜像构建的代码源。
+#### 4. 选择GitHub项目 `<your_username>/go-docker-example`，作为镜像构建的代码源。
 
 ![选择 GitHub 项目](/doc/v1/images/devcloud/devcloud-golang/selectsource.png)
 
-5. 点击`创建`，开始创建项目，并构建镜像。
+#### 5. 点击`创建`，开始创建项目，并构建镜像。
 
 ![创建项目](/doc/v1/images/devcloud/devcloud-golang/build.png)
 
-5. 等待构建完成。
+#### 5. 等待构建完成。
 
 ![构建完成](/doc/v1/images/devcloud/devcloud-golang/buildsuccess.png)
 
-6. 点击`快速部署`，开始部署镜像，在云端提供服务。
+#### 6. 点击`快速部署`，开始部署镜像，在云端提供服务。
 
 ![快速部署](/doc/v1/images/devcloud/devcloud-golang/deploy.png)
 
-7. 输入`服务名称`并点击`创建`。
+#### 7. 输入`服务名称`并点击`创建`。
 
 ![快速部署](/doc/v1/images/devcloud/devcloud-golang/createservice.png)
 
-8. 等待服务状态变为`运行中`，表示服务创建成功并启动完成，后面会提供`服务地址`。
+####  8. 等待服务状态变为`运行中`，表示服务创建成功并启动完成，后面会提供`服务地址`。
 
 ![部署完成](/doc/v1/images/devcloud/devcloud-golang/deploysuccess.png)
 
-9. 点击`服务地址`，访问云端服务，可以看到我们期望的`Hello Tenxcloud!`字样，说明我们的 Golang 应用在云端工作正常。
+####  9. 点击`服务地址`，访问云端服务，可以看到我们期望的`Hello Tenxcloud!`字样，说明我们的 Golang 应用在云端工作正常。
 
 ![访问服务](/doc/v1/images/devcloud/devcloud-golang/accessservice.png)
