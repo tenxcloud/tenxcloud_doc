@@ -1,6 +1,5 @@
 # Golang 开发者的云端之旅
 
----
 对于 Golang 开发者来说，在通过容器化走向云端的道路上差的仅仅是一个**Dockerfile**，其它的事情可以放心扔给容器云厂商来完成。
 
 接下来，我们以一个简单的例子，看看如何使用 Golang Docker 镜像，将我们的 Golang 应用容器化，并通过[时速云](https://console.tenxcloud.com)推向云端。
