@@ -13,4 +13,5 @@
 * [私有集群](/doc/v1/host/README.md)
 * [服务编排](/doc/v1/stack/README.md)
 * [开放 API](/doc/v1/api/README.md)
+* [开发者云端之旅](/doc/v1/devcloud/README.md)
 * [常见问题](/doc/v1/faq/README.md)
