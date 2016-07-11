@@ -1,5 +1,6 @@
 ## 如何搭建自己的路由和子网？
-<ul>查看IaaS的文档：
-<li>	青云：<a href='https://docs.qingcloud.com/guide/topology.html'>网络拓扑指南</a> </li>
-<li>	ucloud: <a href='https://docs.ucloud.cn/upd-docs/unetwork/common.html#id8'>路由器</a> 和 <a href='https://docs.ucloud.cn/upd-docs/unetwork/common.html#id14'>子网</a></li>
-</ul>
+查看IaaS的文档：
+* 青云：[网络拓扑指南](https://docs.qingcloud.com/guide/topology.html)
+* ucloud: [路由器](https://docs.ucloud.cn/network/unet/common.html#id8) 和 [子网](https://docs.ucloud.cn/network/unet/common.html#id14)
+
+上述链接可能会被修改，我们会尽量保证及时更新。如果您无法访问可上官网查询。

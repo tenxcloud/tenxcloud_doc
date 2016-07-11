@@ -26,7 +26,7 @@ Replica Set 使用的是 n 个mongod节点，一同构建一个具备自动容�
 
 **3.创建第一个 mongodb 容器服务**，此时我们并没有开启认证机制，以便我们可以直接进行配置。第一个节点名称“mongodb1”。
 
-3.1) 容器选择docker hub官方镜像的本地复本：docker_library/mongo
+3.1) 容器选择docker hub官方镜像的本地副本：docker_library/mongo
 
 ![mongodb3](/doc/v1/images/advservices/mongo-rs-3.png)
 
