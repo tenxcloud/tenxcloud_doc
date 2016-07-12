@@ -82,6 +82,8 @@
        * [工作任务](doc/v1/api/jobs.md)
        * [存储与备份](doc/v1/api/volumes.md)
    * [通过 swagger UI 查看](doc/v1/api/api_swagger.md)
+* [开发者云端之旅](/doc/v1/devcloud/README.md)
+   * [Golang 开发者的云端之旅](/doc/v1/devcloud/devcloud-golang.md)
 * [常见问题](doc/v1/faq/README.md)
    * [常见问题](doc/v1/faq/faq.md)
    * [如何编写Dockerfile](doc/v1/faq/dockerfile.md)
