@@ -108,6 +108,7 @@
   <!-- <iframe id="iframeDoc" src="index.html" style='width:100%;min-height:100%;position:fixed;top:65px;border:0px;'> -->
   <!-- </iframe> -->
   <%- include(docPath) %>
+  <script type="text/javascript" src="/lib/layer.js"></script>
   <script>
     $(document).on('click','a[href="../../../index.html"]',function(event){
       // alert('请求完成');
@@ -117,7 +118,22 @@
       // alert('请求完成');
       window.location = '/doc/index.html';
     });
+    $('body').on('click','.page-inner img',function(event) {
+      var imgWidth = 'width:' +$(this).width()+ 'px';
+      if ($(document).width() < $(this).width()){
+        imgWidth = 'max-width:90%';
+      }
+      var imgSrc = $(this).attr('src');
+      layer.open({
+        type: 1,
+        title: false,
+        area: imgWidth,
+        skin: 'layui-layer-nobg', //没有背景色
+        shadeClose: true,
+        content: '<img style="'+ imgWidth +'" src="'+ imgSrc +'">'
+      });
 
+    });
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
