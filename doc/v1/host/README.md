@@ -6,10 +6,8 @@
 本章主要通过以下几个方面来介绍镜像服务的主要功能：
    * [为什么使用"私有集群"](00-preface.md)
    * [添加集群](01-add-cluster.md)
-   * [添加主机（普通模式）](02-add-host-self-host.md)
-   * [添加主机（跨云模式）](02-add-cluster-host-in-tenxcloud.md)
-   * [应用管理（普通模式）](03-deploy-app.md)
-   * [应用管理（跨云模式）](03-deploy-app-tenx-host.md)
+   * [添加主机](02-add-host-self-host.md)
+   * [应用管理](03-deploy-app.md)
    * [如何卸载Agent](remove-agent.md)
    * [FAQ](FAQ.md)
        * [如何搭建自己的路由和子网？](faq-question-1.md)

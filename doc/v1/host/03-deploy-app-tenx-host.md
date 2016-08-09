@@ -1,5 +1,5 @@
-# 应用管理（跨云模式，以集群tenx-host为例）
-对于跨云模式的集群来说，管理应用的方式和在公有云（北京一区、二区）上基本一致。
+# 如何通过时速云的控制台管理应用
+管理应用的方式和在公有云（北京一区、二区）上基本一致。
 ## 查看和访问应用
 1. 查看应用列表。进入“容器”面板，选中自己的主机集群，可以看到运行中的应用。  
 ![host1](/doc/v1/images/host/deploy-app-0-tenx-host.png)
@@ -8,7 +8,7 @@
 3. 访问应用。本例中，helloworld是一个http应用，点击地址既可以访问。这里我添加的是笔记本上的虚拟机，网络类型为NAT，所以只能通过内网地址访问。  
 ![host1](/doc/v1/images/host/deploy-app-2-tenx-host.png)
 ## 创建应用
-1. 点击"+添加"按钮。  
+1. 点击"+创建"按钮。  
 ![host1](/doc/v1/images/host/deploy-app-tenx-host-create-1.png)
 2. 搜索要使用的镜像（以hello-world为例）。  
 ![host1](/doc/v1/images/host/deploy-app-tenx-host-create-2.png)

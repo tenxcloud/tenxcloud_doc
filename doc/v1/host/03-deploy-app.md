@@ -1,13 +1,13 @@
-# 应用管理（普通模式，以集群self-host为例）
-普通模式的集群中，Master节点和Node节点在同一个局域网中，因此用户拥有更大的自由度去管理应用。这里我们推荐三种方法：
-1. 通过时速云的控制台，具体参考 [应用管理（跨云模式）](03-deploy-app-tenx-host.md)  
+# 应用管理（以集群self-host为例）
+集群中，Master节点和Node节点在同一个局域网中，因此用户拥有更大的自由度去管理应用。这里我们推荐三种方法：
+1. 通过时速云的控制台，具体参考 [如何通过时速云的控制台应用管理](03-deploy-app-tenx-host.md)  
 ![host1](/doc/v1/images/host/deploy-app-self-host-0-container.png)
-2. 使用普通集群专属的管理平面。  
+2. 使用集群专属的管理平面。  
 ![host1](/doc/v1/images/host/deploy-app-self-host-1.png)
 3. 通过kubectl，该方法适用于对kubernetes有一定使用经验的用户，具体参考[kubectl使用方法](http://kubernetes.io/docs/user-guide/kubectl-overview/)。
 4. 使用kubernetes的client library。目前kubernetes client library已经支持多种编程语言，包括go、nodejs等，该方法要求用户对kubernetes有一定的了解和使用经验。
 
-这里我们重点介绍普通集群专属的管理平面。目前，它由主机列表、应用、日志、事件和系统五部分组成。下面我们一一介绍：
+这里我们重点介绍集群专属的管理平面。目前，它由主机列表、应用、日志、事件和系统五部分组成。下面我们一一介绍：
 ### 主机列表
 集群中的所有节点，也可以查看主机详情。对于这种类型的集群，不推荐删除Master节点。  
 ![host1](/doc/v1/images/host/deploy-app-self-host-1.png)
